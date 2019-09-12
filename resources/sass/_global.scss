@@ -1,0 +1,38 @@
+// Plugins
+
+// FontAwesome 5
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
+// Header Styles
+.read-only, .logged-in-as {
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+.text-theme-colored {
+  color: #18D26E !important;
+}
+
+.bg-theme-colored {
+  background-color: #16242D !important;
+}
+
+.line-bottom {
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.border-bottom-theme-color-3px {
+  border-bottom: 3px solid #F26522 !important;
+}
+
+.font-28 {
+  font-size: 2rem !important;
+}
+
+.font-18 {
+  font-size: 18px !important;
+}

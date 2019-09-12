@@ -1,0 +1,16 @@
+// Override the Bootstrap defaults without modifying key, versioned files.
+
+$font-family-sans-serif: "Nunito", sans-serif;
+
+$wings:    #18D26E !default;
+
+$primary:       $wings !default;
+
+$white:    #fff !default;
+$theme-color: #18d26e !default;
+
+$navbar-dark-color:                 rgba($white, .9) !default;
+$navbar-dark-hover-color:           rgba($theme-color, .75) !default;
+$navbar-dark-active-color:          $theme-color !default;
+$navbar-dark-disabled-color:        rgba($white, .25) !default;
+$navbar-dark-toggler-border-color:  rgba($white, .1) !default;
