@@ -35,6 +35,28 @@ return [
                 'view' => 'View User',
             ],
         ],
+        'blog' => [
+            'title' => 'Blog',
+
+            'posts' => [
+                'all' => 'All Roles',
+                'create' => 'Create Role',
+                'edit' => 'Edit Role',
+                'management' => 'Role Management',
+                'main' => 'Roles',
+            ],
+
+            'users' => [
+                'all' => 'All Users',
+                'change-password' => 'Change Password',
+                'create' => 'Create User',
+                'deactivated' => 'Deactivated Users',
+                'deleted' => 'Deleted Users',
+                'edit' => 'Edit User',
+                'main' => 'Users',
+                'view' => 'View User',
+            ],
+        ],
 
         'log-viewer' => [
             'main' => 'Log Viewer',

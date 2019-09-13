@@ -20,7 +20,7 @@
 
                 <li class="nav-item nav-dropdown {{
                     active_class(Route::is('admin/auth*'), 'open')
-                }}">
+                    }}">
                     <a class="nav-link nav-dropdown-toggle {{
                         active_class(Route::is('admin/auth*'))
                     }}" href="#">
@@ -49,6 +49,44 @@
                                 active_class(Route::is('admin/auth/role*'))
                             }}" href="{{ route('admin.auth.role.index') }}">
                                 @lang('labels.backend.access.roles.management')
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="divider"></li>
+
+                <li class="nav-item nav-dropdown {{
+                    active_class(Route::is('admin/blog*'), 'open')
+                    }}">
+                    <a class="nav-link nav-dropdown-toggle {{
+                        active_class(Route::is('admin/blog*'))
+                    }}" href="#">
+                        <i class="nav-icon far fa-user"></i>
+                        @lang('menus.backend.blog.title')
+
+                        @if ($pending_approval > 0)
+                            <span class="badge badge-danger">{{ $pending_approval }}</span>
+                        @endif
+                    </a>
+
+                    <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                            <a class="nav-link {{
+                                active_class(Route::is('admin/blog/posts*'))
+                            }}" href="{{ route('admin.blog.posts.create') }}">
+                                @lang('labels.backend.blog.posts.create')
+
+                                @if ($pending_approval > 0)
+                                    <span class="badge badge-danger">{{ $pending_approval }}</span>
+                                @endif
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{
+                                active_class(Route::is('admin/blog/posts*'))
+                            }}" href="{{ route('admin.blog.posts.index') }}">
+                                @lang('labels.backend.blog.posts.list')
                             </a>
                         </li>
                     </ul>

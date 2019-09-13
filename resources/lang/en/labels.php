@@ -112,6 +112,13 @@ return [
                 'view' => 'View User',
             ],
         ],
+        'blog' => [
+            'posts' => [
+                'list' => 'All Post',
+                'create' => 'Create Post',
+                'store' => 'Store Post'
+            ],
+        ],
     ],
 
     'frontend' => [
