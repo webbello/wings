@@ -8,3 +8,6 @@
 import '../bootstrap';
 import 'pace';
 import '../plugins';
+// import '../../../node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js';
+
+

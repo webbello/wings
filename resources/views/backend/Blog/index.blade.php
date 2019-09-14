@@ -26,7 +26,7 @@
                             <th>Title</th>
                             <th>Summary</th>
                             <th>Body</th>
-                            <th>Created</th>
+                            <th>@lang('labels.general.actions')</th>
                         </tr>
                         </thead>
                         <tbody>

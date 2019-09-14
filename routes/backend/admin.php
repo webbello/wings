@@ -6,7 +6,7 @@ use App\Http\Controllers\Blog\PostController;
 // All route names are prefixed with 'admin.'.
 Route::redirect('/', '/admin/dashboard', 301);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-Route::get('blog/posts', [PostController::class, 'index'])->name('blog.posts.index');
+Route::get('blog/posts', [PostController::class, 'allPost'])->name('blog.posts.index');
 Route::get('blog/posts/create', [PostController::class, 'create'])->name('blog.posts.create');
 Route::post('blog/posts/store', [PostController::class, 'store'])->name('blog.posts.store');
 

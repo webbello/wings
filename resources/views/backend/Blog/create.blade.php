@@ -57,7 +57,8 @@
                                 ->class('form-control')
                                 ->placeholder(__('Body'))
                                 ->attribute('maxlength', 191)
-                                ->required()
+                                ->attribute('id', 'editor')
+                                ->attribute('rows', 10)
                                 ->autofocus() }}
                         </div><!--col-->
                     </div><!--form-group-->

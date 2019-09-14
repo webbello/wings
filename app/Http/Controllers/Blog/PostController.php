@@ -6,6 +6,7 @@ use App\Models\Blog\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\Blog\ManagePostRequest;
+use App\Http\Resources\PostResource;
 
 class PostController extends Controller
 {
@@ -14,10 +15,34 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function allPost(ManagePostRequest $request)
     {
         $posts = Post::all();
         return view('backend.blog.index', compact('posts'));
+    }
+
+    public function index()
+    {
+        return PostResource::collection(Post::latest()->paginate(5));
+    }
+
+    public function blog()
+    {
+        $posts = Post::all();
+        return view('frontend.blog.index', compact('posts'));
+    }
+
+    public function all()
+    {
+        return view('frontend.blog.index', [
+            'posts' => Post::latest()->paginate(5)
+        ]);
+    }
+
+    public function single(Post $post)
+    {
+        
+        return view('frontend.blog.show', compact('post'));
     }
 
     /**
