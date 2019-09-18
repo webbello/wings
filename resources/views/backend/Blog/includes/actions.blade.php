@@ -1,6 +1,6 @@
 @if ($post->id !== 1)
     <div class="btn-group btn-group-sm" post="group" aria-label="@lang('labels.backend.access.users.user_actions')">
-        <a href="{{ route('admin.blog.posts.edit', $post->id) }}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="@lang('buttons.general.crud.edit')">
+        <a href="{{ route('admin.blog.posts.edit', $post) }}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="@lang('buttons.general.crud.edit')">
             <i class="fas fa-edit"></i>
         </a>
 

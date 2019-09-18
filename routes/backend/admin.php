@@ -14,7 +14,7 @@ Route::get('blog/posts/create', [PostController::class, 'create'])->name('blog.p
 Route::post('blog/posts/store', [PostController::class, 'store'])->name('blog.posts.store');
 
 // Specific Post
-Route::group(['prefix' => 'blog/posts/{id}'], function () {
+Route::group(['prefix' => 'blog/posts/{post}'], function () {
     // Post
     Route::get('/', [PostController::class, 'show'])->name('blog.posts.show');
     Route::get('edit', [PostController::class, 'edit'])->name('blog.posts.edit');

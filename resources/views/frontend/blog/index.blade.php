@@ -15,7 +15,9 @@
         <div class="card-body">
           <h2 class="card-title text-center">{{ $post->title }}</h2>
           <p class="card-text"> {!! html_entity_decode(Str::limit($post->body, $limit = 280, $end = '...')) !!} </p>
-          <a href="/blog/posts/{{ $post->id }}" class="btn btn-primary">Read More &rarr;</a>
+          {{-- <a href="/blog/posts/{{ $post->id }}" class="btn btn-primary">Read More &rarr;</a> --}}
+          <a href="{{ route('frontend.blog.single', $post->id) }}" class="btn btn-primary">Read More &rarr;</a>
+
         </div>
         <div class="card-footer text-muted">
           Posted {{ $post->created_at->diffForHumans() }} by

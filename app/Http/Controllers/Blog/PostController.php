@@ -41,7 +41,7 @@ class PostController extends Controller
         ]);
     }
 
-    public function single(Post $post)
+    public function single(Request $request, Post $post)
     {
         //dd($post);
         return view('frontend.blog.show', compact('post'));
