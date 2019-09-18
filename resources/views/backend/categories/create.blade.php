@@ -52,7 +52,7 @@
                     </div><!--col-->
 
                     <div class="col text-right">
-                        <button type="submit" class="btn btn-primary-outline">Add contact</button>
+                        <button type="submit" class="btn btn-success">Add contact</button>
                     </div><!--col-->
                 </div><!--row-->
             </div><!--card-footer-->

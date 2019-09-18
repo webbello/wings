@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto">
-        <h3 class="mt-4">{{ $post->title }} <span class="lead"> by <a href="#">  </a></span> </h3>
+        <h3 class="mt-4">{{ $post->title }} <span class="lead"> by <a href="#"> </a></span> </h3>
         <hr>
         <p>Posted {{ !! !empty($post->created_at) ? $post->created_at->diffForHumans() : $post->created_at }} </p>
         <hr>

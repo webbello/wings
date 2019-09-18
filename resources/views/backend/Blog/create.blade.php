@@ -3,8 +3,8 @@
 @section('title', __('labels.backend.access.roles.management') . ' | ' . __('labels.backend.access.roles.create'))
 
 @section('content')
-{{ html()->form('POST', route('admin.blog.posts.store'))->class('form-horizontal')->attribute('enctype', 'multipart/form-data')->open() }}
-    <div class="card">
+<div class="card">
+    <form method="post" action="{{ route('admin.blog.posts.store') }}" enctype="multipart/form-data">
         <div class="card-body">
             <div class="row">
                 <div class="col-sm-5">
@@ -17,79 +17,66 @@
 
             <hr>
 
-            <div class="row mt-4">
-                <div class="col">
-                    <div class="form-group row">
-                        {{ html()->label(__('Title'))
-                            ->class('col-md-2 form-control-label')
-                            ->for('title') }}
+            <div class="row">
+            <div class="col-sm-12">
+                <div>
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                        </div><br />
+                    @endif
+                    
+                    @csrf
+                    <div class="form-group">    
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="title" placeholder="Title" maxlength="191" required="required" autofocus="autofocus" class="form-control">
+                    </div>
 
-                        <div class="col-md-10">
-                            {{ html()->text('title')
-                                ->class('form-control')
-                                ->placeholder(__('Title'))
-                                ->attribute('maxlength', 191)
-                                ->required()
-                                ->autofocus() }}
-                        </div><!--col-->
-                    </div><!--form-group-->
-                    <div class="form-group row">
-                        {{ html()->label(__('Summary'))
-                            ->class('col-md-2 form-control-label')
-                            ->for('summary') }}
-
-                        <div class="col-md-10">
-                            {{ html()->textarea('summary')
-                                ->class('form-control')
-                                ->placeholder(__('summary'))
-                                ->attribute('maxlength', 191)
-                                ->required()
-                                ->autofocus() }}
-                        </div><!--col-->
-                    </div><!--form-group-->
-                    <div class="form-group row">
-                        {{ html()->label(__('Body'))
-                            ->class('col-md-2 form-control-label')
-                            ->for('body') }}
-
-                        <div class="col-md-10">
-                            {{ html()->textarea('body')
-                                ->class('form-control')
-                                ->placeholder(__('Body'))
-                                ->attribute('maxlength', 191)
-                                ->attribute('id', 'editor')
-                                ->attribute('rows', 10)
-                                ->autofocus() }}
-                        </div><!--col-->
-                    </div><!--form-group-->
-                    <div class="form-group row">
-                        {{ html()->label(__('Image'))
-                            ->class('col-md-2 form-control-label')
-                            ->for('image') }}
-
-                        <div class="col-md-10">
-                            {{ html()->file('image')
-                                ->class('form-control')
-                                ->attribute('maxlength', 191)
-                                ->required()
-                                ->autofocus() }}
-                        </div><!--col-->
-                    </div><!--form-group-->
-                </div><!--col-->
-            </div><!--row-->
+                    {{-- <div class="form-group">    
+                        <label for="slug">Slug</label>
+                        <input type="text" name="slug" id="slug" placeholder="Slug" maxlength="191" autofocus="autofocus" class="form-control">
+                    </div> --}}
+        
+                    <div class="form-group">
+                        <label for="summary">Summary:</label>
+                        <textarea name="summary" id="summary" placeholder="summary" maxlength="191" required="required" autofocus="autofocus" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="body">Body:</label>
+                        <textarea name="body" id="editor" placeholder="Body" maxlength="191" rows="10" autofocus="autofocus" class="form-control"></textarea>                            
+                    </div>
+                    <div class="form-group">    
+                        <label for="image">Image</label>
+                        <input type="file" name="image" id="image" maxlength="191"  autofocus="autofocus" class="form-control">
+                    </div>
+                    <div class="form-group">    
+                        <label for="lang">Language</label>
+                        <input type="text" name="lang" id="lang" placeholder="Language" maxlength="191"  autofocus="autofocus" class="form-control">
+                    </div>
+                    <div class="form-group">    
+                        <label for="category">Category</label>
+                        <input type="category" name="category" id="category" placeholder="Category" maxlength="191"  autofocus="autofocus" class="form-control">
+                    </div>
+                </div>
+            </div>
+            </div>
         </div><!--card-body-->
 
         <div class="card-footer">
             <div class="row">
                 <div class="col">
-                    {{ form_cancel(route('admin.blog.posts.index'), __('buttons.general.cancel')) }}
+                    {{-- <a type="button" class="btn btn-primary-outline" href="{{route('admin.blog.posts.index')}}">Cancel</button> --}}
                 </div><!--col-->
 
                 <div class="col text-right">
-                    {{ form_submit(__('buttons.general.crud.create')) }}
+                    <button type="submit" class="btn btn-success">Submit</button>
                 </div><!--col-->
             </div><!--row-->
         </div><!--card-footer-->
-    </div><!--card-->
-{{ html()->form()->close() }}
+    </form>
+</div><!--card-->
 @endsection

@@ -21,15 +21,34 @@ function addDeleteForms() {
         .attr('style', 'cursor:pointer;')
         .attr('onclick', '$(this).find("form").submit();');
 }
-$(document).ready(function() {
-    $('[data-countdown]').each(function() {
-      var $this = $(this), finalDate = $(this).data('countdown');
-      console.log('finalDate', finalDate);
-        $this.countdown(finalDate, function(event) {
-        $this.html(event.strftime('<ul class="list-inline home-countdown"><li><span>%D</span><br> days</li><li><span>%H</span><br> Hours</li><li><span>%M</span><br> Minites</li><li><span>%S</span><br> Seconds</li></ul>'));
-      });
+
+$(function() {
+    //caches a jQuery object containing the header element
+    var header = $(".navbar-dark");
+    console.log('header', header);
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 250) {
+            header.removeClass('bg-dark').addClass("bg-dark");
+        } else {
+            header.removeClass("bg-dark").addClass('darkHeader');
+        }
     });
 });
+
+
+// $(document).ready(function() {
+//     $('[data-countdown]').each(function() {
+//       var $this = $(this), finalDate = $(this).data('countdown');
+//       console.log('finalDate', finalDate);
+//         $this.countdown(finalDate, function(event) {
+//         $this.html(event.strftime('<ul class="list-inline home-countdown"><li><span>%D</span><br> days</li><li><span>%H</span><br> Hours</li><li><span>%M</span><br> Minites</li><li><span>%S</span><br> Seconds</li></ul>'));
+//       });
+//     });
+// });
+
+
 /**
  * Place any jQuery/helper plugins in here.
  */

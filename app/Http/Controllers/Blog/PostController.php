@@ -34,14 +34,16 @@ class PostController extends Controller
 
     public function all()
     {
+        $posts = Post::latest()->paginate(5);
+        //dd($posts);
         return view('frontend.blog.index', [
-            'posts' => Post::latest()->paginate(5)
+            'posts' => $posts
         ]);
     }
 
     public function single(Post $post)
     {
-        
+        //dd($post);
         return view('frontend.blog.show', compact('post'));
     }
 
@@ -83,6 +85,7 @@ class PostController extends Controller
 
         $post->author = 1;
         $post->title = $request->title;
+        $post->slug = \Str::slug($request->title);
         $post->body = $request->body;
         $post->summary = $request->summary;
         $post->save();
@@ -99,7 +102,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('frontend.blog.show', compact('post'));
     }
 
     /**
