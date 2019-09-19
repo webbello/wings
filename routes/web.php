@@ -9,7 +9,8 @@ use App\Http\Controllers\LanguageController;
 
 // Switch between the included languages
 Route::get('lang/{lang}', [LanguageController::class, 'swap']);
-
+Route::resource('comments', 'CommentController');
+Route::post('/comments/reply/store', 'CommentController@replyStore')->name('reply.add');
 /*
  * Frontend Routes
  * Namespaces indicate folder structure

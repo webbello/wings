@@ -8,13 +8,14 @@ Route::redirect('/', '/admin/dashboard', 301);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::resource('categories', 'CategoryController');
+// Route::resource('blog/posts', 'Blog\PostController');
 
 Route::get('blog/posts', [PostController::class, 'allPost'])->name('blog.posts.index');
 Route::get('blog/posts/create', [PostController::class, 'create'])->name('blog.posts.create');
 Route::post('blog/posts/store', [PostController::class, 'store'])->name('blog.posts.store');
 
 // Specific Post
-Route::group(['prefix' => 'blog/posts/{id}'], function () {
+Route::group(['prefix' => 'blog/posts/{post}'], function () {
     // Post
     Route::get('/', [PostController::class, 'show'])->name('blog.posts.show');
     Route::get('edit', [PostController::class, 'edit'])->name('blog.posts.edit');

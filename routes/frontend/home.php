@@ -14,7 +14,7 @@ use App\Http\Controllers\Frontend\User\DashboardController;
  */
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('blog', [PostController::class, 'all'])->name('blog');
-Route::get('blog/posts/{id}', [PostController::class, 'single'])->name('blog.single');
+Route::get('blog/posts/{post}', [PostController::class, 'single'])->name('blog.single');
 Route::get('events', [EventController::class, 'index'])->name('events');
 Route::get('events/create', [EventController::class, 'create'])->name('events.create');
 Route::post('events/store', [EventController::class, 'store'])->name('events.store');
