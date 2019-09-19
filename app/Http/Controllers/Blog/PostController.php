@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Blog;
 
+use App\Models\Category;
 use App\Models\Blog\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -54,7 +55,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('backend.blog.create');
+        $parentCategories = Category::where('parent_id',NULL)->get();
+        return view('backend.blog.create', compact('parentCategories'));
     }
 
     /**
@@ -83,11 +85,14 @@ class PostController extends Controller
             $post->image = $name;
         }
 
-        $post->author = 1;
+        $post->author = $request->author;
+        $post->user_id = $request->user_id;
         $post->title = $request->title;
         $post->slug = \Str::slug($request->title);
-        $post->body = $request->body;
         $post->summary = $request->summary;
+        $post->body = $request->body;
+        $post->lang = $request->lang;
+        $post->category_id = $request->category;
         $post->save();
 
         //return new PostResource($post);
@@ -115,9 +120,12 @@ class PostController extends Controller
     {
         //$post = Post::find($post);
         //dd($post);
-        //return view('backend.blog.edit', compact('post'));
+        
+        $parentCategories = Category::where('parent_id',NULL)->get();
+        //return view('backend.blog.edit', compact('post', 'parentCategories'));
         return view('backend.blog.edit')
-            ->withPost($post);
+            ->withPost($post)
+            ->withParentCategories($parentCategories);
     }
 
     /**

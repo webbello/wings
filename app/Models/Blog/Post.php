@@ -4,6 +4,7 @@ namespace App\Models\Blog;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Auth\User;
+use App\Models\Comment;
 
 class Post extends Model
 {
@@ -18,5 +19,10 @@ class Post extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable')->whereNull('parent_id');
     }
 }

@@ -31,11 +31,13 @@
                     @endif
                     
                     @csrf
+                    
                     <div class="form-group">    
                         <label for="title">Title</label>
                         <input type="text" name="title" id="title" placeholder="Title" maxlength="191" required="required" autofocus="autofocus" class="form-control">
                     </div>
-
+                    <input type="hidden" name="author" value="{{$logged_in_user->id}}">
+                    <input type="hidden" name="user_id" value="{{$logged_in_user->id}}">
                     {{-- <div class="form-group">    
                         <label for="slug">Slug</label>
                         <input type="text" name="slug" id="slug" placeholder="Slug" maxlength="191" autofocus="autofocus" class="form-control">
@@ -55,11 +57,26 @@
                     </div>
                     <div class="form-group">    
                         <label for="lang">Language</label>
-                        <input type="text" name="lang" id="lang" placeholder="Language" maxlength="191"  autofocus="autofocus" class="form-control">
+                        <select class="form-control" id="lang" name="lang">
+                            @foreach(array_keys(config('locale.languages')) as $lang)
+                                @if($lang != app()->getLocale())
+                                    <option value="{{$lang}}">@lang('menus.language-picker.langs.'.$lang)</option>
+                                @endif 
+                            @endforeach
+                        </select>
+                        {{-- <input type="text" name="lang" id="lang" placeholder="Language" maxlength="191"  autofocus="autofocus" class="form-control"> --}}
                     </div>
                     <div class="form-group">    
                         <label for="category">Category</label>
-                        <input type="category" name="category" id="category" placeholder="Category" maxlength="191"  autofocus="autofocus" class="form-control">
+                        <select class="form-control" id="category" name="category">
+                            @foreach($parentCategories as $category)
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                @if(count($category->subcategory))
+                                    @include('backend.Blog.includes.subCategory',['subcategories' => $category->subcategory])
+                                @endif 
+                            @endforeach
+                        </select>
+                        {{-- <input type="category" name="category" id="category" placeholder="Category" maxlength="191"  autofocus="autofocus" class="form-control"> --}}
                     </div>
                 </div>
             </div>
