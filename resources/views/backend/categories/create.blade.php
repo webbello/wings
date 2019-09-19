@@ -38,7 +38,16 @@
                 
                             <div class="form-group">
                                 <label for="last_name">Parent Id:</label>
-                                <input type="text" class="form-control" name="parent_id"/>
+                                {{-- <input type="text" class="form-control" name="parent_id"/> --}}
+                                <select class="form-control" id="parent_id" name="parent_id">
+                                    <option value="">Root</option>
+                                    @foreach($parentCategories as $category)
+                                        <option value="{{$category->id}}">{{$category->name}}</option>
+                                        @if(count($category->subcategory))
+                                            @include('backend.Blog.includes.subCategory',['subcategories' => $category->subcategory])
+                                        @endif 
+                                    @endforeach
+                                </select>
                             </div>
                     </div>
                 </div>
@@ -52,7 +61,7 @@
                     </div><!--col-->
 
                     <div class="col text-right">
-                        <button type="submit" class="btn btn-success">Add contact</button>
+                        <button type="submit" class="btn btn-success">Add Category</button>
                     </div><!--col-->
                 </div><!--row-->
             </div><!--card-footer-->
