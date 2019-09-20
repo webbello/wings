@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Blog;
 
 use App\Models\Category;
 use App\Models\Blog\Post;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\Blog\ManagePostRequest;
@@ -74,6 +75,7 @@ class PostController extends Controller
         ]);
         //dd($request->all());
         $post = new Post;
+        
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
@@ -94,6 +96,25 @@ class PostController extends Controller
         $post->lang = $request->lang;
         $post->category_id = $request->category;
         $post->save();
+
+        if($post)
+        {        
+            $tagNames = explode(',',$request->get('tags'));
+            $tagIds = [];
+            foreach($tagNames as $tagName)
+            {
+                //$post->tags()->create(['name'=>$tagName]);
+                //Or to take care of avoiding duplication of Tag
+                //you could substitute the above line as
+                $tag = Tag::firstOrCreate(['name'=>$tagName]);
+                if($tag)
+                {
+                $tagIds[] = $tag->id;
+                }
+
+            }
+            $post->tags()->sync($tagIds);
+        }
 
         //return new PostResource($post);
         return redirect('admin/blog/posts')->with('success', 'Post saved!');
