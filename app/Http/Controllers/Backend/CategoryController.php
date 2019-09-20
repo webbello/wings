@@ -69,9 +69,12 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Category $category)
     {
-        //
+        //$category = Category::find($id);
+        $parentCategories = Category::where('parent_id',NULL)->get();
+        //dd($category);
+        return view('backend.categories.edit', compact('category', 'parentCategories'));
     }
 
     /**
@@ -92,8 +95,12 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Category $category)
     {
-        //
+        $category->delete();
+
+        //event(new CategoryDeleted($post));
+
+        return redirect()->route('admin.categories.index')->withFlashSuccess(__('alerts.backend.posts.deleted'));
     }
 }
