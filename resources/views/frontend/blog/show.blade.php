@@ -3,7 +3,7 @@
 @section('title', app_name() . ' | ' . __('navs.general.home'))
 
 @section('content')
-<div class="container blog1">
+<div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto">
         <h3 class="mt-4">{{ $post->title }} <span class="lead"> by <a href="#"> {{ $post->user->name }}</a></span> </h3>
@@ -15,13 +15,15 @@
         </ul>
         <p>Posted {{ !! !empty($post->created_at) ? $post->created_at->diffForHumans() : $post->created_at }} </p>
         <hr>
-        <img class="img-fluid rounded" src=" {!! !empty($post->image) ? '/storage/uploads/posts/' . $post->image :  'http://placehold.it/750x300' !!} " alt="">
-        <hr>
-        <p class="lead">{!! html_entity_decode($post->body) !!}</p>
+        <div class="blog-post">
+          <img class="img-fluid rounded" src=" {!! !empty($post->image) ? '/storage/uploads/posts/' . $post->image :  'http://placehold.it/750x300' !!} " alt="">
+          <hr>
+          {!! html_entity_decode($post->body) !!}
+        </div>
         <hr>
         <div class="card my-4">
           <h5 class="card-header">Leave a Comment:</h5>
-          <div class="card-body">
+          <div class="card-body" id="comment-section">
               @if($logged_in_user)
               <h6 class="text-center">(Loggedin as <a href="{{ route('frontend.auth.logout') }}">{{$logged_in_user->name}}. @lang('navs.general.logout')?</a>)</h6>
               @endif
@@ -30,7 +32,7 @@
                 <img src="{{$logged_in_user->picture}}" width="100px" class="rounded mr-3" alt="{{$logged_in_user->name}}">
                 @endif
                 <div class="media-body">
-                  <h5 class="mt-0">Your comment</h5>
+                  <h5 class="mt-0 mb-1">Your comment</h5>
                   <form method="post" action="{{ route('comments.store') }}">
                       @csrf
                       <div class="form-group">
@@ -52,7 +54,7 @@
               </div>
           </div>
           {{-- <h4 class="card-header pl-3">Display Comments</h4> --}}
-            <div class="comments-container pr-2 pb-2">
+            <div class="comments-container pr-2 pb-2 pl-3">
               @include('includes.partials._comment_replies', ['comments' => $post->comments, 'post_id' => $post->id])
             </div>
         </div>

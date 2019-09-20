@@ -3,92 +3,69 @@
 @section('title', __('labels.backend.access.roles.management') . ' | ' . __('labels.backend.access.roles.create'))
 
 @section('content')
-{{ html()->modelForm($post, 'PATCH',  route('admin.blog.posts.update', $post))->class('form-horizontal')->attribute('enctype', 'multipart/form-data')->open() }}
     <div class="card">
-        <div class="card-body">
-            <div class="row">
-                <div class="col-sm-5">
-                    <h4 class="card-title mb-0">
-                        @lang('labels.backend.blog.posts.create')
-                        {{-- <small class="text-muted">@lang('labels.backend.blog.posts.create')</small> --}}
-                    </h4>
-                </div><!--col-->
-            </div><!--row-->
+        <form method="post" action="{{ route('admin.categories.update', ['id' => $category->id]) }}">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h4 class="card-title mb-0">
+                            @lang('Add a Category')
+                            {{-- <small class="text-muted">@lang('labels.backend.blog.posts.create')</small> --}}
+                        </h4>
+                    </div><!--col-->
+                </div><!--row-->
 
-            <hr>
+                <hr>
 
-            <div class="row mt-4">
-                <div class="col">
-                    <div class="form-group row">
-                        {{ html()->label(__('Title'))
-                            ->class('col-md-2 form-control-label')
-                            ->for('title') }}
+                <div class="row">
+                    <div class="col-sm-12">
+                    <div>
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                        </div><br />
+                    @endif
+                        
+                            @csrf
+                            <div class="form-group">    
+                                <label for="first_name">Category Name:</label>
+                                <input type="text" class="form-control" name="name" />
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="last_name">Parent Id:</label>
+                                {{-- <input type="text" class="form-control" name="parent_id"/> --}}
+                                <select class="form-control" id="parent_id" name="parent_id">
+                                    <option value="">Root</option>
+                                    @foreach($parentCategories as $category)
+                                        <option value="{{$category->id}}">{{$category->name}}</option>
+                                        @if(count($category->subcategory))
+                                            @include('backend.Blog.includes.subCategory',['subcategories' => $category->subcategory])
+                                        @endif 
+                                    @endforeach
+                                </select>
+                            </div>
+                    </div>
+                </div>
+                </div>
+            </div><!--card-body-->
 
-                        <div class="col-md-10">
-                            {{ html()->text('title')
-                                ->class('form-control')
-                                ->placeholder(__('Title'))
-                                ->attribute('maxlength', 191)
-                                ->required()
-                                ->autofocus() }}
-                        </div><!--col-->
-                    </div><!--form-group-->
-                    <div class="form-group row">
-                        {{ html()->label(__('Summary'))
-                            ->class('col-md-2 form-control-label')
-                            ->for('summary') }}
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col">
+                        {{-- <a type="button" class="btn btn-primary-outline" href="{{route('admin.categories.index')}}">Cancel</button> --}}
+                    </div><!--col-->
 
-                        <div class="col-md-10">
-                            {{ html()->textarea('summary')
-                                ->class('form-control')
-                                ->placeholder(__('summary'))
-                                ->attribute('maxlength', 191)
-                                ->required()
-                                ->autofocus() }}
-                        </div><!--col-->
-                    </div><!--form-group-->
-                    <div class="form-group row">
-                        {{ html()->label(__('Body'))
-                            ->class('col-md-2 form-control-label')
-                            ->for('body') }}
-
-                        <div class="col-md-10">
-                            {{ html()->textarea('body')
-                                ->class('form-control')
-                                ->placeholder(__('Body'))
-                                ->attribute('maxlength', 191)
-                                ->required()
-                                ->autofocus() }}
-                        </div><!--col-->
-                    </div><!--form-group-->
-                    <div class="form-group row">
-                        {{ html()->label(__('Image'))
-                            ->class('col-md-2 form-control-label')
-                            ->for('image') }}
-
-                        <div class="col-md-10">
-                            {{ html()->file('image')
-                                ->class('form-control')
-                                ->attribute('maxlength', 191)
-                                ->required()
-                                ->autofocus() }}
-                        </div><!--col-->
-                    </div><!--form-group-->
-                </div><!--col-->
-            </div><!--row-->
-        </div><!--card-body-->
-
-        <div class="card-footer">
-            <div class="row">
-                <div class="col">
-                    {{ form_cancel(route('admin.blog.posts.index'), __('buttons.general.cancel')) }}
-                </div><!--col-->
-
-                <div class="col text-right">
-                    {{ form_submit(__('buttons.general.crud.create')) }}
-                </div><!--col-->
-            </div><!--row-->
-        </div><!--card-footer-->
+                    <div class="col text-right">
+                        <button type="submit" class="btn btn-success">Add Category</button>
+                    </div><!--col-->
+                </div><!--row-->
+            </div><!--card-footer-->
+        </form>
     </div><!--card-->
-{{ html()->closeModelForm() }}
+
 @endsection

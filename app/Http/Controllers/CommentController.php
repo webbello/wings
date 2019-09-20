@@ -104,8 +104,13 @@ class CommentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comment $comment)
     {
-        //
+        if (!$comment->user->id) {
+            return redirect()->route('comments.index')->withFlashDanger(__('exceptions.backend.access.roles.cant_delete_admin'));
+        }
+        $comment->delete();
+        return redirect()->to(url()->previous() . '#comment-section');
+        //return back();
     }
 }
