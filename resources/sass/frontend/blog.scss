@@ -23,6 +23,10 @@
     overflow-y: scroll;
   }
   
+  .image{
+    width: 100%;
+  }
+
   /*Remove the scrollbar from Chrome, Safari, Edge and IE*/
   ::-webkit-scrollbar {
       width: 0px;
