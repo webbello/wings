@@ -23,6 +23,7 @@ window.Vue = Vue;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('quiz-component', require('./components/QuizComponent.vue').default);
 Vue.component('blog-posts', require('./components/Read.vue').default);
 Vue.component('event-calender', require('./components/EventCalender.vue').default);
 /**

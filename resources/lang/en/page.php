@@ -22,7 +22,7 @@ return [
         'events' => 'Events',
         'dashboard' => 'Dashboard',
         'login' => 'Login',
-        'blog' => 'Blog',
+        'blog' => 'E-Magazine',
         'register' => 'Register',
 
         'user' => [
