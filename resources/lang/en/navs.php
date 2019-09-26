@@ -19,6 +19,7 @@ return [
 
     'frontend' => [
         'contact' => 'Contact',
+        'blog' => 'Blog',
         'event' => 'Event',
         'dashboard' => 'Dashboard',
         'login' => 'Login',

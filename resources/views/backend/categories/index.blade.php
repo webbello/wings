@@ -26,8 +26,13 @@
                                 <div class="card-header">Categories</div>
                                 <div class="card-body">
                                     @foreach($parentCategories as $category)
-                                        <ul>
-                                            <li>{{$category->name}}</li>
+                                        <ul class="list-group">
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">{{$category->name}}
+                                            <span class="badge ">
+                                                @include('backend.categories.includes.actions', ['category' => $category])
+                                            </span>
+                                            </li>
+                                            
                                             @if(count($category->subcategory))
                                                  @include('backend.categories.includes.subCategoryList',['subcategories' => $category->subcategory])
                                             @endif 

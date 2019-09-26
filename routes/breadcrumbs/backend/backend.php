@@ -19,7 +19,9 @@ Breadcrumbs::for('admin.categories.index', function ($trail) {
 Breadcrumbs::for('admin.categories.create', function ($trail) {
     $trail->push(__('strings.backend.blog.title'), route('admin.categories.create'));
 });
-
+Breadcrumbs::for('admin.categories.edit', function ($trail) {
+    $trail->push(__('strings.backend.blog.title'), route('admin.categories.edit'));
+});
 
 require __DIR__.'/auth.php';
 require __DIR__.'/log-viewer.php';

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Blog;
 use App\Models\Category;
 use App\Models\Blog\Post;
 use App\Models\Tag;
+use App\Events\Backend\Blog\PostDeleted;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\Blog\ManagePostRequest;
@@ -167,8 +168,14 @@ class PostController extends Controller
      * @param  \App\Models\Blog\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(ManagePostRequest $request, Post $post)
     {
-        //
+
+        //$this->roleRepository->deleteById($post->id);
+        $post->delete();
+
+        event(new PostDeleted($post));
+
+        return redirect()->route('admin.blog.posts.index')->withFlashSuccess(__('alerts.backend.posts.deleted'));
     }
 }
