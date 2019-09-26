@@ -7,7 +7,7 @@
             <img src="{{$comment->user->picture}}" width="40px" class="rounded mr-3" alt="{{$comment->user->name}}">
             <div class="media-body">
                 <h6 class="m-0 font-weight-bold">{{ $comment->user->name }}
-                        @if($logged_in_user->id == $comment->user->id)
+                        @if($logged_in_user && $logged_in_user->id == $comment->user->id)
                         <div class="btn-group dropleft float-right">
                             <a href="" class=" ml-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-ellipsis-v"></i>
