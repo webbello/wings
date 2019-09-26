@@ -33,3 +33,21 @@
     -ms-overflow-style: none !important;
   }
   
+  @media (max-width: 700px) {
+    .row-height{
+      height: auto;
+    }
+    .left{
+      overflow-y: hidden;
+    }
+    
+    .right{
+      overflow-y: hidden;
+    }
+    
+    .mid{
+      //background-color: green;
+      height: 600px;
+      overflow-y: hidden
+    }
+  }
