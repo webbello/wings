@@ -22,7 +22,7 @@
                     </header>
 
                     <!-- questionTitle -->
-                    <h2 class="titleContainer title">{{ quiz.questions[questionIndex].text }}</h2>
+                    <h5 class="titleContainer">{{ quiz.questions[questionIndex].text }}</h5>
 
                     <!-- quizOptions -->
                     <div class="optionContainer">
