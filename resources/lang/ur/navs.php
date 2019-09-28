@@ -18,13 +18,13 @@ return [
     ],
 
     'frontend' => [
-        'contact' => 'رابطہ کریں۔',
-        'photo_gallery', 'فوٹو گیلری۔',
+        'contact' => 'رابطہ',
+        'photo_gallery', 'فوٹو گیلری',
         'event' => 'تقریب',
         'dashboard' => 'ڈیش بورڈ',
-        'login' => 'لاگ ان کریں',
+        'login' => 'لاگ ان',
         'macros' => 'میکروس۔',
-        'register' => 'رجسٹر کریں۔',
+        'register' => 'رجسٹر',
 
         'blog' => [
             'index' => 'بلاگ',
