@@ -25,7 +25,7 @@ return [
         'register' => 'رجسٹر کریں۔',
 
         'photo' => [
-            'gallery' => 'فوٹو گیلری۔',
+            'gallery' => 'فوٹو گیلری',
         ],
         'blog' => [
             'index' => 'رسالہ۔',
