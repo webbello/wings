@@ -12,9 +12,9 @@ return [
     |
     */
 
-    'password' => 'Passwords must be at least six characters and match the confirmation.',
-    'reset' => 'Your password has been reset!',
-    'sent' => 'We have e-mailed your password reset link!',
+    'password' => 'پاس ورڈ کم از کم چھ حروف کے ہونے چاہئیں اور تصدیق سے مماثل ہوں۔',
+    'reset' => 'آپ کا پاس ورڈ دوبارہ ترتیب دیا گیا ہے!',
+    'sent' => 'ہم نے آپ کے پاس ورڈ کو دوبارہ ترتیب دینے والے لنک کو ای میل کیا ہے!',
     'token' => 'This password reset token is invalid.',
-    'user' => "We can't find a user with that e-mail address.",
+    'user' => "ہم اس ای میل پتے کے ساتھ کوئی صارف نہیں ڈھونڈ سکتے ہیں۔",
 ];

@@ -13,37 +13,37 @@ return [
     */
 
     'general' => [
-        'home' => 'Home',
-        'logout' => 'Logout',
+        'home' => 'ঘর',
+        'logout' => 'প্রস্থান',
     ],
 
     'frontend' => [
-        'contact' => 'Contact',
-        'events' => 'Events',
-        'dashboard' => 'Dashboard',
-        'login' => 'Login',
-        'register' => 'Register',
+        'contact' => 'যোগাযোগ',
+        'events' => 'ঘটনাবলী',
+        'dashboard' => 'ড্যাশবোর্ড',
+        'login' => 'লগইন',
+        'register' => 'নিবন্ধন',
 
         'photo' => [
-            'gallery' => 'Photo Gallery',
+            'gallery' => 'ফটো গ্যালারি',
         ],
         'blog' => [
-            'index' => 'E-Magazine',
-            'single' => 'Blog Post',
+            'index' => 'পত্রিকা',
+            'single' => 'ব্লগ পোস্ট',
         ],
 
         'user' => [
-            'dashboard' => 'Dashboard',
-            'account' => 'My Account',
-            'administration' => 'Administration',
-            'change_password' => 'Change Password',
-            'my_information' => 'My Information',
-            'profile' => 'Profile',
+            'dashboard' => 'ড্যাশবোর্ড',
+            'account' => 'আমার অ্যাকাউন্ট',
+            'administration' => 'প্রশাসন',
+            'change_password' => 'পাসওয়ার্ড পরিবর্তন করুন',
+            'my_information' => 'আমার তথ্য',
+            'profile' => 'প্রোফাইলের',
         ],
         
         'auth' => [
-            'login' => 'Login',
-            'register' => 'Register',
+            'login' => 'লগইন',
+            'register' => 'নিবন্ধন',
         ],
         
     ],

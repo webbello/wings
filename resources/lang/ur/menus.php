@@ -14,7 +14,7 @@ return [
 
     'backend' => [
         'access' => [
-            'title' => 'Access',
+            'title' => 'رسائی۔',
 
             'roles' => [
                 'all' => 'All Roles',
@@ -25,8 +25,8 @@ return [
             ],
 
             'users' => [
-                'all' => 'All Users',
-                'change-password' => 'Change Password',
+                'all' => 'تمام صارفین',
+                'change-password' => 'پاس ورڈ تبدیل کریں',
                 'create' => 'Create User',
                 'deactivated' => 'Deactivated Users',
                 'deleted' => 'Deleted Users',
@@ -36,44 +36,44 @@ return [
             ],
         ],
         'blog' => [
-            'title' => 'Blog',
+            'title' => 'بلاگ',
 
             'posts' => [
                 'all' => 'All Roles',
                 'create' => 'Create Role',
                 'edit' => 'Edit Role',
                 'management' => 'Role Management',
-                'main' => 'Roles',
+                'main' => 'کردار۔',
             ],
 
             'users' => [
-                'all' => 'All Users',
-                'change-password' => 'Change Password',
-                'create' => 'Create User',
-                'deactivated' => 'Deactivated Users',
-                'deleted' => 'Deleted Users',
-                'edit' => 'Edit User',
-                'main' => 'Users',
-                'view' => 'View User',
+                'all' => 'تمام صارفین',
+                'change-password' => 'پاس ورڈ تبدیل کریں',
+                'create' => 'صارف بنائیں۔',
+                'deactivated' => 'غیر فعال صارفین',
+                'deleted' => 'حذف شدہ صارفین',
+                'edit' => 'صارف میں ترمیم کریں۔',
+                'main' => 'صارفین',
+                'view' => 'صارف دیکھیں',
             ],
         ],
 
         'log-viewer' => [
-            'main' => 'Log Viewer',
-            'dashboard' => 'Dashboard',
-            'logs' => 'Logs',
+            'main' => 'لاگ ویور۔',
+            'dashboard' => 'ڈیش بورڈ',
+            'logs' => 'نوشتہ جات',
         ],
 
         'sidebar' => [
-            'dashboard' => 'Dashboard',
-            'general' => 'General',
-            'history' => 'History',
-            'system' => 'System',
+            'dashboard' => 'ڈیش بورڈ',
+            'general' => 'جنرل۔',
+            'history' => 'تاریخ',
+            'system' => 'سسٹم۔',
         ],
     ],
 
     'language-picker' => [
-        'language' => 'Language',
+        'language' => 'زبان',
         /*
          * Add the new language to this array.
          * The key should have the same language code as the folder name.

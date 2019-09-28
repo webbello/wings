@@ -12,6 +12,7 @@ return [
     |
     */
 
-    'administrator' => 'Administrator',
-    'user' => 'User',
+    'administrator' => 'ایڈمنسٹریٹر۔',
+    'user' => 'صارف',
+    'author' => 'مصنف',
 ];

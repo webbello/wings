@@ -73,7 +73,7 @@ return [
     ],
 
     'language-picker' => [
-        'language' => 'Language',
+        'language' => 'भाषा',
         /*
          * Add the new language to this array.
          * The key should have the same language code as the folder name.
