@@ -30,9 +30,9 @@ $(function() {
         var scroll = $(window).scrollTop();
 
         if (scroll >= 250) {
-            header.removeClass('bg-dark').addClass("bg-dark");
+            // header.removeClass('bg-dark').addClass("bg-dark");
         } else {
-            header.removeClass("bg-dark").addClass('darkHeader');
+            // header.removeClass("bg-dark").addClass('darkHeader');
         }
     });
 });

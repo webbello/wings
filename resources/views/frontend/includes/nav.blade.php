@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <a href="{{ route('frontend.index') }}" class="navbar-brand">{{ app_name() }}</a>
 
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="@lang('labels.general.toggle_navigation')">
@@ -42,6 +42,7 @@
                 </li>
             @endguest
 
+            <li class="nav-item"><a href="{{route('frontend.photo.gallery')}}" class="nav-link {{ active_class(Route::is('frontend.photo.gallery*')) }}">Photo Gallery</a></li>
             <li class="nav-item"><a href="{{route('frontend.blog')}}" class="nav-link {{ active_class(Route::is('frontend.blog*')) }}">@lang('navs.frontend.blog')</a></li>
             <li class="nav-item"><a href="{{route('frontend.contact')}}" class="nav-link {{ active_class(Route::is('frontend.contact')) }}">@lang('navs.frontend.contact')</a></li>
             <li class="nav-item"><a href="{{route('frontend.events')}}" class="nav-link {{ active_class(Route::is('frontend.events')) }}">@lang('navs.frontend.event')</a></li>

@@ -20,6 +20,7 @@ return [
     'frontend' => [
         'contact' => 'Contact',
         'blog' => 'Blog',
+        'photo_gallery', 'Photo Gallery',
         'event' => 'Event',
         'dashboard' => 'Dashboard',
         'login' => 'Login',
