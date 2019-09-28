@@ -43,7 +43,7 @@
             @endguest
 
             <li class="nav-item"><a href="{{route('frontend.photo.gallery')}}" class="nav-link {{ active_class(Route::is('frontend.photo.gallery*')) }}">@lang('page.frontend.photo.gallery')</a></li>
-            <li class="nav-item"><a href="{{route('frontend.blog')}}" class="nav-link {{ active_class(Route::is('frontend.blog*')) }}">@lang('navs.frontend.blog')</a></li>
+            <li class="nav-item"><a href="{{route('frontend.blog.index')}}" class="nav-link {{ active_class(Route::is('frontend.blog*')) }}">@lang('navs.frontend.blog.index')</a></li>
             <li class="nav-item"><a href="{{route('frontend.contact')}}" class="nav-link {{ active_class(Route::is('frontend.contact')) }}">@lang('navs.frontend.contact')</a></li>
             <li class="nav-item"><a href="{{route('frontend.events')}}" class="nav-link {{ active_class(Route::is('frontend.events')) }}">@lang('navs.frontend.event')</a></li>
         </ul>
