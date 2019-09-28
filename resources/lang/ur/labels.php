@@ -123,35 +123,35 @@ return [
 
     'frontend' => [
         'auth' => [
-            'login_box_title' => 'Login',
-            'login_button' => 'Login',
-            'login_with' => 'Login with :social_media',
-            'register_box_title' => 'Register',
-            'register_button' => 'Register',
-            'remember_me' => 'Remember Me',
+            'login_box_title' => 'لاگ ان کریں',
+            'login_button' => 'لاگ ان کریں',
+            'login_with' => 'کے ساتھ لاگ ان :social_media',
+            'register_box_title' => 'رجسٹر کریں۔',
+            'register_button' => 'رجسٹر کریں۔',
+            'remember_me' => 'مجھے یاد رکھیں',
         ],
 
         'contact' => [
-            'box_title' => 'Contact Us',
-            'button' => 'Send Information',
+            'box_title' => 'ہم سے رابطہ کریں',
+            'button' => 'معلومات بھیجیں۔',
         ],
 
         'passwords' => [
-            'expired_password_box_title' => 'Your password has expired.',
-            'forgot_password' => 'Forgot Your Password?',
-            'reset_password_box_title' => 'Reset Password',
-            'reset_password_button' => 'Reset Password',
-            'update_password_button' => 'Update Password',
-            'send_password_reset_link_button' => 'Send Password Reset Link',
+            'expired_password_box_title' => 'آپ کے پاس ورڈ کی میعاد ختم ہوگئی ہے۔',
+            'forgot_password' => 'اپنا پاس ورڈ بھول گئے؟',
+            'reset_password_box_title' => 'پاس ورڈ ری سیٹ',
+            'reset_password_button' => 'پاس ورڈ ری سیٹ',
+            'update_password_button' => 'پاس ورڈ کو اپ ڈیٹ کریں۔',
+            'send_password_reset_link_button' => 'پاس ورڈ ری سیٹ کریں لنک بھیجیں۔',
         ],
 
         'user' => [
             'passwords' => [
-                'change' => 'Change Password',
+                'change' => 'پاس ورڈ تبدیل کریں',
             ],
 
             'profile' => [
-                'avatar' => 'Avatar',
+                'avatar' => 'اوتار۔',
                 'created_at' => 'Created At',
                 'edit_information' => 'Edit Information',
                 'email' => 'E-mail',

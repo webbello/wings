@@ -15,28 +15,28 @@ return [
     'backend' => [
         'access' => [
             'users' => [
-                'delete_user_confirm' => 'Are you sure you want to delete this user permanently? Anywhere in the application that references this user\'s id will most likely error. Proceed at your own risk. This can not be un-done.',
+                'delete_user_confirm' => 'کیا آپ واقعی اس صارف کو مستقل طور پر حذف کرنا چاہتے ہیں؟ درخواست میں کہیں بھی جو اس صارف کے شناخت کا حوالہ دیتا ہے تو غالبا. غلطی ہوگی۔ اپنے جوکھم پر آگے بڑھیں۔ یہ کام نہیں کیا جاسکتا۔',
                 'if_confirmed_off' => '(If confirmed is off)',
-                'no_deactivated' => 'There are no deactivated users.',
-                'no_deleted' => 'There are no deleted users.',
-                'restore_user_confirm' => 'Restore this user to its original state?',
+                'no_deactivated' => 'کوئی غیر فعال صارف نہیں ہیں۔',
+                'no_deleted' => 'کوئی حذف شدہ صارف نہیں ہیں۔',
+                'restore_user_confirm' => 'اس صارف کو اس کی اصل حالت میں بحال کریں؟',
             ],
         ],
 
         'dashboard' => [
-            'title' => 'Dashboard',
-            'welcome' => 'Welcome',
+            'title' => 'ڈیش بورڈ',
+            'welcome' => 'خوش آمدید',
         ],
 
         'general' => [
-            'all_rights_reserved' => 'All Rights Reserved.',
-            'are_you_sure' => 'Are you sure you want to do this?',
+            'all_rights_reserved' => 'جملہ حقوق محفوظ ہیں.',
+            'are_you_sure' => 'کیا آپ واقعی یہ کرنا چاہتے ہیں؟',
             'boilerplate_link' => 'Wings Of ESC',
-            'continue' => 'Continue',
-            'member_since' => 'Member since',
+            'continue' => 'جاری رہے',
+            'member_since' => 'چونکہ اراکین',
             'minutes' => ' minutes',
             'search_placeholder' => 'Search...',
-            'timeout' => 'You were automatically logged out for security reasons since you had no activity in ',
+            'timeout' => 'آپ سیکیورٹی وجوہات کی بناء پر خود بخود لاگ آؤٹ ہوگئے تھے کیونکہ آپ میں کوئی سرگرمی نہیں تھی۔ ',
 
             'see_all' => [
                 'messages' => 'See all messages',

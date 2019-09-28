@@ -13,30 +13,30 @@ return [
     */
 
     'general' => [
-        'home' => 'Home',
-        'logout' => 'Logout',
+        'home' => 'گھر',
+        'logout' => 'لاگ آوٹ',
     ],
 
     'frontend' => [
-        'contact' => 'Contact',
-        'photo_gallery', 'Photo Gallery',
-        'event' => 'Event',
-        'dashboard' => 'Dashboard',
-        'login' => 'Login',
-        'macros' => 'Macros',
-        'register' => 'Register',
+        'contact' => 'رابطہ کریں۔',
+        'photo_gallery', 'فوٹو گیلری۔',
+        'event' => 'تقریب',
+        'dashboard' => 'ڈیش بورڈ',
+        'login' => 'لاگ ان کریں',
+        'macros' => 'میکروس۔',
+        'register' => 'رجسٹر کریں۔',
 
         'blog' => [
-            'index' => 'Blog',
-            'single' => 'Blog Post',
+            'index' => 'بلاگ',
+            'single' => 'بلاگ پوسٹ',
         ],
 
         'user' => [
-            'account' => 'My Account',
-            'administration' => 'Administration',
-            'change_password' => 'Change Password',
-            'my_information' => 'My Information',
-            'profile' => 'Profile',
+            'account' => 'میرا اکاونٹ',
+            'administration' => 'انتظامیہ۔',
+            'change_password' => 'پاس ورڈ تبدیل کریں',
+            'my_information' => 'میری معلومات',
+            'profile' => 'پروفائل',
         ],
     ],
 ];
