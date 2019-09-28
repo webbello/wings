@@ -14,7 +14,7 @@ use App\Http\Controllers\Backend\PhotoGalleryController;
  * All route names are prefixed with 'frontend.'.
  */
 Route::get('/', [HomeController::class, 'index'])->name('index');
-Route::get('blog', [PostController::class, 'all'])->name('blog');
+Route::get('blog', [PostController::class, 'all'])->name('blog.index');
 Route::get('blog/posts/{post}', [PostController::class, 'single'])->name('blog.single');
 Route::get('events', [EventController::class, 'index'])->name('events');
 Route::get('events/create', [EventController::class, 'create'])->name('events.create');
