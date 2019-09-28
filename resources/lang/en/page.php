@@ -35,6 +35,7 @@ return [
         ],
         'auth' => [
             'login' => 'Login',
+            'register' => 'Register',
         ],
         'photo' => [
             'gallery' => 'Photo Gallery',
