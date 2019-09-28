@@ -13,30 +13,30 @@ return [
     */
 
     'general' => [
-        'home' => 'Home',
-        'logout' => 'Logout',
+        'home' => 'घर',
+        'logout' => 'लॉग आउट',
     ],
 
     'frontend' => [
-        'contact' => 'Contact',
-        'photo_gallery', 'Photo Gallery',
-        'event' => 'Event',
-        'dashboard' => 'Dashboard',
-        'login' => 'Login',
+        'contact' => 'संपर्क',
+        'photo_gallery', 'फोटो गैलरी',
+        'event' => 'आयोजन',
+        'dashboard' => 'डैशबोर्ड',
+        'login' => 'लॉग इन',
         'macros' => 'Macros',
-        'register' => 'Register',
+        'register' => 'रजिस्टर',
 
         'blog' => [
-            'index' => 'Blog',
-            'single' => 'Blog Post',
+            'index' => 'ब्लॉग',
+            'single' => 'ब्लॉग पोस्ट',
         ],
 
         'user' => [
-            'account' => 'My Account',
-            'administration' => 'Administration',
-            'change_password' => 'Change Password',
-            'my_information' => 'My Information',
-            'profile' => 'Profile',
+            'account' => 'मेरा खाता',
+            'administration' => 'शासन प्रबंध',
+            'change_password' => 'पासवर्ड बदलें',
+            'my_information' => 'मेरी जानकारी',
+            'profile' => 'प्रोफाइल',
         ],
     ],
 ];

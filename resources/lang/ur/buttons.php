@@ -16,14 +16,14 @@ return [
         'access' => [
             'users' => [
                 'activate' => 'Activate',
-                'change_password' => 'Change Password',
-                'clear_session' => 'Clear Session',
-                'confirm' => 'Confirm',
-                'deactivate' => 'Deactivate',
-                'delete_permanently' => 'Delete Permanently',
-                'login_as' => 'Login As :user',
-                'resend_email' => 'Resend Confirmation E-mail',
-                'restore_user' => 'Restore User',
+                'change_password' => 'پاس ورڈ تبدیل کریں',
+                'clear_session' => 'سیشن صاف کریں۔',
+                'confirm' => 'تصدیق کریں۔',
+                'deactivate' => 'غیر فعال کریں۔',
+                'delete_permanently' => 'مستقل طور پر حذف کریں۔',
+                'login_as' => 'بطور لاگ ان :user',
+                'resend_email' => 'دوبارہ تصدیقی میل بھیجیں',
+                'restore_user' => 'صارف کو بحال کریں۔',
                 'unconfirm' => 'Un-confirm',
                 'unlink' => 'Unlink',
             ],
@@ -32,14 +32,14 @@ return [
 
     'emails' => [
         'auth' => [
-            'confirm_account' => 'Confirm Account',
-            'reset_password' => 'Reset Password',
+            'confirm_account' => 'اکاؤنٹ کی توثیق کریں۔',
+            'reset_password' => 'پاس ورڈ ری سیٹ',
         ],
     ],
 
     'general' => [
-        'cancel' => 'Cancel',
-        'continue' => 'Continue',
+        'cancel' => 'منسوخ کریں',
+        'continue' => 'جاری رہے',
 
         'crud' => [
             'create' => 'Create',

@@ -11,8 +11,8 @@ return [
     */
 
     '404' => [
-        'title' => 'Page Not Found',
-        'description' => 'Sorry, but the page you were trying to view does not exist.',
+        'title' => 'صفحہ نہیں ملا',
+        'description' => 'معذرت ، لیکن آپ جس صفحے کو دیکھنے کی کوشش کر رہے تھے وہ موجود نہیں ہے۔',
     ],
 
     '503' => [
