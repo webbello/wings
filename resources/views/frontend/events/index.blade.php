@@ -59,9 +59,9 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <h3 class="line-bottom border-bottom mt-3">About Us</h3>
-                    <img src="img/frontend/site/about-plan.jpg" class="img-fluid" alt="">
+                    <img src="img/frontend/site/about-plan.jpg" class="rounded img-fluid" alt="">
                     <p class="mt-15">Lorem ipsum dolor sit amet, conse ctetur adipis elit. Totam perferendis, assumenda vitae cum beatae Pariatur, ratione adipis elit. Totam perfereding.</p>
-                    <a href="#" class="btn btn-colored btn-sm btn-theme-colored">read more</a>
+                    <a href="#" class="btn btn-outline-primary btn-sm btn-theme-colored">read more</a>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <h3 class="text-uppercase line-bottom mt-sm-30 mt-3">Get <span class="text-theme-colored"> Involved</span></h3>
