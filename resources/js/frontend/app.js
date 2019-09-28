@@ -24,6 +24,7 @@ window.Vue = Vue;
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('quiz-component', require('./components/QuizComponent.vue').default);
+Vue.component('gallery-component', require('./components/GalleryComponent.vue').default);
 Vue.component('blog-posts', require('./components/Read.vue').default);
 Vue.component('event-calender', require('./components/EventCalender.vue').default);
 /**

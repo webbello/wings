@@ -33,5 +33,11 @@ return [
             'my_information' => 'My Information',
             'profile' => 'Profile',
         ],
+        'auth' => [
+            'login' => 'Login',
+        ],
+        'photo' => [
+            'gallery' => 'Photo Gallery',
+        ],
     ],
 ];

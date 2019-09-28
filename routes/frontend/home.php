@@ -7,6 +7,7 @@ use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\User\AccountController;
 use App\Http\Controllers\Frontend\User\ProfileController;
 use App\Http\Controllers\Frontend\User\DashboardController;
+use App\Http\Controllers\Backend\PhotoGalleryController;
 
 /*
  * Frontend Controllers
@@ -18,7 +19,7 @@ Route::get('blog/posts/{post}', [PostController::class, 'single'])->name('blog.s
 Route::get('events', [EventController::class, 'index'])->name('events');
 Route::get('events/create', [EventController::class, 'create'])->name('events.create');
 Route::post('events/store', [EventController::class, 'store'])->name('events.store');
-
+Route::get('photo_gallery', [PhotoGalleryController::class, 'index'])->name('photo.gallery');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact/send', [ContactController::class, 'send'])->name('contact.send');
 
