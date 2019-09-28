@@ -7,5 +7,5 @@
         </strong> @lang('strings.backend.general.all_rights_reserved')
     </div>
 
-    <div class="ml-auto">Theme by <a href="http://coreui.io">Irfan</a></div>
+    <div class="ml-auto">By <a href="#">Irfan</a></div>
 </footer>
