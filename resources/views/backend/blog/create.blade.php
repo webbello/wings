@@ -45,7 +45,7 @@
         
                     <div class="form-group">
                         <label for="summary">Summary:</label>
-                        <textarea name="summary" id="summary" placeholder="summary" maxlength="191" required="required" autofocus="autofocus" class="form-control"></textarea>
+                        <textarea name="summary" id="summary" placeholder="summary" required="required" autofocus="autofocus" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="body">Body:</label>
