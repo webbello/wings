@@ -16,7 +16,7 @@
     },
     "devDependencies": {
         "@coreui/coreui": "^2.1.12",
-        "@fortawesome/fontawesome-free": "^5.9.0",
+        "@fortawesome/fontawesome-free": "^5.11.2",
         "@vue/test-utils": "^1.0.0-beta.29",
         "axios": "^0.19",
         "babel-core": "^7.0.0-bridge.0",
@@ -32,9 +32,9 @@
         "perfect-scrollbar": "^1.4.0",
         "popper.js": "^1.15.0",
         "resolve-url-loader": "^2.3.2",
-        "sass": "^1.21.0",
+        "sass": "^1.22.12",
         "sass-loader": "^7.1.0",
-        "sweetalert2": "^8.13.0",
+        "sweetalert2": "^8.18.0",
         "vue": "^2.6.10",
         "vue-jest": "^3.0.4",
         "vue-template-compiler": "^2.6.10"
@@ -65,7 +65,8 @@
     },
     "dependencies": {
         "@ckeditor/ckeditor5-build-classic": "^12.4.0",
-        "@ckeditor/ckeditor5-vue": "^1.0.0-beta.2",
+        "@ckeditor/ckeditor5-image": "^14.0.0",
+        "@ckeditor/ckeditor5-vue": "^1.0.0",
         "@fullcalendar/core": "^4.3.1",
         "@fullcalendar/daygrid": "^4.3.0",
         "@fullcalendar/interaction": "^4.3.0",
