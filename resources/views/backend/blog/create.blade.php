@@ -45,11 +45,11 @@
         
                     <div class="form-group">
                         <label for="summary">Summary:</label>
-                        <textarea name="summary" id="summary" placeholder="summary" maxlength="191" required="required" autofocus="autofocus" class="form-control"></textarea>
+                        <textarea name="summary" id="summary" placeholder="summary" required="required" autofocus="autofocus" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="body">Body:</label>
-                        <textarea name="body" id="editor" placeholder="Body" maxlength="191" rows="10" autofocus="autofocus" class="form-control"></textarea>                            
+                        <textarea name="body" data-lang="{{app()->getLocale()}}" id="editor" placeholder="Body" maxlength="191" rows="10" autofocus="autofocus" class="form-control"></textarea>                            
                     </div>
                     <div class="form-group">    
                         <label for="image">Image</label>

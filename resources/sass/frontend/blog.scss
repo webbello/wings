@@ -44,6 +44,22 @@
     width: 100%;
   }
 
+  figure.image-style-side {
+    float: right;
+    width: 50%;
+    padding: 1rem 0 1rem 1rem;
+  }
+
+  figure.image.image-style-align-right {
+    float: right;
+    width: 50%;
+  }
+  figure.image.image-style-align-left {
+    float: left;
+    width: 50%;
+    padding: 1rem 1rem 1rem 0;
+  }
+
   /*Remove the scrollbar from Chrome, Safari, Edge and IE*/
   ::-webkit-scrollbar {
       width: 0px;

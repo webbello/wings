@@ -46,7 +46,8 @@
         <img class="card-img-top img-fluid" src=" {!! !empty($post->image) ? '/storage/uploads/posts/' . $post->image :  'http://placehold.it/750x300' !!} " alt="Card image cap">
         <div class="card-body">
           <h2 class="card-title text-center">{{ $post->title }}</h2>
-          <div class="card-text"> {!! html_entity_decode(Str::limit($post->body, $limit = 280, $end = '...')) !!} </div>
+          {{-- <div class="card-text"> {!! html_entity_decode(Str::words($post->body, $limit = 16, $end = '...')) !!} </div> --}}
+          <div class="card-text clearfix"> {!! html_entity_decode($post->summary) !!} </div>
           {{-- <a href="/blog/posts/{{ $post->id }}" class="btn btn-primary">Read More &rarr;</a> --}}
           <a href="{{ route('frontend.blog.single', $post->id) }}" class="btn btn-primary">Read More &rarr;</a>
 
