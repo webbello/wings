@@ -936,8 +936,26 @@ h6 {
 --------------------------------*/
 
 #team {
-  background: #fff;
-  padding: 60px 0;
+  background: url("../img/frontend/site/about-bg.jpg") center top no-repeat fixed;
+  background-size: cover;
+  padding: 60px 0 40px 0;
+  position: relative;
+}
+
+#team::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.72);
+  z-index: 9;
+}
+#team .container {
+  position: relative;
+  z-index: 10;
+
 }
 
 #team .member {

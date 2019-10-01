@@ -9,9 +9,9 @@
     @include('frontend.includes.upcoming-events')
     @include('frontend.includes.about')
     @include('frontend.includes.services')
-    @include('frontend.includes.quiz')
+    {{-- @include('frontend.includes.quiz') --}}
     @include('frontend.includes.call-to-action')
-    @include('frontend.includes.facts')
+    {{-- @include('frontend.includes.facts') --}}
     @include('frontend.includes.team')
     
     {{-- @include('frontend.includes.example') --}}

@@ -15,7 +15,7 @@
         </ul>
         <p>Posted {{ !! !empty($post->created_at) ? $post->created_at->diffForHumans() : $post->created_at }} </p>
         <hr>
-        <div class="blog-post">
+        <div class="blog-post clearfix">
           <img class="img-fluid rounded" src=" {!! !empty($post->image) ? '/storage/uploads/posts/' . $post->image :  'http://placehold.it/750x300' !!} " alt="">
           <hr>
           {!! html_entity_decode($post->body) !!}
