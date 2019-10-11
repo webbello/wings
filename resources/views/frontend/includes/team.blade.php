@@ -146,7 +146,7 @@
                 <div class="member-info">
                     <div class="member-info-content">
                     <h4>Rashid Jamil</h4>
-                    <span>Accountant</span>
+                    <span>Singer</span>
                     <div class="social">
                         <a href=""><i class="fab fa-twitter"></i></a>
                         <a href=""><i class="fab fa-facebook"></i></a>
