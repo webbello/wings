@@ -7,8 +7,9 @@
         <header class="section-header">
         <h3>About Us</h3>
         <h5>Educational support Council (E.S.C.) taught us the same when we were in our important stages of our education. Well! we are the ex-students of E.S.C.</h5>
-        <p>It was on 3rd of May 2009 that a handful of ex-students from Educational Support Council decided to form an organisation so that they can function in a more precise and focused steps. It was not that they were not there but on the above mentioned date they got a name. And the name was &#8220;Wings of ESC&#8221;. In order to draft a &#8220;memorandum of association&#8221; of the organisation &#8220;Wings of ESC&#8221;, a <a href="https://wingsofesc.wordpress.com/adhoc/">committee </a>was formed. The memorandum which was drafted are as follows&#8230;</p>
-
+        <p>A humble desire to give back to E.S.C. (Educational Support Council) and the society at large while having the inner pleasure to reach out to the distressed and being tied together by a value system that transforms the past students of E.S.C., Kolkata into “men and women with excellence” gave birth to Wings of ESC - an alumni association in the year 2009. The association is registered under the West Bengal societies Act (Sl. No. 37631 of 2015-2016). </p>
+        <p>Wings of ESC in its limited capacity has functioned very actively since its inception. Apart from regular calendar events like supporting in invigilation setup, career counselling, quarterly meetups, only to name a few, the association also organizes computer literacy classes, workshops for personality development, reading and writing, medical awareness, etc.</p> 
+        
         </header>
 
         <div class="row about-cols">
