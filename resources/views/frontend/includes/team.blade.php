@@ -4,7 +4,7 @@
     <section id="team">
         <div class="container">
             <div class="section-header wow fadeInUp">
-            <h3>Team</h3>
+            <h3>Our GCMs </h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
             </div>
             <div class="customNavigation clearfix mb-1">
@@ -17,10 +17,10 @@
     
             <div class=" wow fadeInUp">
                 <div class="member">
-                <img src="img/frontend/site/team-1.jpg" class="img-fluid" alt="">
+                <img src="img/frontend/site/team/tanzeel_haider.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                     <div class="member-info-content">
-                    <h4>Walter White</h4>
+                    <h4>Tanzeel Haider</h4>
                     <span>Chief Executive Officer</span>
                     <div class="social">
                         <a href=""><i class="fab fa-twitter"></i></a>
@@ -35,11 +35,11 @@
     
             <div class=" wow fadeInUp" data-wow-delay="0.1s">
                 <div class="member">
-                <img src="img/frontend/site/team-2.jpg" class="img-fluid" alt="">
+                <img src="img/frontend/site/team/md-shadaab-alam.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                     <div class="member-info-content">
-                    <h4>Sarah Jhonson</h4>
-                    <span>Product Manager</span>
+                    <h4>Md Shadaab Alam</h4>
+                    <span>President</span>
                     <div class="social">
                         <a href=""><i class="fab fa-twitter"></i></a>
                         <a href=""><i class="fab fa-facebook"></i></a>
@@ -53,10 +53,10 @@
     
             <div class=" wow fadeInUp" data-wow-delay="0.2s">
                 <div class="member">
-                <img src="img/frontend/site/team-3.jpg" class="img-fluid" alt="">
+                <img src="img/frontend/site/team/parvez_ahmed.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                     <div class="member-info-content">
-                    <h4>William Anderson</h4>
+                    <h4>Parvez Ahmed</h4>
                     <span>CTO</span>
                     <div class="social">
                         <a href=""><i class="fab fa-twitter"></i></a>
@@ -71,10 +71,10 @@
     
             <div class=" wow fadeInUp" data-wow-delay="0.3s">
                 <div class="member">
-                <img src="img/frontend/site/team-4.jpg" class="img-fluid" alt="">
+                <img src="img/frontend/site/team/sk-farid.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                     <div class="member-info-content">
-                    <h4>Amanda Jepson</h4>
+                    <h4>Sk Farid</h4>
                     <span>Accountant</span>
                     <div class="social">
                         <a href=""><i class="fab fa-twitter"></i></a>
@@ -88,10 +88,10 @@
             </div>
             <div class=" wow fadeInUp" data-wow-delay="0.4s">
                 <div class="member">
-                <img src="img/frontend/site/team-1.jpg" class="img-fluid" alt="">
+                <img src="img/frontend/site/team/arshi_salim.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                     <div class="member-info-content">
-                    <h4>Walter White</h4>
+                    <h4>Arshi Salim</h4>
                     <span>Chief Executive Officer</span>
                     <div class="social">
                         <a href=""><i class="fab fa-twitter"></i></a>
@@ -106,10 +106,10 @@
     
             <div class=" wow fadeInUp" data-wow-delay="0.5s">
                 <div class="member">
-                <img src="img/frontend/site/team-2.jpg" class="img-fluid" alt="">
+                <img src="img/frontend/site/team/shakra-salim.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                     <div class="member-info-content">
-                    <h4>Sarah Jhonson</h4>
+                    <h4>Shakra Salim</h4>
                     <span>Product Manager</span>
                     <div class="social">
                         <a href=""><i class="fab fa-twitter"></i></a>
@@ -124,10 +124,10 @@
     
             <div class=" wow fadeInUp" data-wow-delay="0.6s">
                 <div class="member">
-                <img src="img/frontend/site/team-3.jpg" class="img-fluid" alt="">
+                <img src="img/frontend/site/team/zeba-zareen.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                     <div class="member-info-content">
-                    <h4>William Anderson</h4>
+                    <h4>Zeba Zareen</h4>
                     <span>CTO</span>
                     <div class="social">
                         <a href=""><i class="fab fa-twitter"></i></a>
@@ -142,10 +142,44 @@
     
             <div class=" wow fadeInUp" data-wow-delay="0.7s">
                 <div class="member">
-                <img src="img/frontend/site/team-4.jpg" class="img-fluid" alt="">
+                <img src="img/frontend/site/team/rashid_jamil.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                     <div class="member-info-content">
-                    <h4>Amanda Jepson</h4>
+                    <h4>Rashid Jamil</h4>
+                    <span>Singer</span>
+                    <div class="social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-google-plus"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class=" wow fadeInUp" data-wow-delay="0.7s">
+                <div class="member">
+                <img src="img/frontend/site/team/aman_niyaz.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                    <div class="member-info-content">
+                    <h4>Aman Niyaz</h4>
+                    <span>Accountant</span>
+                    <div class="social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-google-plus"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class=" wow fadeInUp" data-wow-delay="0.7s">
+                <div class="member">
+                <img src="img/frontend/site/team/Asif_Iqbal.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                    <div class="member-info-content">
+                    <h4>Asif Iqbal</h4>
                     <span>Accountant</span>
                     <div class="social">
                         <a href=""><i class="fab fa-twitter"></i></a>
