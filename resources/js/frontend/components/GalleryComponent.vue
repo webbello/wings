@@ -1,6 +1,6 @@
 <template>
   <div>
-    <gallery :images="images" :index="index" @close="index = null"></gallery>
+    <gallery :images="images" :index="index" :options="fullscreenOptions" @close="index = null"></gallery>
     
     <div class="card-columns">
         <div class="card" v-for="(image, imageIndex) in images"
@@ -59,6 +59,10 @@
           'https://source.unsplash.com/daily',
           'https://source.unsplash.com/collection/190727/1600x900',
         ],
+        fullscreenOptions: {
+          // Defines if the gallery should open in fullscreen mode:
+          fullScreen: false
+        },
         index: null
       };
     },
