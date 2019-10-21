@@ -9,8 +9,9 @@ class Event extends Model
     protected $fillable = [
         'title',
         'summary',
+        'image',
         'description',
-        'venu',
+        'venue',
         'city',
         'country',
         'event_by'       

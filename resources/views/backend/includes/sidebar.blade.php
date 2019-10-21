@@ -13,13 +13,22 @@
                 </a>
             </li>
             <li class="nav-item">
-                    <a class="nav-link {{
-                        active_class(Route::is('admin/categories'))
-                    }}" href="{{ route('admin.categories.index') }}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        @lang('Category')
-                    </a>
-                </li>
+                <a class="nav-link {{
+                    active_class(Route::is('admin/categories'))
+                }}" href="{{ route('admin.categories.index') }}">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    @lang('Category')
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link {{
+                    active_class(Route::is('admin/events'))
+                }}" href="{{ route('admin.events.index') }}">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    @lang('Events')
+                </a>
+            </li>
 
             @if ($logged_in_user->isAdmin())
                 <li class="nav-title">
@@ -95,6 +104,44 @@
                                 active_class(Route::is('admin/blog/posts*'))
                             }}" href="{{ route('admin.blog.posts.index') }}">
                                 @lang('labels.backend.blog.posts.list')
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="divider"></li>
+
+                <li class="nav-item nav-dropdown {{
+                    active_class(Route::is('admin/gallery*'), 'open')
+                    }}">
+                    <a class="nav-link nav-dropdown-toggle {{
+                        active_class(Route::is('admin/gallery*') || Route::is('admin/album*'))
+                    }}" href="#">
+                        <i class="nav-icon far fa-user"></i>
+                        @lang('Photo Gallery')
+
+                        @if ($pending_approval > 0)
+                            <span class="badge badge-danger">{{ $pending_approval }}</span>
+                        @endif
+                    </a>
+
+                    <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                            <a class="nav-link {{
+                                active_class(Route::is('admin/gallery*'))
+                            }}" href="{{ route('admin.gallery.index') }}">
+                                @lang('Gallery')
+
+                                @if ($pending_approval > 0)
+                                    <span class="badge badge-danger">{{ $pending_approval }}</span>
+                                @endif
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{
+                                active_class(Route::is('admin/album*'))
+                            }}" href="{{ route('admin.album.index') }}">
+                                @lang('Album')
                             </a>
                         </li>
                     </ul>

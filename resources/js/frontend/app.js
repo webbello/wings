@@ -9,9 +9,30 @@ import '../bootstrap';
 import '../plugins';
 import './custom';
 import Vue from 'vue';
+// import VueRouter    from 'vue-router'
+import GalleryComponent   from './components/GalleryComponent'
+import AlbumComponent   from './components/AlbumComponent'
+// Vue.use(VueRouter)
 
 window.Vue = Vue;
-
+// const router = new VueRouter({
+//     mode: 'history',
+//     routes: [
+//         {
+//             path: '/photo_gallery',
+//             name: 'Album',
+//             component: AlbumComponent,
+//             props: true
+//         },
+//         {
+//             path: '/photo_gallery/2',
+//             name: 'Gallery',
+//             component: GalleryComponent,
+//             props: true
+//         },
+        
+//     ],
+// });
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -26,6 +47,7 @@ window.Vue = Vue;
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('quiz-component', require('./components/QuizComponent.vue').default);
 Vue.component('gallery-component', require('./components/GalleryComponent.vue').default);
+Vue.component('album-component', require('./components/AlbumComponent.vue').default);
 Vue.component('blog-posts', require('./components/Read.vue').default);
 Vue.component('event-calender', require('./components/EventCalender.vue').default);
 /**
@@ -36,4 +58,6 @@ Vue.component('event-calender', require('./components/EventCalender.vue').defaul
 
 const app = new Vue({
     el: '#app',
+    // components: { GalleryComponent },
+    // router,
 });
