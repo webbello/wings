@@ -13,13 +13,22 @@
                 </a>
             </li>
             <li class="nav-item">
-                    <a class="nav-link {{
-                        active_class(Route::is('admin/categories'))
-                    }}" href="{{ route('admin.categories.index') }}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        @lang('Category')
-                    </a>
-                </li>
+                <a class="nav-link {{
+                    active_class(Route::is('admin/categories'))
+                }}" href="{{ route('admin.categories.index') }}">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    @lang('Category')
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link {{
+                    active_class(Route::is('admin/events'))
+                }}" href="{{ route('admin.events.index') }}">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    @lang('Events')
+                </a>
+            </li>
 
             @if ($logged_in_user->isAdmin())
                 <li class="nav-title">

@@ -14,7 +14,7 @@
 
         <div class="row about-cols">
 
-            <div class="col-md-4 wow fadeInUp">
+            <div class="col-md-6 wow fadeInUp">
                 <div class="about-col">
                 <div class="img">
                     <img src="img/frontend/site/about-mission.jpg" alt="" class="img-fluid">
@@ -22,25 +22,26 @@
                 </div>
                 <h2 class="title"><a href="#">Our Mission</a></h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                </div>
-            </div>
+                <ul>
+                    <li>To carry forward the lamp of knowledge in the society</li>
+                    <li>To promote literacy among the unfortunates</li>
+                    <li>To help and provide every possible means to the underprivileged students for the betterment</li>
+                    
+                    <li>To conduct various program and career guiding seminars</li>
+                    <a href="/our_mission" class="btn btn-primary">Read more</a>
+                    {{-- <ul>To promote the works and ideals of Education Support Council (ESC)
+                        <li>To bring in fresh and innovative ideas to run the institution smoothly</li>
+                        <li>To share the burden of the management and the coordinator on our shoulders</li>
+                        <li>To be the face and voice of management in front of the students</li>
+                        <li>To bring the problems faced by the students, to the management</li>
+                    </ul> --}}
 
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="about-col">
-                <div class="img">
-                    <img src="img/frontend/site/about-plan.jpg" alt="" class="img-fluid">
-                    <div class="icon"><i class="ion-ios-list-outline"></i></div>
-                </div>
-                <h2 class="title"><a href="#">Our Plan</a></h2>
+                </ul>
                 <p>
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                </p>
                 </div>
             </div>
 
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="about-col">
                 <div class="img">
                     <img src="img/frontend/site/about-vision.jpg" alt="" class="img-fluid">
@@ -48,8 +49,12 @@
                 </div>
                 <h2 class="title"><a href="#">Our Vision</a></h2>
                 <p>
-                    Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                    Wings of ESC envisions itself to be a collaborative organization of individuals from all walks of life. 
+                    It aims to be a platform where people from all career paths come together. Be it doctors, engineers, 
+                    lawyers, accountants, govt. service holders, people from the field of arts and many others work together with a sole objective of helping one another and creating an environment of learning and improvement. We desire to have role models and mentors for the upcoming minds of the society.
+                    <br><a href="/our_vision" class="btn btn-primary">Read more</a>
                 </p>
+                
                 </div>
             </div>
 

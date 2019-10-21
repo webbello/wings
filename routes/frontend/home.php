@@ -24,6 +24,13 @@ Route::get('photo_gallery/{id}', [AlbumController::class, 'frontend_show'])->nam
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact/send', [ContactController::class, 'send'])->name('contact.send');
 
+//pages
+Route::get('/our_mission', [HomeController::class, 'page_our_mission'])->name('our_mission');
+Route::get('/our_vision', [HomeController::class, 'page_our_vision'])->name('our_vission');
+Route::get('/our_activities', [HomeController::class, 'page_our_activities'])->name('our_activities');
+Route::get('/mission_50k', [HomeController::class, 'page_mission_50k'])->name('mission_50k');
+Route::get('/president_message', [HomeController::class, 'page_president_message'])->name('president_message');
+
 /*
  * These frontend controllers require the user to be logged in
  * All route names are prefixed with 'frontend.'
