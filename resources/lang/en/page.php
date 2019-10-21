@@ -25,7 +25,10 @@ return [
         'register' => 'Register',
 
         'photo' => [
-            'gallery' => 'Photo Gallery',
+            'gallery' => [
+                'index' => 'Photo Album',
+                'show' => 'Photo Gallery',
+            ],
         ],
         'blog' => [
             'index' => 'E-Magazine',

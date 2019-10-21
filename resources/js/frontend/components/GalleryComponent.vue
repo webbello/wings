@@ -1,12 +1,13 @@
 <template>
   <div>
-    <gallery :images="images" :index="index" @close="index = null"></gallery>
+    <gallery :images="photos" :index="index" :options="fullscreenOptions" @close="index = null"></gallery>
     
     <div class="card-columns">
-        <div class="card" v-for="(image, imageIndex) in images"
+        <div class="card" v-for="(image, imageIndex) in photos"
         :key="imageIndex"
         @click="index = imageIndex">
-            <img :src="image" class="card-img-top" alt="...">
+        <!-- {{image.image}} -->
+            <img :src="'/storage/uploads/album/'+image.album_id+'/'+image.image" class="card-img-top" alt="...">
         </div>
     </div>
   </div>
@@ -16,53 +17,20 @@
   import VueGallery from 'vue-gallery';
   
   export default {
+    props: ['photos'],
     data: function () {
       return {
-        images: [
-          'https://source.unsplash.com/random',
-          'https://source.unsplash.com/weekly?fruit',
-          'https://source.unsplash.com/weekly?water',
-          'https://source.unsplash.com/weekly?education',
-          'https://source.unsplash.com/weekly?books',
-          'https://source.unsplash.com/weekly?school',
-          'https://source.unsplash.com/weekly?help',
-          'https://source.unsplash.com/daily',
-          'https://source.unsplash.com/collection/190727/1600x900',
-          'https://source.unsplash.com/weekly?fruit',
-          'https://source.unsplash.com/weekly?water',
-          'https://source.unsplash.com/weekly?education',
-          'https://source.unsplash.com/weekly?books',
-          'https://source.unsplash.com/weekly?school',
-          'https://source.unsplash.com/weekly?help',
-          'https://source.unsplash.com/daily',
-          'https://source.unsplash.com/collection/190727/1600x900',
-          'https://source.unsplash.com/weekly?fruit',
-          'https://source.unsplash.com/weekly?water',
-          'https://source.unsplash.com/weekly?education',
-          'https://source.unsplash.com/weekly?books',
-          'https://source.unsplash.com/weekly?school',
-          'https://source.unsplash.com/weekly?help',
-          'https://source.unsplash.com/daily',
-          'https://source.unsplash.com/collection/190727/1600x900',
-          'https://source.unsplash.com/weekly?fruit',
-          'https://source.unsplash.com/weekly?water',
-          'https://source.unsplash.com/weekly?education',
-          'https://source.unsplash.com/weekly?school',
-          'https://source.unsplash.com/weekly?help',
-          'https://source.unsplash.com/daily',
-          'https://source.unsplash.com/collection/190727/1600x900',
-          'https://source.unsplash.com/weekly?fruit',
-          'https://source.unsplash.com/weekly?water',
-          'https://source.unsplash.com/weekly?books',
-          'https://source.unsplash.com/weekly?school',
-          'https://source.unsplash.com/weekly?help',
-          'https://source.unsplash.com/daily',
-          'https://source.unsplash.com/collection/190727/1600x900',
-        ],
+        
+        fullscreenOptions: {
+          // Defines if the gallery should open in fullscreen mode:
+          fullScreen: false
+        },
         index: null
       };
     },
- 
+    mounted() {
+      // console.log('photos', photos);
+    },
     components: {
       'gallery': VueGallery
     },
