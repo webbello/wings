@@ -22,3 +22,7 @@ Route::group(['prefix' => 'blog/posts/{post}'], function () {
     Route::patch('/', [PostController::class, 'update'])->name('blog.posts.update');
     Route::delete('/', [PostController::class, 'destroy'])->name('blog.posts.destroy');
 });
+
+Route::resource('events','EventController');
+Route::resource('album','AlbumController');
+Route::resource('gallery','PhotoGalleryController');

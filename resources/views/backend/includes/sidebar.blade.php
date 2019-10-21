@@ -103,6 +103,44 @@
                 <li class="divider"></li>
 
                 <li class="nav-item nav-dropdown {{
+                    active_class(Route::is('admin/gallery*'), 'open')
+                    }}">
+                    <a class="nav-link nav-dropdown-toggle {{
+                        active_class(Route::is('admin/gallery*') || Route::is('admin/album*'))
+                    }}" href="#">
+                        <i class="nav-icon far fa-user"></i>
+                        @lang('Photo Gallery')
+
+                        @if ($pending_approval > 0)
+                            <span class="badge badge-danger">{{ $pending_approval }}</span>
+                        @endif
+                    </a>
+
+                    <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                            <a class="nav-link {{
+                                active_class(Route::is('admin/gallery*'))
+                            }}" href="{{ route('admin.gallery.index') }}">
+                                @lang('Gallery')
+
+                                @if ($pending_approval > 0)
+                                    <span class="badge badge-danger">{{ $pending_approval }}</span>
+                                @endif
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{
+                                active_class(Route::is('admin/album*'))
+                            }}" href="{{ route('admin.album.index') }}">
+                                @lang('Album')
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="divider"></li>
+
+                <li class="nav-item nav-dropdown {{
                     active_class(Route::is('admin/log-viewer*'), 'open')
                 }}">
                         <a class="nav-link nav-dropdown-toggle {{

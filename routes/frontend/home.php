@@ -1,13 +1,13 @@
 <?php
 
-use App\Http\Controllers\EventController;
+use App\Http\Controllers\Backend\EventController;
 use App\Http\Controllers\Blog\PostController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\User\AccountController;
 use App\Http\Controllers\Frontend\User\ProfileController;
 use App\Http\Controllers\Frontend\User\DashboardController;
-use App\Http\Controllers\Backend\PhotoGalleryController;
+use App\Http\Controllers\Backend\AlbumController;
 
 /*
  * Frontend Controllers
@@ -16,10 +16,11 @@ use App\Http\Controllers\Backend\PhotoGalleryController;
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('blog', [PostController::class, 'all'])->name('blog.index');
 Route::get('blog/posts/{post}', [PostController::class, 'single'])->name('blog.single');
-Route::get('events', [EventController::class, 'index'])->name('events');
+Route::get('events', [EventController::class, 'frontend_index'])->name('events');
 Route::get('events/create', [EventController::class, 'create'])->name('events.create');
 Route::post('events/store', [EventController::class, 'store'])->name('events.store');
-Route::get('photo_gallery', [PhotoGalleryController::class, 'index'])->name('photo.gallery');
+Route::get('photo_gallery', [AlbumController::class, 'frontend_index'])->name('photo.gallery.index');
+Route::get('photo_gallery/{id}', [AlbumController::class, 'frontend_show'])->name('photo.gallery.show');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact/send', [ContactController::class, 'send'])->name('contact.send');
 

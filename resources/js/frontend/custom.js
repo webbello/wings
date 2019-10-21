@@ -40,7 +40,7 @@ $(document).ready(function(){
         owl.trigger('prev.owl.carousel', [300]);
     })
     $(".customNavigation").mouseout(function(){
-        owl.trigger('play.owl.autoplay',[1000]);
+        owl.trigger('play.owl.autoplay',[2000]);
     });
 
 });

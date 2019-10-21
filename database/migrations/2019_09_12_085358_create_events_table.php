@@ -19,7 +19,7 @@ class CreateEventsTable extends Migration
             $table->string('image');
             $table->mediumText('summary');
             $table->longText('description');
-            $table->string('venu');
+            $table->string('venue');
             $table->string('city');   
             $table->string('country');
             $table->string('event_by');

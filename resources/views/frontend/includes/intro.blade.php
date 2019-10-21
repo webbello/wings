@@ -9,10 +9,10 @@
 
         <div class="carousel-inner" role="listbox">
 
-          <div class="carousel-item active" style="background-image: url('img/frontend/site/intro-carousel/1.jpg');">
+          <div class="carousel-item active" style="background-image: url('img/frontend/site/intro-carousel/1.make_difference1.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Raise Your Helping Hand</h2>
+                <h2>Together we can and we will make a diff</h2>
                 <p>Every day we bring hope to millions of children in the world's , hardest places as a sign of God's unconditional love.
                 </p>
                 <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
@@ -20,7 +20,7 @@
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/2.jpg');">
+          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/2.book_exhibition.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Donate for helpless child</h2>
@@ -30,7 +30,7 @@
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/3.jpg');">
+          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/3.penmanship1.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Sponsor a child Education today</h2>
@@ -40,24 +40,24 @@
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/4.jpg');">
+          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/4.our_team(gcm).jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>EMPOWERMENT OF THE UNDERPRIVILEGED</h2>
                 <p>No life lacks pain but no life lacks meaning either
                   Suffering ceases to be suffering the moment it finds meaning
                   And education makes life meaningful</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                <a href="#team" class="btn-get-started scrollto">Our GCMs </a>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/5.jpg');">
+          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/5.photo_gallery.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Magnam aliquam quaerat</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                <a href="/photo_gallery" class="btn-get-started scrollto">Photo Gallery</a>
               </div>
             </div>
           </div>
