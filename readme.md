@@ -1,47 +1,143 @@
-## Laravel Boilerplate (Current: Laravel 5.8) ([Demo](http://134.209.123.206/))
+## Download
 
-[![Latest Stable Version](https://poser.pugx.org/rappasoft/laravel-boilerplate/v/stable)](https://packagist.org/packages/rappasoft/laravel-boilerplate)
-[![Latest Unstable Version](https://poser.pugx.org/rappasoft/laravel-boilerplate/v/unstable)](https://packagist.org/packages/rappasoft/laravel-boilerplate) 
-<br/>
-[![StyleCI](https://styleci.io/repos/30171828/shield?style=plastic)](https://styleci.io/repos/30171828/shield?style=plastic)
-[![CircleCI](https://circleci.com/gh/rappasoft/laravel-boilerplate/tree/master.svg?style=svg)](https://circleci.com/gh/rappasoft/laravel-boilerplate/tree/master)
-<br/>
-![GitHub contributors](https://img.shields.io/github/contributors/rappasoft/laravel-boilerplate.svg)
-![GitHub stars](https://img.shields.io/github/stars/rappasoft/laravel-boilerplate.svg?style=social)
 
-### Demo Credentials
+[![Download](https://circleci.com/gh/rappasoft/laravel-boilerplate/tree/master.svg?style=svg)](https://github.com/webbello/wings/archive/master.zip)
+
+
+## Getting Started
+
+Quiz application in one form or the other is becoming a general requirement for most of the applications these days. Be it Survey, mock test, preparation, self evaluation, gathering information, actual objective test or exam. This quiz application will help you to get through your need with minimal or no modification.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+NodeJs (10.x)
+Composer
+PHP >= 7.2
+
+```
+
+# Installation
+
+
+## 1. Download
+
+Download the files above and place on your server. [Download](https://github.com/webbello/wings/archive/master.zip)
+
+
+
+## 2. Environment Files
+
+This package ships with a `.env.example` file in the root of the project.
+
+You must rename this file to just `.env`
+
+Note: Make sure you have hidden files shown on your system.
+
+## 3. Composer
+
+Laravel project dependencies are managed through the [PHP Composer tool](https://getcomposer.org/) . The first step is to install the depencencies by navigating into your project in terminal and typing this command:
+
+```
+composer install
+```
+
+## 4. NPM/Yarn
+
+In order to install the Javascript packages for frontend development, you will need the Node Package Manager, and optionally the Yarn Package Manager by Facebook (Recommended)
+
+If you only have NPM installed you have to run this command from the root of the project:
+
+```
+npm install
+```
+If you have Yarn installed, run this instead from the root of the project:
+
+`yarn`
+
+
+## 5. Create Database
+
+You must create your database on your server and on your `.env` file update the following lines:
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=wings
+DB_USERNAME=root
+DB_PASSWORD=secret
+
+```
+Change these lines to reflect your new database settings.
+
+
+## 6. Artisan Commands
+
+The first thing we are going to so is set the key that Laravel will use when doing encryption.
+```
+php artisan key:generate
+```
+You should see a green message stating your key was successfully generated. As well as you should see the `APP_KEY` variable in your `.env` file reflected.
+
+It's time to see if your database credentials are correct.
+
+We are going to run the built in migrations to create the database tables:
+```
+php artisan migrate
+```
+
+You should see a message for each table migrated, if you don't and see errors, than your credentials are most likely not correct.
+
+We are now going to set the administrator account information. To do this you need to navigate to this file and change the name/email/password of the Administrator account.
+
+You can delete the other dummy users, but do not delete the administrator account or you will not be able to access the backend.
+
+Now seed the database with:
+```
+php artisan db:seed
+```
+You should get a message for each file seeded, you should see the information in your database tables.
+
+## 7. Storage:link
+
+After your project is installed you must run this command to link your public storage folder for user avatar uploads:
+```
+php artisan storage:link
+```
+
+
+## 8. Login
+
+After your project is installed and you can access it in a browser, click the login button on the right of the navigation bar.
+
+The administrator credentials are:
 
 **User:** admin@admin.com  
 **Password:** secret
 
-### Official Documentation
+You will be automatically redirected to the backend. If you changed these values in the seeder prior, then obviously use the ones you updated to.
 
-[Click here for the official documentation](http://laravel-boilerplate.com)
 
-### Slack Channel
+## Route guide with screenshots
 
-Please join us in our Slack channel to get faster responses to your questions. Get your invite here: https://laravel-boilerplate.herokuapp.com
+| `\src\app\components\login`               | `\src\app\components\quiz`               | `\src\app\components\offline-session` |
+| ------------- |:-------------:| -----:|
+| ![](./images/screenshot/eclass_login.png) | ![](./images/screenshot/play.png) | ![](./images/screenshot/offline-session.png) |
 
-### Introduction
+| `\src\app\components\user-profile`          | `\src\app\components\quiz\quiz-list`   | `\src\app\components\question`        |
+| ------------- |:-------------:| -----:|
+| ![](./images/screenshot/study_material.png) | ![](./images/screenshot/quiz-list.png) | ![](./images/screenshot/question.png) |
 
-Laravel Boilerplate provides you with a massive head start on any size web application. It comes with a full featured access control system out of the box with an easy to learn API and is built on a Bootstrap foundation with a front and backend architecture. We have put a lot of work into it and we hope it serves you well and saves you time!
+| `\src\app\components\online-users`        | `\src\app\components\reports`       | `\src\app\components\chat-history`        |
+| ------------- |:-------------:| -----:|
+| ![](./images/screenshot/online-users.png) | ![](./images/screenshot/report.png) | ![](./images/screenshot/chat-history.png) |
 
-### Issues
+## Demo Link
 
-If you come across any issues please [report them here](https://github.com/rappasoft/laravel-boilerplate/issues).
+<a href="http://wingsofesc.herokuapp.com/"> Demo Url </a>
 
-### Contributing
 
-Thank you for considering contributing to the Laravel Boilerplate project! Please feel free to make any pull requests, or e-mail me a feature request you would like to see in the future to Anthony Rappa at rappa819@gmail.com.
-
-### Security Vulnerabilities
-
-If you discover a security vulnerability within this boilerplate, please send an e-mail to Anthony Rappa at rappa819@gmail.com, or create a pull request if possible. All security vulnerabilities will be promptly addressed. Please reference [this page](https://github.com/rappasoft/laravel-boilerplate/wiki/7.-Security-Fixes) to make sure you are up to date.
-
-### Donations
-
-If you would like to help the continued efforts of this project, any size [donations](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=JJWUZ4E9S9SFG&lc=US&item_name=Laravel%205%20Boilerplate&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted) are welcomed and highly appreciated.
-
-### License
-
-MIT: [http://anthony.mit-license.org](http://anthony.mit-license.org)
+ 
