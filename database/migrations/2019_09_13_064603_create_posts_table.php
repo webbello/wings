@@ -25,7 +25,7 @@ class CreatePostsTable extends Migration
             $table->longText('body');
             $table->tinyInteger('status');
             $table->binary('image')->nullable();
-            $table->dateTime('published_at');
+            $table->dateTime('published_at')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
