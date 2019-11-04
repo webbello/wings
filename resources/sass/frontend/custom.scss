@@ -1326,7 +1326,14 @@ h6 {
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
-
+@include media-breakpoint-down(sm) { 
+  .home-countdown > li {
+    padding: 1px 4px 8px;
+  }
+  .home-countdown > li > span {
+    font-size: 20px;
+  }
+}
 @media (min-width: 768px) {
   #contact .contact-address,
   #contact .contact-phone,
