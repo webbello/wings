@@ -96,6 +96,7 @@ class PostController extends Controller
         $post->body = $request->body;
         $post->lang = $request->lang;
         $post->category_id = $request->category;
+        $post->status = 0;
         $post->save();
 
         if($post)
