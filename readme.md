@@ -104,12 +104,18 @@ You should get a message for each file seeded, you should see the information in
 ## 7. Storage:link
 
 After your project is installed you must run this command to link your public storage folder for user avatar uploads:
+
 ```
 php artisan storage:link
 ```
 
+## 8. Serve 
 
-## 8. Login
+```
+php artisan serve
+```
+
+## 9. Login
 
 After your project is installed and you can access it in a browser, click the login button on the right of the navigation bar.
 

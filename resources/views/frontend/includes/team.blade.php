@@ -5,7 +5,7 @@
         <div class="container">
             <div class="section-header wow fadeInUp">
             <h3>Our GCMs </h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+            <p>Governing Council Members</p>
             </div>
             <div class="customNavigation clearfix mb-1">
                 <div class="btn-group float-right">
@@ -21,12 +21,12 @@
                 <div class="member-info">
                     <div class="member-info-content">
                     <h4>Tanzeel Haider</h4>
-                    <span>Chief Executive Officer</span>
+                    <span>Member</span>
                     <div class="social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-google-plus"></i></a>
-                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/tanzeel003"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/tanzeel.haider"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/tanzeelbinhaider/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/tanzeel-haider-6445b437/"><i class="fab fa-linkedin"></i></a>
                     </div>
                     </div>
                 </div>
@@ -41,10 +41,10 @@
                     <h4>Md Shadaab Alam</h4>
                     <span>President</span>
                     <div class="social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-google-plus"></i></a>
-                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        {{-- <a href=""><i class="fab fa-twitter"></i></a> --}}
+                        <a href="https://www.facebook.com/kshadaab"><i class="fab fa-facebook"></i></a>
+                        {{-- <a href=""><i class="fab fa-google-plus"></i></a> --}}
+                        {{-- <a href=""><i class="fab fa-linkedin"></i></a> --}}
                     </div>
                     </div>
                 </div>
@@ -57,12 +57,12 @@
                 <div class="member-info">
                     <div class="member-info-content">
                     <h4>Parvez Ahmed</h4>
-                    <span>CTO</span>
+                    <span>Member </span>
                     <div class="social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-google-plus"></i></a>
-                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        {{-- <a href=""><i class="fab fa-twitter"></i></a> --}}
+                        <a href="https://www.facebook.com/parvez.ahmed.942"><i class="fab fa-facebook"></i></a>
+                        {{-- <a href=""><i class="fab fa-google-plus"></i></a> --}}
+                        <a href="https://www.linkedin.com/in/parvez-ahmed-086b7720/"><i class="fab fa-linkedin"></i></a>
                     </div>
                     </div>
                 </div>
@@ -75,12 +75,12 @@
                 <div class="member-info">
                     <div class="member-info-content">
                     <h4>Sk Farid</h4>
-                    <span>Accountant</span>
+                    <span>Treasurer</span>
                     <div class="social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-google-plus"></i></a>
-                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        {{-- <a href=""><i class="fab fa-twitter"></i></a> --}}
+                        <a href="https://www.facebook.com/sk.farid.5492216"><i class="fab fa-facebook"></i></a>
+                        {{-- <a href=""><i class="fab fa-google-plus"></i></a> --}}
+                        {{-- <a href=""><i class="fab fa-linkedin"></i></a> --}}
                     </div>
                     </div>
                 </div>
@@ -92,12 +92,12 @@
                 <div class="member-info">
                     <div class="member-info-content">
                     <h4>Arshi Salim</h4>
-                    <span>Chief Executive Officer</span>
+                    <span>Secretary</span>
                     <div class="social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-google-plus"></i></a>
-                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        {{-- <a href=""><i class="fab fa-twitter"></i></a> --}}
+                        <a href="https://www.facebook.com/aap.ki.73"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/arshisalim_/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/arshi-salim/"><i class="fab fa-linkedin"></i></a>
                     </div>
                     </div>
                 </div>
@@ -110,12 +110,12 @@
                 <div class="member-info">
                     <div class="member-info-content">
                     <h4>Shakra Salim</h4>
-                    <span>Product Manager</span>
+                    <span>Member</span>
                     <div class="social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-google-plus"></i></a>
-                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/salim_shakra"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/shakra.salim.1"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/shakrasalim/"><i class="fab fa-instagram"></i></a>
+                        {{-- <a href=""><i class="fab fa-linkedin"></i></a> --}}
                     </div>
                     </div>
                 </div>
@@ -128,12 +128,12 @@
                 <div class="member-info">
                     <div class="member-info-content">
                     <h4>Zeba Zareen</h4>
-                    <span>CTO</span>
+                    <span>Activity Lead</span>
                     <div class="social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-google-plus"></i></a>
-                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        {{-- <a href=""><i class="fab fa-twitter"></i></a> --}}
+                        <a href="https://www.facebook.com/zayesha.alam.9"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/zebazareen1926/"><i class="fab fa-instagram"></i></a>
+                        {{-- <a href=""><i class="fab fa-linkedin"></i></a> --}}
                     </div>
                     </div>
                 </div>
@@ -146,12 +146,12 @@
                 <div class="member-info">
                     <div class="member-info-content">
                     <h4>Rashid Jamil</h4>
-                    <span>Singer</span>
+                    <span>Activity Lead</span>
                     <div class="social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-google-plus"></i></a>
-                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/jamil_n_rashid"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/rashidbinmurtaza"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/md.rashid.jamil/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/md-rashid-jamil-33502280"><i class="fab fa-linkedin"></i></a>
                     </div>
                     </div>
                 </div>
@@ -163,12 +163,12 @@
                 <div class="member-info">
                     <div class="member-info-content">
                     <h4>Aman Niyaz</h4>
-                    <span>Accountant</span>
+                    <span>Member</span>
                     <div class="social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-google-plus"></i></a>
-                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        <a href="www.twitter.com/amanniyaz"><i class="fab fa-twitter"></i></a>
+                        <a href="www.facebook.com/amanniyaz.waplog"><i class="fab fa-facebook"></i></a>
+                        <a href="www.instagram.com/aman.niyaz"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/amanniyaz"><i class="fab fa-linkedin"></i></a>
                     </div>
                     </div>
                 </div>
@@ -180,12 +180,12 @@
                 <div class="member-info">
                     <div class="member-info-content">
                     <h4>Asif Iqbal</h4>
-                    <span>Accountant</span>
+                    <span>Social Media & PR Head</span>
                     <div class="social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-google-plus"></i></a>
-                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/theasifiqbal"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/asifturn"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/theasifiqbal/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/asif-iqbal-42999b137/"><i class="fab fa-linkedin"></i></a>
                     </div>
                     </div>
                 </div>

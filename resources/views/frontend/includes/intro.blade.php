@@ -23,7 +23,7 @@
           <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/2.book_exhibition.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Donate for helpless child</h2>
+                <h2>Penmanship Update </h2>
                 <p>Educational support Council (E.S.C.) taught us the same when we were in our important stages of our education. Well! we are the ex-students of E.S.C.</p>
                 <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
               </div>
@@ -33,7 +33,7 @@
           <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/3.penmanship1.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Sponsor a child Education today</h2>
+                <h2>Book exhibition</h2>
                 <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
                 <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
               </div>
@@ -55,7 +55,7 @@
           <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/5.photo_gallery.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Magnam aliquam quaerat</h2>
+                <h2>Photo Gallery</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <a href="/photo_gallery" class="btn-get-started scrollto">Photo Gallery</a>
               </div>
