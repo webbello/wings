@@ -23,6 +23,9 @@ return [
         'dashboard' => 'Dashboard',
         'login' => 'Login',
         'register' => 'Register',
+        'president_message' => 'President Message',
+        'our_activities' => 'Our Activities',
+        'mission_50k' => 'Mission 50k',
 
         'photo' => [
             'gallery' => [

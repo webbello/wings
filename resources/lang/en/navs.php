@@ -18,7 +18,7 @@ return [
     ],
 
     'frontend' => [
-        'contact' => 'Contact',
+        'contact' => 'Write to us',
         'photo_gallery', 'Photo Gallery',
         'event' => 'Event',
         'dashboard' => 'Dashboard',
