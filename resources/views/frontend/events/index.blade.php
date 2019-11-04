@@ -1,66 +1,39 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('page.frontend.events'))
+@section('title', app_name() . ' | ' . __('page.frontend.events.index'))
 
 @section('content')
 
 
-    @include('frontend.includes.upcoming-events')
+    @include('frontend.includes.upcoming-events', ['events' => $events])
     <div class="container">
         <div class="section-content">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-5">
                     <h3 class="line-bottom border-bottom mt-3">Upcoming Events</h3>
-                    <div class="media">
-                        <div class="event-date text-center bg-theme-colored border-1px pt-1 pl-3 pr-3 mr-3 sm-custom-style">
-                            <ul class="list-inline">
-                                <li class="font-28 text-white font-weight-700">26</li>
-                                <li class="font-18 text-white text-center text-uppercase">OCT</li>
-                            </ul>
+                    @foreach ($events as $key => $event)
+                        <div class="media {{($key > 0) ? 'my-4' : ''}}">
+                            <div class="event-date text-center bg-theme-colored border-1px pt-1 pl-3 pr-3 mr-3 sm-custom-style">
+                                <ul class="list-inline">
+                                    <li class="font-28 text-white font-weight-700">{{ \Carbon\Carbon::parse($event->event_date)->format('d') }}</li>
+                                    <li class="font-18 text-white text-center text-uppercase">{{\Carbon\Carbon::parse($event->event_date)->format('M')}}</li>
+                                </ul>
+                            </div>
+                            <div class="media-body align-self-center">
+                                <h5 class="media-heading font-16 font-weight-600"><a href="{{ route('frontend.events.show', $event->id ) }}">{{$event->title}}</a></h5>
+                                <ul class="list-inline font-weight-600 text-gray-dimgray">
+                                    <li class="list-inline-item"><i class="far fa-clock text-theme-colored"></i> {{\Carbon\Carbon::parse($event->event_date)->format('g.i')}}</li>
+                                    <li class="list-inline-item"> <i class="fa fa-map-marker text-theme-colored"></i> {{$event->venue}}</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="media-body align-self-center">
-                            <h5 class="media-heading font-16 font-weight-600"><a href="#">Event: Foods For Poor</a></h5>
-                            <ul class="list-inline font-weight-600 text-gray-dimgray">
-                                <li class="list-inline-item"><i class="far fa-clock text-theme-colored"></i> 6.00 pm - 8.30 pm</li>
-                                <li class="list-inline-item"> <i class="fa fa-map-marker text-theme-colored"></i> 25 Newyork City.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="media my-4">
-                        <div class="event-date text-center bg-theme-colored border-1px pt-1 pl-3 pr-3 mr-3 sm-custom-style">
-                            <ul class="list-inline">
-                                <li class="font-28 text-white font-weight-700">26</li>
-                                <li class="font-18 text-white text-center text-uppercase">OCT</li>
-                            </ul>
-                        </div>
-                        <div class="media-body align-self-center">
-                            <h5 class="media-heading font-16 font-weight-600"><a href="#">Event: Foods For Poor</a></h5>
-                            <ul class="list-inline font-weight-600 text-gray-dimgray">
-                                <li class="list-inline-item"><i class="far fa-clock text-theme-colored"></i> 6.00 pm - 8.30 pm</li>
-                                <li class="list-inline-item"> <i class="fa fa-map-marker text-theme-colored"></i> 25 Newyork City.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <div class="event-date text-center bg-theme-colored border-1px pt-1 pl-3 pr-3 mr-3 sm-custom-style">
-                            <ul class="list-inline">
-                                <li class="font-28 text-white font-weight-700">26</li>
-                                <li class="font-18 text-white text-center text-uppercase">OCT</li>
-                            </ul>
-                        </div>
-                        <div class="media-body align-self-center">
-                            <h5 class="media-heading font-16 font-weight-600"><a href="#">Event: Foods For Poor</a></h5>
-                            <ul class="list-inline font-weight-600 text-gray-dimgray">
-                                <li class="list-inline-item"><i class="far fa-clock text-theme-colored"></i> 6.00 pm - 8.30 pm</li>
-                                <li class="list-inline-item"> <i class="fa fa-map-marker text-theme-colored"></i> 25 Newyork City.</li>
-                            </ul>
-                        </div>
-                    </div>
+                    @endforeach
+                    
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <h3 class="line-bottom border-bottom mt-3">About Us</h3>
                     <img src="img/frontend/site/about-plan.jpg" class="rounded img-fluid" alt="">
-                    <p class="mt-15">Lorem ipsum dolor sit amet, conse ctetur adipis elit. Totam perferendis, assumenda vitae cum beatae Pariatur, ratione adipis elit. Totam perfereding.</p>
+                    <p class="mt-15">A humble desire to give back to E.S.C. (Educational Support Council) and the society at large while having the inner pleasure to reach out to the distressed and being tied together by a value system that transforms the past students of E.S.C.</p>
                     <a href="#" class="btn btn-outline-primary btn-sm btn-theme-colored">read more</a>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
@@ -86,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <div class="row mb-4">
+        {{-- <div class="row mb-4">
             <div class="col">
                 <div class="card">
                     <div class="card-header">
@@ -101,7 +74,7 @@
                     </div><!--card-body-->
                 </div><!--card-->  
             </div><!--col-->
-        </div><!--row-->
+        </div><!--row--> --}}
     </div><!--container-->
 
 
