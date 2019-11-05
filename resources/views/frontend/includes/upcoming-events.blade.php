@@ -9,12 +9,12 @@
                 </div>
                 
                 <div class="col-md-6">
-                    <div class="text-center text-white font-13 pt-30 mt-5" data-countdown="{{$events->first()->event_date ?? '0000-00-00 00:00:00'}}">
+                    <div class="text-center text-white font-13 pt-30 mt-5" id="event-countdown" data-countdown="{{$events->first()->event_date ?? '0000-00-00 00:00:00'}}">
                         <ul class="list-inline home-countdown float-right">
-                            <li class="list-inline-item"><span>00</span><br> days</li>
-                            <li class="list-inline-item"><span>00</span><br> Hours</li>
-                            <li class="list-inline-item"><span>00</span><br> Minites</li>
-                            <li class="list-inline-item"><span>00</span><br> Seconds</li>
+                            <li class="list-inline-item"><span id="days">00</span><br> days</li>
+                            <li class="list-inline-item"><span id="hours">00</span><br> Hours</li>
+                            <li class="list-inline-item"><span id="minutes">00</span><br> Minites</li>
+                            <li class="list-inline-item"><span id="seconds">00</span><br> Seconds</li>
                         </ul>
                     </div>
                 </div>
