@@ -17,7 +17,7 @@ class CreateEventsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('image');
-            $table->mediumText('summary');
+            $table->mediumText('summary')->nullable();
             $table->longText('description');
             $table->string('venue');
             $table->string('city');   

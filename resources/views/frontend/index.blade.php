@@ -6,7 +6,7 @@
 
     @include('frontend.includes.intro')
     @include('frontend.includes.featured-services')
-    @include('frontend.includes.upcoming-events')
+    @include('frontend.includes.upcoming-events', ['events' => $events])
     @include('frontend.includes.about')
     {{-- @include('frontend.includes.services') --}}
     {{-- @include('frontend.includes.quiz') --}}

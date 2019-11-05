@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\Event;
 use App\Http\Controllers\Controller;
 
 /**
@@ -14,7 +15,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.index');
+        $events = Event::latest()->get();
+        return view('frontend.index',compact('events'));
     }
     public function page_our_mission()
     {
