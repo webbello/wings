@@ -30,6 +30,7 @@
                             <div class="form-group">    
                                 <label for="title">Title:</label>
                                 <input type="text" class="form-control" name="title"/>
+                                <input type="hidden" name="user_id" value="{{$logged_in_user->id}}">
                             </div>
                         
                             {{-- <div class="form-group">
@@ -96,7 +97,7 @@
                 $('.datetimepicker').datetimepicker({
                     // Formats
                     // follow MomentJS docs: https://momentjs.com/docs/#/displaying/format/
-                    format: 'DD-MM-YYYY hh:mm A',
+                    format: 'YYYY-MM-DD hh:mm:ss', //YYYY-MM-DD HH:MM:SS
                     
                     // Your Icons
                     // as Bootstrap 4 is not using Glyphicons anymore

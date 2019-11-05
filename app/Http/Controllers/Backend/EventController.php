@@ -46,7 +46,7 @@ class EventController extends Controller
     {
         $request->validate([
             'title'=>'required',
-            'summary'=>'required',
+            // 'summary'=>'required',
             'description'=>'required'
         ]);
         $event = new Event;
@@ -59,12 +59,16 @@ class EventController extends Controller
             $image->move($destinationPath, $name);
             $event->image = $name;
         }
+        // dd($request->get('event_date'));
         $event->title = $request->get('title');
-        $event->summary = $request->get('summary');
+        $event->summary = 'Summary';
         $event->description = $request->get('description');
+        $event->event_date = $request->get('event_date');
         $event->venue = $request->get('venue');
         $event->city = $request->get('city');
         $event->country = $request->get('country');
+        $event->status = 0;
+        $event->created_by = $request->get('user_id');
         $event->save();
         return redirect('/admin/events')->with('success', 'Event saved!');
     }
@@ -78,6 +82,18 @@ class EventController extends Controller
     public function show($id)
     {
         //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function frontend_show($id)
+    {
+        $event = Event::find($id);
+        return view('frontend.events.show', compact('event'));
     }
 
     /**
@@ -102,7 +118,7 @@ class EventController extends Controller
     {
         $request->validate([
             'title'=>'required',
-            'summary'=>'required',
+            // 'summary'=>'required',
             'description'=>'required'
         ]);
         // $event = new Event;
@@ -116,11 +132,14 @@ class EventController extends Controller
             $event->image = $name;
         }
         $event->title = $request->get('title');
-        $event->summary = $request->get('summary');
+        $event->summary = 'summary';
         $event->description = $request->get('description');
+        $event->event_date = $request->get('event_date');
         $event->venue = $request->get('venue');
         $event->city = $request->get('city');
         $event->country = $request->get('country');
+        $event->status = 0;
+        $event->created_by = $request->get('user_id');
         $event->save();
     }
 

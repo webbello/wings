@@ -19,7 +19,7 @@ return [
 
     'frontend' => [
         'contact' => 'Contact',
-        'events' => 'Events',
+        // 'events' => 'Events',
         'dashboard' => 'Dashboard',
         'login' => 'Login',
         'register' => 'Register',
@@ -36,6 +36,11 @@ return [
         'blog' => [
             'index' => 'E-Magazine',
             'single' => 'Blog Post',
+        ],
+
+        'events' => [
+            'index' => 'Events',
+            'show' => 'Event Detail',
         ],
 
         'user' => [
