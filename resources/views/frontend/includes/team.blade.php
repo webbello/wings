@@ -68,6 +68,42 @@
                 </div>
                 </div>
             </div>
+
+            <div class=" wow fadeInUp" data-wow-delay="0.2s">
+                <div class="member">
+                <img src="img/frontend/site/team/shahbaz-alam.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                    <div class="member-info-content">
+                    <h4>Shahbaz Alam</h4>
+                    <span>Member </span>
+                    <div class="social">
+                        {{-- <a href=""><i class="fab fa-twitter"></i></a> --}}
+                        {{-- <a href="https://www.facebook.com/parvez.ahmed.942"><i class="fab fa-facebook"></i></a> --}}
+                        {{-- <a href=""><i class="fab fa-google-plus"></i></a> --}}
+                        <a href="http://linkedin.com/in/shahbazalam03"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class=" wow fadeInUp" data-wow-delay="0.7s">
+                <div class="member">
+                <img src="img/frontend/site/team/rashid_jamil.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                    <div class="member-info-content">
+                    <h4>Rashid Jamil</h4>
+                    <span>Activity Lead</span>
+                    <div class="social">
+                        <a href="https://twitter.com/jamil_n_rashid"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/rashidbinmurtaza"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/md.rashid.jamil/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/md-rashid-jamil-33502280"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
     
             <div class=" wow fadeInUp" data-wow-delay="0.3s">
                 <div class="member">
@@ -139,24 +175,7 @@
                 </div>
                 </div>
             </div>
-    
-            <div class=" wow fadeInUp" data-wow-delay="0.7s">
-                <div class="member">
-                <img src="img/frontend/site/team/rashid_jamil.jpg" class="img-fluid" alt="">
-                <div class="member-info">
-                    <div class="member-info-content">
-                    <h4>Rashid Jamil</h4>
-                    <span>Activity Lead</span>
-                    <div class="social">
-                        <a href="https://twitter.com/jamil_n_rashid"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.facebook.com/rashidbinmurtaza"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/md.rashid.jamil/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/md-rashid-jamil-33502280"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
+
             <div class=" wow fadeInUp" data-wow-delay="0.7s">
                 <div class="member">
                 <img src="img/frontend/site/team/aman_niyaz.jpg" class="img-fluid" alt="">
