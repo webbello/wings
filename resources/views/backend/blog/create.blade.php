@@ -13,6 +13,11 @@
                         {{-- <small class="text-muted">@lang('labels.backend.blog.posts.create')</small> --}}
                     </h4>
                 </div><!--col-->
+                <div class="col-sm-7">
+                    <div class="float-right">
+                        <a class="btn btn-primary" href="{{ route('admin.blog.posts.index') }}"> Back</a>
+                    </div>
+                </div><!--col-->
             </div><!--row-->
 
             <hr>

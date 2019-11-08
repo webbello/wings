@@ -52,7 +52,7 @@
     <div class="app-body">
         @include('backend.includes.sidebar')
 
-        <main class="main" id="app">
+        <main class="main">
             @include('includes.partials.read-only')
             @include('includes.partials.logged-in-as')
             {!! Breadcrumbs::render() !!}

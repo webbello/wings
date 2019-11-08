@@ -98,7 +98,7 @@ class PhotoGalleryController extends Controller
      */
     public function edit(PhotoGallery $gallery)
     {
-        // dd($gallery);
+        //dd($gallery);
         $albums = Album::all();
         return view('backend.gallery.edit',compact('gallery', 'albums'));
     }
@@ -131,7 +131,7 @@ class PhotoGalleryController extends Controller
         $gallery->album_id = $request->album;
         $gallery->title = $request->title;
         $gallery->description = $request->description;
-        $photoGallery->href = '/storage/uploads/album/'.$request->album .'/'. $photoGallery->image;
+        $gallery->href = '/storage/uploads/album/'.$request->album .'/'. $gallery->image;
         $gallery->save();
 
         //Album::create($request->all());
