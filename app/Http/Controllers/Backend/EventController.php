@@ -15,14 +15,17 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::latest()->paginate(10);
+        $sort = 'event_date';
+        $sortOrder = 'desc';
+        $events = Event::orderBy($sort, $sortOrder)->paginate(10);
+        // dd($events);
         return view('backend.events.index',compact('events'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
-    public function frontend_index()
+    public function frontend_index($sort = 'event_date', $sortOrder = 'desc')
     {
-        $events = Event::all();
+        $events = Event::orderBy($sort, $sortOrder)->get();
         return view('frontend.events.index', compact('events'));
     }
 
@@ -141,6 +144,7 @@ class EventController extends Controller
         $event->status = 0;
         $event->created_by = $request->get('user_id');
         $event->save();
+        return redirect('/admin/events')->with('success', 'Event Updated!');
     }
 
     /**

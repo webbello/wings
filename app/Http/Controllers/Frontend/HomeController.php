@@ -15,7 +15,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $events = Event::latest()->get();
+        $sort = 'event_date';
+        $sortOrder = 'desc';
+        $events = Event::orderBy($sort, $sortOrder)->limit(3)->get();
+        // $events = Event::latest()->get();
         return view('frontend.index',compact('events'));
     }
     public function page_our_mission()

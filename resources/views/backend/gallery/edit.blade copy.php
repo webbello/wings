@@ -1,3 +1,4 @@
+dd($gallery);
 @extends('backend.layouts.app')
 
 @section('title', app_name() . ' | '. __('labels.backend.access.roles.management'))
@@ -34,7 +35,8 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Album:</strong>
-                
+                {{-- {{ dd($albums) }} --}}
+                {{-- <input type="text" name="album" class="form-control" placeholder="Album"> --}}
                 <select class="form-control"  name="album">
                     @foreach($albums as $album)
                             <option value="{{$album->id}}">{{$album->title}}</option>
