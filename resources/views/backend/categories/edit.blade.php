@@ -33,7 +33,7 @@
                             @csrf
                             <div class="form-group">    
                                 <label for="first_name">Category Name:</label>
-                                <input type="text" class="form-control" name="name" />
+                            <input type="text" class="form-control" name="name" value="{{$category->name}}"/>
                             </div>
                 
                             <div class="form-group">
@@ -61,7 +61,7 @@
                     </div><!--col-->
 
                     <div class="col text-right">
-                        <button type="submit" class="btn btn-success">Add Category</button>
+                        <button type="submit" class="btn btn-success">Update Category</button>
                     </div><!--col-->
                 </div><!--row-->
             </div><!--card-footer-->

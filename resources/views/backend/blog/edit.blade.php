@@ -13,6 +13,11 @@
                         {{-- <small class="text-muted">@lang('labels.backend.blog.posts.create')</small> --}}
                     </h4>
                 </div><!--col-->
+                <div class="col-sm-7">
+                    <div class="float-right">
+                        <a class="btn btn-primary" href="{{ route('admin.blog.posts.index') }}"> Back</a>
+                    </div>
+                </div><!--col-->
             </div><!--row-->
 
             <hr>
@@ -34,7 +39,7 @@
                     
                     <div class="form-group">    
                         <label for="title">Title</label>
-                        <input type="text" name="title" id="title" placeholder="Title" maxlength="191" required="required" autofocus="autofocus" class="form-control">
+                        <input type="text" name="title" value="{{$post->title}}" id="title" placeholder="Title" maxlength="191" required="required" autofocus="autofocus" class="form-control">
                     </div>
                     <input type="hidden" name="author" value="{{$logged_in_user->id}}">
                     <input type="hidden" name="user_id" value="{{$logged_in_user->id}}">
@@ -45,15 +50,15 @@
         
                     <div class="form-group">
                         <label for="summary">Summary:</label>
-                        <textarea name="summary" id="summary" placeholder="summary" maxlength="191" required="required" autofocus="autofocus" class="form-control"></textarea>
+                        <textarea name="summary" id="summary" placeholder="summary" maxlength="191" required="required" autofocus="autofocus" class="form-control">{{$post->summary}} </textarea>
                     </div>
                     <div class="form-group">
                         <label for="body">Body:</label>
-                        <textarea name="body" id="editor" placeholder="Body" maxlength="191" rows="10" autofocus="autofocus" class="form-control"></textarea>                            
+                        <textarea name="body" id="editor" placeholder="Body" maxlength="191" rows="10" autofocus="autofocus" class="form-control">{{$post->body}}</textarea>                            
                     </div>
                     <div class="form-group">    
                         <label for="image">Image</label>
-                        <input type="file" name="image" id="image" maxlength="191"  autofocus="autofocus" class="form-control">
+                        <input type="file" name="image" value="{{$post->image}}" id="image" maxlength="191"  autofocus="autofocus" class="form-control">
                     </div>
                     <div class="form-group">    
                         <label for="lang">Language</label>
