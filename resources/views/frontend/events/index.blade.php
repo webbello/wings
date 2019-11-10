@@ -12,6 +12,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-5">
                     <h3 class="line-bottom border-bottom mt-3">Upcoming Events</h3>
                     @foreach ($events as $key => $event)
+                    @if ($key < 3)
                         <div class="media {{($key > 0) ? 'my-4' : ''}}">
                             <div class="event-date text-center bg-theme-colored border-1px pt-1 pl-3 pr-3 mr-3 sm-custom-style">
                                 <ul class="list-inline">
@@ -27,6 +28,7 @@
                                 </ul>
                             </div>
                         </div>
+                    @endif
                     @endforeach
                     
                 </div>
@@ -59,14 +61,31 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="row mb-4">
+        <div class="row mb-4 mt-3">
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <i class="fab fa-font-awesome-flag"></i> Font Awesome @lang('strings.frontend.test')
+                        <i class="fab fa-font-awesome-flag"></i> Past Events
                     </div>
                     <div class="card-body">
-                        <event-calender></event-calender>
+                        @foreach ($events as $key => $event)
+                            <div class="media {{($key > 0) ? 'my-4' : ''}}">
+                                <div class="event-date text-center bg-theme-colored border-1px pt-1 pl-3 pr-3 mr-3 sm-custom-style">
+                                    <ul class="list-inline">
+                                        <li class="font-28 text-white font-weight-700">{{ \Carbon\Carbon::parse($event->event_date)->format('d') }}</li>
+                                        <li class="font-18 text-white text-center text-uppercase">{{\Carbon\Carbon::parse($event->event_date)->format('M')}}</li>
+                                    </ul>
+                                </div>
+                                <div class="media-body align-self-center">
+                                    <h5 class="media-heading font-16 font-weight-600"><a href="{{ route('frontend.events.show', $event->id ) }}">{{$event->title}}</a></h5>
+                                    <ul class="list-inline font-weight-600 text-gray-dimgray">
+                                        <li class="list-inline-item"><i class="far fa-clock text-theme-colored"></i> {{\Carbon\Carbon::parse($event->event_date)->format('g.i')}}</li>
+                                        <li class="list-inline-item"> <i class="fa fa-map-marker text-theme-colored"></i> {{$event->venue}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        @endforeach
+                        {{-- <event-calender></event-calender> --}}
                         <i class="fas fa-home"></i>
                         <i class="fab fa-facebook"></i>
                         <i class="fab fa-twitter"></i>
@@ -74,7 +93,7 @@
                     </div><!--card-body-->
                 </div><!--card-->  
             </div><!--col-->
-        </div><!--row--> --}}
+        </div><!--row-->
     </div><!--container-->
 
 
