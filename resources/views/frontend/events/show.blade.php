@@ -38,7 +38,7 @@
             </tr>
             <tr>
                 <th>@lang('labels.frontend.user.profile.last_updated')</th>
-                <td>{{ timezone()->convertToLocal($logged_in_user->updated_at) }} ({{ $logged_in_user->updated_at->diffForHumans() }})</td>
+                <td>{{ timezone()->convertToLocal($event->updated_at) }} ({{ $event->updated_at->diffForHumans() }})</td>
             </tr>
         </table>
     </div>
