@@ -80,6 +80,20 @@
                             </div><!--col-->
                         </div><!--row-->
 
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    {{ html()->label(__('validation.attributes.frontend.year_of_passing_12'))->for('year_of_passing_12') }}
+
+                                    {{ html()->text('year_of_passing_12')
+                                        ->class('form-control')
+                                        ->placeholder(__('validation.attributes.frontend.year_of_passing_12'))
+                                        ->attribute('maxlength', 191)
+                                        ->required() }}
+                                </div><!--form-group-->
+                            </div><!--col-->
+                        </div><!--row-->
+
                         @if(config('access.captcha.registration'))
                             <div class="row">
                                 <div class="col">

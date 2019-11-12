@@ -20,8 +20,16 @@ class CreateUsersTable extends Migration
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('email')->unique();
+            $table->string('gender')->nullable();
+            $table->date('dob')->nullable();
             $table->string('avatar_type')->default('gravatar');
             $table->string('avatar_location')->nullable();
+            $table->mediumText('short_bio')->nullable();
+            $table->longText('full_bio')->nullable();
+            $table->smallInteger('year_of_passing_12')->nullable();
+            $table->string('occupation')->nullable();
+            $table->string('phone_no')->nullable();
+            $table->string('member_since')->nullable();
             $table->string('password')->nullable();
             $table->timestamp('password_changed_at')->nullable();
             $table->unsignedTinyInteger('active')->default(1);

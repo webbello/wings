@@ -20,7 +20,7 @@
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/2.book_exhibition.jpg');">
+          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/3.penmanship1.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Penmanship Update </h2>
@@ -30,7 +30,7 @@
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/3.penmanship1.jpg');">
+          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/2.book_exhibition.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Book exhibition</h2>

@@ -1,3 +1,5 @@
+<div class="card">
+<div class="card-body">
 {{ html()->modelForm($logged_in_user, 'POST', route('frontend.user.profile.update'))->class('form-horizontal')->attribute('enctype', 'multipart/form-data')->open() }}
     @method('PATCH')
 
@@ -75,13 +77,125 @@
 
     <div class="row">
         <div class="col">
+            <div class="form-group">
+                {{ html()->label(__('validation.attributes.frontend.gender'))->for('gender') }}
+
+                {{ html()->select('gender')
+                    ->class('form-control')
+                    // ->placeholder(__('validation.attributes.frontend.gender'))
+                    ->options(['Male' => 'Male', 'Female'=> 'Female'])
+                    ->required() }}
+            </div><!--form-group-->
+        </div><!--col-->
+    </div><!--row-->
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                {{ html()->label(__('validation.attributes.frontend.dob'))->for('dob') }}
+
+                {{ html()->text('dob')
+                    ->class('form-control')
+                    ->placeholder(__('yyyy-mm-dd'))
+                    ->attribute('maxlength', 191)
+                    ->autofocus() }}
+            </div><!--form-group-->
+        </div><!--col-->
+    </div><!--row-->
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                {{ html()->label(__('validation.attributes.frontend.short_bio'))->for('short_bio') }}
+
+                {{ html()->textarea('short_bio')
+                    ->class('form-control')
+                    ->placeholder(__('validation.attributes.frontend.short_bio'))
+                    ->autofocus() }}
+            </div><!--form-group-->
+        </div><!--col-->
+    </div><!--row-->
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                {{ html()->label(__('validation.attributes.frontend.full_bio'))->for('full_bio') }}
+
+                {{ html()->textarea('full_bio')
+                    ->class('form-control')
+                    ->placeholder(__('validation.attributes.frontend.full_bio'))
+                    ->autofocus() }}
+            </div><!--form-group-->
+        </div><!--col-->
+    </div><!--row-->
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                {{ html()->label(__('validation.attributes.frontend.year_of_passing_12'))->for('year_of_passing_12') }}
+
+                {{ html()->text('year_of_passing_12')
+                    ->class('form-control')
+                    ->placeholder(__('validation.attributes.frontend.year_of_passing_12'))
+                    ->attribute('maxlength', 191)
+                    ->required()
+                    ->autofocus() }}
+            </div><!--form-group-->
+        </div><!--col-->
+    </div><!--row-->
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                {{ html()->label(__('validation.attributes.frontend.occupation'))->for('occupation') }}
+
+                {{ html()->text('occupation')
+                    ->class('form-control')
+                    ->placeholder(__('validation.attributes.frontend.occupation'))
+                    ->attribute('maxlength', 191)
+                    ->autofocus() }}
+            </div><!--form-group-->
+        </div><!--col-->
+    </div><!--row-->
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                {{ html()->label(__('validation.attributes.frontend.phone_no'))->for('phone_no') }}
+
+                {{ html()->text('phone_no')
+                    ->class('form-control')
+                    ->placeholder(__('validation.attributes.frontend.phone_no'))
+                    ->attribute('maxlength', 191)
+                    ->autofocus() }}
+            </div><!--form-group-->
+        </div><!--col-->
+    </div><!--row-->
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                {{ html()->label(__('validation.attributes.frontend.member_since'))->for('member_since') }}
+
+                {{ html()->text('member_since')
+                    ->class('form-control')
+                    ->placeholder(__('validation.attributes.frontend.member_since'))
+                    ->attribute('maxlength', 191)
+                    ->autofocus() }}
+            </div><!--form-group-->
+        </div><!--col-->
+    </div><!--row-->
+
+    <div class="row">
+        <div class="col">
             <div class="form-group mb-0 clearfix">
                 {{ form_submit(__('labels.general.buttons.update')) }}
             </div><!--form-group-->
         </div><!--col-->
     </div><!--row-->
 {{ html()->closeModelForm() }}
-
+</div>
+</div>
 @push('after-scripts')
     <script>
         $(function() {
