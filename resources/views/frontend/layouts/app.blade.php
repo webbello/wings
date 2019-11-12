@@ -30,10 +30,10 @@
             @include('includes.partials.logged-in-as')
             @include('frontend.includes.nav')
             {{-- @include('frontend.includes.header') --}}
-            @if (Route::currentRouteName() !== 'frontend.index')
+            @if (Route::currentRouteName() !== 'frontend.index' && Route::currentRouteName() !== 'frontend.user.dashboard')
                 @include('frontend.includes.inner-header')
             @endif
-            
+
             <main id="main">
                 @include('includes.partials.messages')
                 @yield('content')
