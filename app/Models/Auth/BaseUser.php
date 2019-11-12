@@ -39,6 +39,7 @@ abstract class BaseUser extends Authenticatable implements Recordable
         'avatar_type',
         'avatar_location',
         'password',
+        'year_of_passing_12',
         'password_changed_at',
         'active',
         'confirmation_code',
