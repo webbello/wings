@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\Event;
-use Faker\Factory;
+
 
 class EventsTableSeeder extends Seeder
 {
@@ -13,7 +13,6 @@ class EventsTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Factory::create();
         Event::truncate();
         Event::create([
             'title' => 'Personality Development Seminar',
