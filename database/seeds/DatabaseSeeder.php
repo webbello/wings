@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call(AuthTableSeeder::class);
         $this->call(EventsTableSeeder::class);
+        $this->call(CategoriesTableSeeder::class);
 
         Model::reguard();
     }

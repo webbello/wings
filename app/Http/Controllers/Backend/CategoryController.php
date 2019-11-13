@@ -43,12 +43,12 @@ class CategoryController extends Controller
             'name'=>'required'
         ]);
 
-        $category = new Category([
-            'name' => $request->get('name'),
-            'parent_id' => $request->get('parent_id')
-        ]);
+        $category = new Category;
+        $category->name = $request->name;
+        $category->slug = \Str::slug($request->name);
+        $category->parent_id = $request->parent_id;
         $category->save();
-        //dd($request->get('name'));
+        
         return redirect('admin/categories')->with('success', 'Category saved!');
     }
 
