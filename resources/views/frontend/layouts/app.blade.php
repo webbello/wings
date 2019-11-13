@@ -9,13 +9,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>@yield('title', app_name())</title>
-        <meta name="description" content="@yield('meta_description', 'An Ex-Students\' Association')">
+        <meta name="description" content="@yield('meta_description', "An Ex-Students' Association")">
         <meta name="author" content="@yield('meta_author', 'Md Irfan')">
         @yield('meta')
         <!-- Jetpack Open Graph Tags -->
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Wings of ESC" />
-        <meta property="og:description" content="Serve the society - An Ex-Students\' Association" />
+        <meta property="og:description" content="Serve the society - An Ex-Students' Association" />
         <meta property="og:url" content="https://wingsofesc.in" />
         <meta property="og:site_name" content="Wings of ESC" />
         <meta property="og:image" content="https://wingsofesc.files.wordpress.com/2016/10/wings.png" />
