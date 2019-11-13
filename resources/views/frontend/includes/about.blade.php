@@ -6,7 +6,6 @@
 
         <header class="section-header">
         <h3>About Us</h3>
-        <h5>Educational support Council (E.S.C.) taught us the same when we were in our important stages of our education. Well! we are the ex-students of E.S.C.</h5>
         <p>A humble desire to give back to E.S.C. (Educational Support Council) and the society at large while having the inner pleasure to reach out to the distressed and being tied together by a value system that transforms the past students of E.S.C., Kolkata into “men and women with excellence” gave birth to Wings of ESC - an alumni association in the year 2009. The association is registered under the West Bengal societies Act (Sl. No. 37631 of 2015-2016). </p>
         <p>Wings of ESC in its limited capacity has functioned very actively since its inception. Apart from regular calendar events like supporting in invigilation setup, career counselling, quarterly meetups, only to name a few, the association also organizes computer literacy classes, workshops for personality development, reading and writing, medical awareness, etc.</p> 
         
@@ -17,7 +16,7 @@
             <div class="col-md-6 wow fadeInUp">
                 <div class="about-col">
                 <div class="img">
-                    <img src="img/frontend/site/about-mission.jpg" alt="" class="img-fluid">
+                    <img src="img/frontend/site/our_mission.jpg" alt="" class="img-fluid">
                     <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
                 </div>
                 <h2 class="title"><a href="#">Our Mission</a></h2>
@@ -44,7 +43,7 @@
             <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="about-col">
                 <div class="img">
-                    <img src="img/frontend/site/about-vision.jpg" alt="" class="img-fluid">
+                    <img src="img/frontend/site/our_vision.jpg" alt="" class="img-fluid">
                     <div class="icon"><i class="ion-ios-eye-outline"></i></div>
                 </div>
                 <h2 class="title"><a href="#">Our Vision</a></h2>
