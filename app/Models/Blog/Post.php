@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Auth\User;
 use App\Models\Tag;
 use App\Models\Comment;
+use App\Models\Category;
 
 class Post extends Model
 {
@@ -30,5 +31,10 @@ class Post extends Model
     public function comments()
     {
         return $this->morphMany(Comment::class, 'commentable')->whereNull('parent_id');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 }

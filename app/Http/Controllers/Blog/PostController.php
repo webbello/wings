@@ -20,7 +20,7 @@ class PostController extends Controller
      */
     public function allPost(ManagePostRequest $request)
     {
-        $posts = Post::all();
+        $posts = Post::latest()->paginate(5);
         return view('backend.blog.index', compact('posts'));
     }
 
@@ -35,10 +35,16 @@ class PostController extends Controller
         return view('frontend.blog.index', compact('posts'));
     }
 
-    public function all()
+    public function all(Request $request, Category $category)
     {
-        $posts = Post::latest()->paginate(5);
-        //dd($posts);
+        
+        // $category = Category::where('slug', $request->category)->get();
+        // dd($category);
+        if ($request->category === null) {
+            $category->id = 1;
+        }
+        $posts = Post::where('category_id', $category->id)->latest()->simplePaginate(6);
+        
         return view('frontend.blog.index', [
             'posts' => $posts
         ]);
