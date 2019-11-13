@@ -26,6 +26,8 @@ return [
         'president_message' => 'President Message',
         'our_activities' => 'Our Activities',
         'mission_50k' => 'Mission 50k',
+        'our_mission' => 'Our Mission',
+        'our_vission' => 'Our Vission',
 
         'photo' => [
             'gallery' => [

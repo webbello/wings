@@ -26,7 +26,7 @@
                 <h2>Penmanship Update </h2>
                 <p>The feathers of wings wrote essays and stories on thought provoking topics. Click
                   below to know more</p>
-                <a href="#" class="btn-get-started scrollto">Our submission</a>
+                <a href="blog/penmanship" class="btn-get-started scrollto">Our submission</a>
               </div>
             </div>
           </div>
@@ -37,7 +37,7 @@
                 <h2>Book exhibition</h2>
                 <p>We came together to distribute our used books to others and it was a massive
                   success. It created a big library</p>
-                <a href="#" class="btn-get-started scrollto">Know more</a>
+                <a href="blog/book_exhibition" class="btn-get-started scrollto">Know more</a>
               </div>
             </div>
           </div>
