@@ -17,9 +17,9 @@ class HomeController extends Controller
     {
         $sort = 'event_date';
         $sortOrder = 'desc';
-        $events = Event::orderBy($sort, $sortOrder)->limit(3)->get();
+        $upcoming_events = Event::where('event_date', '>=', now())->orderBy($sort, $sortOrder)->get();
         // $events = Event::latest()->get();
-        return view('frontend.index',compact('events'));
+        return view('frontend.index',compact('upcoming_events'));
     }
     public function page_our_mission()
     {

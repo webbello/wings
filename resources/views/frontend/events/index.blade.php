@@ -3,33 +3,37 @@
 @section('title', app_name() . ' | ' . __('page.frontend.events.index'))
 
 @section('content')
-
-
-    @include('frontend.includes.upcoming-events', ['events' => $events])
+{{-- {{dd($events['upcoming']->last())}} --}}
+    @if (isset($events['upcoming']))
+        @include('frontend.includes.upcoming-events', ['recent_event' => $events['upcoming']->last()])
+    @endif
+    
     <div class="container">
         <div class="section-content">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-5">
                     <h3 class="line-bottom border-bottom mt-3">Upcoming Events</h3>
-                    @foreach ($events as $key => $event)
-                    @if ($key < 3)
-                        <div class="media {{($key > 0) ? 'my-4' : ''}}">
-                            <div class="event-date text-center bg-theme-colored border-1px pt-1 pl-3 pr-3 mr-3 sm-custom-style">
-                                <ul class="list-inline">
-                                    <li class="font-28 text-white font-weight-700">{{ \Carbon\Carbon::parse($event->event_date)->format('d') }}</li>
-                                    <li class="font-18 text-white text-center text-uppercase">{{\Carbon\Carbon::parse($event->event_date)->format('M')}}</li>
-                                </ul>
+                    @if (isset($events['upcoming']))
+                        @foreach ($events['upcoming'] as $key => $event)
+
+                            <div class="media {{($key > 0) ? 'my-4' : ''}}">
+                                <div class="event-date text-center bg-theme-colored border-1px pt-1 pl-3 pr-3 mr-3 sm-custom-style">
+                                    <ul class="list-inline">
+                                        <li class="font-28 text-white font-weight-700">{{ \Carbon\Carbon::parse($event->event_date)->format('d') }}</li>
+                                        <li class="font-18 text-white text-center text-uppercase">{{\Carbon\Carbon::parse($event->event_date)->format('M')}}</li>
+                                    </ul>
+                                </div>
+                                <div class="media-body align-self-center">
+                                    <h5 class="media-heading font-16 font-weight-600"><a href="{{ route('frontend.events.show', $event->id ) }}">{{$event->title}}</a></h5>
+                                    <ul class="list-inline font-weight-600 text-gray-dimgray">
+                                        <li class="list-inline-item"><i class="far fa-clock text-theme-colored"></i> {{\Carbon\Carbon::parse($event->event_date)->format('g.i')}}</li>
+                                        <li class="list-inline-item"> <i class="fa fa-map-marker text-theme-colored"></i> {{$event->venue}}</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="media-body align-self-center">
-                                <h5 class="media-heading font-16 font-weight-600"><a href="{{ route('frontend.events.show', $event->id ) }}">{{$event->title}}</a></h5>
-                                <ul class="list-inline font-weight-600 text-gray-dimgray">
-                                    <li class="list-inline-item"><i class="far fa-clock text-theme-colored"></i> {{\Carbon\Carbon::parse($event->event_date)->format('g.i')}}</li>
-                                    <li class="list-inline-item"> <i class="fa fa-map-marker text-theme-colored"></i> {{$event->venue}}</li>
-                                </ul>
-                            </div>
-                        </div>
+
+                        @endforeach
                     @endif
-                    @endforeach
                     
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3">
@@ -68,23 +72,25 @@
                         <i class="fab fa-font-awesome-flag"></i> Past Events
                     </div>
                     <div class="card-body">
-                        @foreach ($events as $key => $event)
-                            <div class="media {{($key > 0) ? 'my-4' : ''}}">
-                                <div class="event-date text-center bg-theme-colored border-1px pt-1 pl-3 pr-3 mr-3 sm-custom-style">
-                                    <ul class="list-inline">
-                                        <li class="font-28 text-white font-weight-700">{{ \Carbon\Carbon::parse($event->event_date)->format('d') }}</li>
-                                        <li class="font-18 text-white text-center text-uppercase">{{\Carbon\Carbon::parse($event->event_date)->format('M')}}</li>
-                                    </ul>
+                        @if (isset($events['past']))
+                            @foreach ($events['past'] as $key => $event)
+                                <div class="media {{($key > 0) ? 'my-4' : ''}}">
+                                    <div class="event-date text-center bg-theme-colored border-1px pt-1 pl-3 pr-3 mr-3 sm-custom-style">
+                                        <ul class="list-inline">
+                                            <li class="font-28 text-white font-weight-700">{{ \Carbon\Carbon::parse($event->event_date)->format('d') }}</li>
+                                            <li class="font-18 text-white text-center text-uppercase">{{\Carbon\Carbon::parse($event->event_date)->format('M')}}</li>
+                                        </ul>
+                                    </div>
+                                    <div class="media-body align-self-center">
+                                        <h5 class="media-heading font-16 font-weight-600"><a href="{{ route('frontend.events.show', $event->id ) }}">{{$event->title}}</a></h5>
+                                        <ul class="list-inline font-weight-600 text-gray-dimgray">
+                                            <li class="list-inline-item"><i class="far fa-clock text-theme-colored"></i> {{\Carbon\Carbon::parse($event->event_date)->format('g.i')}}</li>
+                                            <li class="list-inline-item"> <i class="fa fa-map-marker text-theme-colored"></i> {{$event->venue}}</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="media-body align-self-center">
-                                    <h5 class="media-heading font-16 font-weight-600"><a href="{{ route('frontend.events.show', $event->id ) }}">{{$event->title}}</a></h5>
-                                    <ul class="list-inline font-weight-600 text-gray-dimgray">
-                                        <li class="list-inline-item"><i class="far fa-clock text-theme-colored"></i> {{\Carbon\Carbon::parse($event->event_date)->format('g.i')}}</li>
-                                        <li class="list-inline-item"> <i class="fa fa-map-marker text-theme-colored"></i> {{$event->venue}}</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        @endif
                         {{-- <event-calender></event-calender> --}}
                         <i class="fas fa-home"></i>
                         <i class="fab fa-facebook"></i>

@@ -18,6 +18,7 @@
       {{-- <h1 class="my-4 text-center">Welcome to the Blog </h1> --}}
 
       @foreach ($posts as $post)
+      {{-- {{dd($post->category->slug)}} --}}
       <div class="card mb-4">
         <img class="card-img-top img-fluid" src=" {!! !empty($post->image) ? '/storage/uploads/posts/' . $post->image :  'http://placehold.it/750x300' !!} " alt="Card image cap">
         <div class="card-body">
@@ -34,7 +35,7 @@
         </div>
       </div>
       @endforeach
-
+      {{ $posts->links() }}
     </div>
     {{-- <div class="col-md-3 right d-none d-sm-none d-md-block">
       

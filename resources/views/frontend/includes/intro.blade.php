@@ -13,19 +13,9 @@
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Together we can and we will make a diff</h2>
-                <p>Every day we bring hope to millions of children in the world's , hardest places as a sign of God's unconditional love.
-                </p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/2.book_exhibition.jpg');">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2>Penmanship Update </h2>
-                <p>Educational support Council (E.S.C.) taught us the same when we were in our important stages of our education. Well! we are the ex-students of E.S.C.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                <p>Alone, we are powerless. But, together, we can make things happen. The combined
+                  effect is greater than the sum of the individual effects</p>
+                <a href="#" class="btn-get-started scrollto">Know How</a>
               </div>
             </div>
           </div>
@@ -33,9 +23,21 @@
           <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/3.penmanship1.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
+                <h2>Penmanship Update </h2>
+                <p>The feathers of wings wrote essays and stories on thought provoking topics. Click
+                  below to know more</p>
+                <a href="blog/penmanship" class="btn-get-started scrollto">Our submission</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/2.book_exhibition.jpg');">
+            <div class="carousel-container">
+              <div class="carousel-content">
                 <h2>Book exhibition</h2>
-                <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                <p>We came together to distribute our used books to others and it was a massive
+                  success. It created a big library</p>
+                <a href="blog/book_exhibition" class="btn-get-started scrollto">Know more</a>
               </div>
             </div>
           </div>
@@ -43,11 +45,10 @@
           <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/4.our_team(gcm).jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>EMPOWERMENT OF THE UNDERPRIVILEGED</h2>
-                <p>No life lacks pain but no life lacks meaning either
-                  Suffering ceases to be suffering the moment it finds meaning
-                  And education makes life meaningful</p>
-                <a href="#team" class="btn-get-started scrollto">Our GCMs </a>
+                <h2>Our GCMs</h2>
+                <p>We are a registered organization and we are led by abled people from different
+                  spheres of life</p>
+                <a href="#team" class="btn-get-started scrollto">Know our GCMs </a>
               </div>
             </div>
           </div>
@@ -56,7 +57,7 @@
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Photo Gallery</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --}}
                 <a href="/photo_gallery" class="btn-get-started scrollto">Photo Gallery</a>
               </div>
             </div>

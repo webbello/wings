@@ -25,7 +25,11 @@ class EventController extends Controller
 
     public function frontend_index($sort = 'event_date', $sortOrder = 'desc')
     {
-        $events = Event::orderBy($sort, $sortOrder)->get();
+        $events = Event::orderBy($sort, $sortOrder)->get()
+        ->groupBy(function($event) {
+            return $event->event_date >= now() ? 'upcoming' : 'past';
+        });
+        // dd($events);
         return view('frontend.events.index', compact('events'));
     }
 
