@@ -63,6 +63,8 @@
                                         ->class('form-control')
                                         ->placeholder(__('validation.attributes.frontend.password'))
                                         ->required() }}
+                                    <small id="password" class="form-text text-muted"> The password must be at least 8 characters and it contain both upper-case and lower-case letters and special characters and numerical digits</small>
+
                                 </div><!--form-group-->
                             </div><!--col-->
                         </div><!--row-->

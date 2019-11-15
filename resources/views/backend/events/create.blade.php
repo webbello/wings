@@ -29,7 +29,7 @@
                             @csrf
                             <div class="form-group">    
                                 <label for="title">Title:</label>
-                                <input type="text" class="form-control" name="title"/>
+                                <input type="text" class="form-control" name="title" value="{{ old('title') }}"/>
                                 <input type="hidden" name="user_id" value="{{$logged_in_user->id}}">
                             </div>
                         
@@ -40,13 +40,13 @@
                         
                             <div class="form-group">
                                 <label for="description">Description:</label>
-                                <input type="text" class="form-control" name="description"/>
+                                <input type="text" class="form-control" name="description" value="{{ old('description') }}"/>
                             </div>
                             <div class="form-group">
                                 
                                 <label for="event_date">Date:</label>
                                 <div class="input-group mb-3 ">
-                                    <input type="text" class="form-control datetimepicker" placeholder="Event Name" name="event_date" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    <input type="text" class="form-control datetimepicker" placeholder="Event Name" name="event_date" value="{{ old('event_date') }}" aria-label="Recipient's username" aria-describedby="button-addon2">
                                     <div class="input-group-append datetimepicker">
                                         <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-calendar-alt"></i></button>
                                     </div>
@@ -55,15 +55,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="venue">Venue:</label>
-                                <input type="text" class="form-control" name="venue"/>
+                                <input type="text" class="form-control" name="venue" value="{{ old('venue') }}"/>
                             </div>
                             <div class="form-group">
                                 <label for="city">City:</label>
-                                <input type="text" class="form-control" name="city"/>
+                                <input type="text" class="form-control" name="city" value="{{ old('city') }}"/>
                             </div>
                             <div class="form-group">
                                 <label for="country">Country:</label>
-                                <input type="text" class="form-control" name="country"/>
+                                <input type="text" class="form-control" name="country" value="{{ old('country') }}"/>
                             </div>
                             <div class="form-group">
                                 <label for="image">Image:</label>
