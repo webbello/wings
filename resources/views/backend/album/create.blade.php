@@ -31,18 +31,18 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Title:</strong>
-                <input type="text" name="title" class="form-control" placeholder="Title">
+                <input type="text" name="title" class="form-control" placeholder="Title" value="{{old('title') }}" >
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Description:</strong>
-                <textarea class="form-control" style="height:150px" name="description" placeholder="Description"></textarea>
+                <textarea class="form-control" style="height:150px" name="description" placeholder="Description">value="{{old('description') }}"</textarea>
             </div>
             <div class="form-group">    
                 <label for="image"><strong> Image </strong> </label>
-                <input type="file" name="image" id="image"  autofocus="autofocus" class="form-control">
+                <input type="file" name="image" id="image"  value="{{old('image') }}" class="form-control">
             </div>
         </div>
         

@@ -34,7 +34,7 @@
         <link rel="icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/62c7f1f62f2971bd7f11aa0de05eeaf1?s=32" sizes="16x16" />
         <link rel="apple-touch-icon-precomposed" href="https://secure.gravatar.com/blavatar/62c7f1f62f2971bd7f11aa0de05eeaf1?s=114" />
         <link rel="search" type="application/opensearchdescription+xml" href="https://wingsofesc.wordpress.com/osd.xml" title="Wings of ESC" />
-        <link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+        <link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="wingsofesc.in" />
 
         {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
         @stack('before-styles')

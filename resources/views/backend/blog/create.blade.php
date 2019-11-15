@@ -25,21 +25,12 @@
             <div class="row">
             <div class="col-sm-12">
                 <div>
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                        </div><br />
-                    @endif
                     
                     @csrf
                     
                     <div class="form-group">    
                         <label for="title">Title</label>
-                        <input type="text" name="title" id="title" placeholder="Title" maxlength="191" required="required" autofocus="autofocus" class="form-control">
+                        <input type="text" name="title" id="title" placeholder="Title" value="{{ old('title') }}" required="required" autofocus="autofocus" class="form-control">
                     </div>
                     <input type="hidden" name="author" value="{{$logged_in_user->id}}">
                     <input type="hidden" name="user_id" value="{{$logged_in_user->id}}">
@@ -50,11 +41,11 @@
         
                     <div class="form-group">
                         <label for="summary">Summary:</label>
-                        <textarea name="summary" id="summary" placeholder="summary" required="required" autofocus="autofocus" class="form-control"></textarea>
+                        <textarea name="summary" id="summary" placeholder="summary" required="required" value="{{ old('summary') }}" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="body">Body:</label>
-                        <textarea name="body" data-lang="{{app()->getLocale()}}" id="editor" placeholder="Body" maxlength="191" rows="10" autofocus="autofocus" class="form-control"></textarea>                            
+                        <textarea name="body" data-lang="{{app()->getLocale()}}" id="editor" placeholder="Body" maxlength="191" rows="10" autofocus="autofocus" class="form-control">{{ old('body') }}</textarea>                            
                     </div>
                     <div class="form-group">    
                         <label for="image">Image</label>
@@ -65,7 +56,7 @@
                         <select class="form-control" id="lang" name="lang">
                             @foreach(array_keys(config('locale.languages')) as $lang)
                                 @if($lang != app()->getLocale())
-                                    <option value="{{$lang}}">@lang('menus.language-picker.langs.'.$lang)</option>
+                                    <option value="{{$lang}}" {{($lang == old('lang')) ? 'selected' : ''}}>@lang('menus.language-picker.langs.'.$lang)</option>
                                 @endif 
                             @endforeach
                         </select>
@@ -75,7 +66,7 @@
                         <label for="category">Category</label>
                         <select class="form-control" id="category" name="category">
                             @foreach($parentCategories as $category)
-                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                <option value="{{$category->id}}" {{($category->id == old('category')) ? 'selected' : ''}}>{{$category->name}}</option>
                                 @if(count($category->subcategory))
                                     @include('backend.Blog.includes.subCategory',['subcategories' => $category->subcategory])
                                 @endif 
