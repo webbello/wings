@@ -5,7 +5,7 @@
 @section('content')
 {{-- <blog-posts></blog-posts> --}}
 <div class="president_message p-3 clearfix">
-    <img src="img/frontend/site/team/president-md-shadaab-alam.jpg" alt="Md Shadaab Alam Khan" width="300" class="float-right pl-3">
+    <img class="img-fluid img-thumbnail float-md-right" src="img/frontend/site/team/president-md-shadaab-alam_1.jpg" alt="Md Shadaab Alam Khan" >
     <p>
         Dear friends,       
     </p>
