@@ -167,7 +167,58 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'summary' => 'required',
+            'body' => 'required',           
+            //'image' => 'required|mimes:jpeg,png,jpg,gif,svg',
+        ]);
+        //dd($request->all());
+        // $post = new Post;
+        
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            
+            $name = \Str::slug($request->title).'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('/storage/uploads/posts');
+            $imagePath = $destinationPath . "/" . $name;
+            $image->move($destinationPath, $name);
+            $post->image = $name;
+        }
+
+        $post->author = $request->author;
+        $post->user_id = $request->user_id;
+        $post->title = $request->title;
+        $post->slug = \Str::slug($request->title);
+        $post->summary = $request->summary;
+        $post->body = $request->body;
+        $post->lang = $request->lang;
+        $post->category_id = $request->category;
+        $post->status = 0;
+        $post->save();
+
+        if($post)
+        {        
+            $tagNames = explode(',',$request->get('tags'));
+            $tagIds = [];
+            foreach($tagNames as $tagName)
+            {
+                //$post->tags()->create(['name'=>$tagName]);
+                //Or to take care of avoiding duplication of Tag
+                //you could substitute the above line as
+                $tag = Tag::firstOrCreate(['name'=>$tagName]);
+                if($tag)
+                {
+                $tagIds[] = $tag->id;
+                }
+
+            }
+            $post->tags()->sync($tagIds);
+        }
+
+        //return new PostResource($post);
+        return redirect('admin/blog/posts')->with('success', 'Post saved!');
     }
 
     /**

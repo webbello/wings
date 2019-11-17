@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="card">
-    <form method="post" action="{{ route('admin.blog.posts.index', $post) }}" enctype="multipart/form-data">
+    <form method="post" action="{{ route('admin.blog.posts.update', $post->id) }}" enctype="multipart/form-data">
         <div class="card-body">
             <div class="row">
                 <div class="col-sm-5">
