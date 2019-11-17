@@ -19,7 +19,7 @@ Route::group(['prefix' => 'blog/posts/{post}'], function () {
     // Post
     Route::get('/', [PostController::class, 'show'])->name('blog.posts.show');
     Route::get('edit', [PostController::class, 'edit'])->name('blog.posts.edit');
-    Route::patch('/', [PostController::class, 'update'])->name('blog.posts.update');
+    Route::put('/', [PostController::class, 'update'])->name('blog.posts.update');
     Route::delete('/', [PostController::class, 'destroy'])->name('blog.posts.destroy');
 });
 
