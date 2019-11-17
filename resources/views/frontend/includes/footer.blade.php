@@ -8,7 +8,7 @@
     
               <div class="col-lg-3 col-md-6 footer-info">
                 <h3>Wings</h3>
-                <p>A humble desire to give back to E.S.C. (Educational Support Council) and the society at large while having the inner pleasure to reach out to the distressed and being tied together by a value system that transforms the past students of E.S.C.</p>
+                <p>A humble desire to give back to E.S.C. (Educational Support Council) and the society at large while having the inner pleasure to reach out to the distressed and being tied together by a value system that transforms the ex-students of E.S.C.</p>
               </div>
     
               <div class="col-lg-3 col-md-6 footer-links">
@@ -28,7 +28,7 @@
                   Wings of Educational Society <br>
                   22 H 7 LINTON STREET
                   Park Circus <br>
-                  Kolkata - 760014<br>
+                  Kolkata - 700014<br>
                   West Bengal <br>
                   {{-- <strong>Phone:</strong> +1 5589 55488 55<br> --}}
                   <strong>Email:</strong> wingsofesckolkata@gmail.com<br>
