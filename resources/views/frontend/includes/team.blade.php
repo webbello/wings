@@ -17,7 +17,7 @@
     
             <div class=" wow fadeInUp" data-wow-delay="0.1s">
                 <div class="member">
-                <img src="img/frontend/site/team/md-shadaab-alam.jpg" class="img-fluid" alt="">
+                <img src="img/frontend/site/team/md-shadaab-alam_1.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                     <div class="member-info-content">
                     <h4>Md Shadaab Alam</h4>
