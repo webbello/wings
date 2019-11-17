@@ -55,9 +55,9 @@
                         <label for="lang">Language</label>
                         <select class="form-control" id="lang" name="lang">
                             @foreach(array_keys(config('locale.languages')) as $lang)
-                                @if($lang != app()->getLocale())
+                                {{-- @if($lang != app()->getLocale()) --}}
                                     <option value="{{$lang}}" {{($lang == $post->lang) ? 'selected' : ''}}>@lang('menus.language-picker.langs.'.$lang)</option>
-                                @endif 
+                                {{-- @endif  --}}
                             @endforeach
                         </select>
                         {{-- <input type="text" name="lang" id="lang" placeholder="Language" maxlength="191"  autofocus="autofocus" class="form-control"> --}}

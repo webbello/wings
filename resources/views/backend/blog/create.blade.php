@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('labels.backend.access.roles.management') . ' | ' . __('labels.backend.access.roles.create'))
+@section('title', __('Post') . ' | ' . __('labels.backend.access.roles.create'))
 
 @section('content')
 <div class="card">
@@ -55,8 +55,10 @@
                         <label for="lang">Language</label>
                         <select class="form-control" id="lang" name="lang">
                             @foreach(array_keys(config('locale.languages')) as $lang)
-                                @if($lang != app()->getLocale())
-                                    <option value="{{$lang}}" {{($lang == old('lang')) ? 'selected' : ''}}>@lang('menus.language-picker.langs.'.$lang)</option>
+                                @if(old('lang'))
+                                    <option value="{{$lang}}" {{(  $lang == old('lang') ) ? 'selected' : ''}}>@lang('menus.language-picker.langs.'.$lang)</option>
+                                @else
+                                    <option value="{{$lang}}" {{(  $lang == 'en' ) ? 'selected' : ''}}>@lang('menus.language-picker.langs.'.$lang)</option>
                                 @endif 
                             @endforeach
                         </select>
@@ -76,7 +78,7 @@
                     </div>
                     <div class="form-group">    
                         <label for="tags">Tag</label>
-                        <input type="text" name="tags" id="tags" maxlength="191"  autofocus="autofocus" class="form-control">
+                        <input type="text" name="tags" id="tags"  value="{{ old('tags') }}" class="form-control">
                     </div>
                 </div>
             </div>
