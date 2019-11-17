@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('labels.backend.access.roles.management') . ' | ' . __('labels.backend.access.roles.create'))
+@section('title', __('Edit Post') . ' | ' . __(''))
 
 @section('content')
 <div class="card">
@@ -24,18 +24,9 @@
 
             <div class="row">
             <div class="col-sm-12">
-                <div>
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                        </div><br />
-                    @endif
-                    
+                <div> 
                     @csrf
+                    @method('PUT')
                     
                     <div class="form-group">    
                         <label for="title">Title</label>
@@ -65,7 +56,7 @@
                         <select class="form-control" id="lang" name="lang">
                             @foreach(array_keys(config('locale.languages')) as $lang)
                                 @if($lang != app()->getLocale())
-                                    <option value="{{$lang}}">@lang('menus.language-picker.langs.'.$lang)</option>
+                                    <option value="{{$lang}}" {{($lang == $post->lang) ? 'selected' : ''}}>@lang('menus.language-picker.langs.'.$lang)</option>
                                 @endif 
                             @endforeach
                         </select>
@@ -75,7 +66,7 @@
                         <label for="category">Category</label>
                         <select class="form-control" id="category" name="category">
                             @foreach($parentCategories as $category)
-                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                <option value="{{$category->id}}" {{($category->id == $post->category_id) ? 'selected' : ''}}>{{$category->name}}</option>
                                 @if(count($category->subcategory))
                                     @include('backend.Blog.includes.subCategory',['subcategories' => $category->subcategory])
                                 @endif 
