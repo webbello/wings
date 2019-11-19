@@ -6,21 +6,30 @@
 <div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto">
-        <h3 class="mt-4">{{ $post->title }} <span class="lead"> by <a href="#"> {{ $post->user->name }}</a></span> </h3>
-        <hr>
+        <h1 class="mt-4">{{ $post->title }} </h1>
+        
         <ul class="list-inline">
-          @foreach($post->tags as $tag)
-            <li class="list-inline-item"><a class="btn btn-sm btn-outline-primary" href="#" role="button">{{$tag->name}}</a></li>
-          @endforeach
+            <li class="list-inline-item"><i class="fa fa-calendar"></i> {{ !! !empty($post->created_at) ? $post->created_at->diffForHumans() : $post->created_at }}</li>
+            {{-- <li class="list-inline-item"><span class="lead1"> <i class="fa fa-user"></i> <a href="#"> {{ $post->user->name }}</a></span></li> --}}
+            <li class="list-inline-item"><i class="fa fa-user"></i> {{ $post->user->name }}</li>
         </ul>
-        <p>Posted {{ !! !empty($post->created_at) ? $post->created_at->diffForHumans() : $post->created_at }} </p>
-        <hr>
+
+        {{-- <p>Posted {{ !! !empty($post->created_at) ? $post->created_at->diffForHumans() : $post->created_at }} </p> --}}
+        
         <div class="blog-post clearfix">
-          <img class="img-fluid rounded" src=" {!! !empty($post->image) ? '/storage/uploads/posts/' . $post->image :  'http://placehold.it/750x300' !!} " alt="">
+          <img class="img-fluid rounded" src=" {!! !empty($post->image) ? '/storage/uploads/posts/' . $post->image :  'http://placehold.it/750x300' !!} " style="height: 300px">
           <hr>
           {!! html_entity_decode($post->body) !!}
         </div>
         <hr>
+        {{-- {{dd($post->tags)}} --}}
+        @if (count($post->tags) > 0)
+        <ul class="list-inline">
+            @foreach($post->tags as $tag)
+              <li class="list-inline-item"><a class="btn btn-sm btn-outline-primary" href="#" role="button">{{$tag->name}}</a></li>
+            @endforeach
+        </ul>
+        @endif
         <div class="card my-4">
           <h5 class="card-header">Leave a Comment:</h5>
           <div class="card-body" id="comment-section">
