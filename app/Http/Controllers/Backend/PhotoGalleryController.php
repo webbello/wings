@@ -75,8 +75,7 @@ class PhotoGalleryController extends Controller
         $photoGallery->save();
 
         //Album::create($request->all());
-        return redirect()->route('admin.gallery.index')
-                        ->with('success','Photo created successfully.');
+        return redirect()->route('admin.gallery.index')->withFlashSuccess('Photo saved successfully!');
     }
 
     /**
@@ -135,8 +134,7 @@ class PhotoGalleryController extends Controller
         $gallery->save();
 
         //Album::create($request->all());
-        return redirect()->route('admin.gallery.index')
-                        ->with('success','Photo created successfully.');
+        return redirect()->route('admin.gallery.index')->withFlashSuccess('Photo updated successfully!');
     }
 
     /**
@@ -145,8 +143,10 @@ class PhotoGalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, PhotoGallery $gallery)
     {
-        //
+        $gallery->delete();
+        return redirect()->route('admin.gallery.index')
+                        ->withFlashSuccess('Photo deleted successfully!');
     }
 }
