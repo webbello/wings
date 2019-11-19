@@ -126,7 +126,7 @@ class PostController extends Controller
         }
 
         //return new PostResource($post);
-        return redirect('admin/blog/posts')->with('success', 'Post saved!');
+        return redirect('admin/blog/posts')->withFlashSuccess('Post saved successfully!');
     }
 
     /**
@@ -218,7 +218,7 @@ class PostController extends Controller
         }
 
         //return new PostResource($post);
-        return redirect('admin/blog/posts')->with('success', 'Post saved!');
+        return redirect('admin/blog/posts')->withFlashSuccess('Post updated successfully!');
     }
 
     /**

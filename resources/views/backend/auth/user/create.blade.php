@@ -55,6 +55,7 @@
                                 {{ html()->email('email')
                                     ->class('form-control')
                                     ->placeholder(__('validation.attributes.backend.access.users.email'))
+                                    ->attribute('id', 'register_email')
                                     ->attribute('maxlength', 191)
                                     ->required() }}
                             </div><!--col-->
@@ -67,6 +68,7 @@
                                 {{ html()->password('password')
                                     ->class('form-control')
                                     ->placeholder(__('validation.attributes.backend.access.users.password'))
+                                    ->attribute('id', 'register_password')
                                     ->required() }}
                             </div><!--col-->
                         </div><!--form-group-->
@@ -78,6 +80,7 @@
                                 {{ html()->password('password_confirmation')
                                     ->class('form-control')
                                     ->placeholder(__('validation.attributes.backend.access.users.password_confirmation'))
+                                    ->attribute('id', 'register_confirm_password')
                                     ->required() }}
                             </div><!--col-->
                         </div><!--form-group-->
@@ -204,3 +207,53 @@
         </div><!--card-->
     {{ html()->form()->close() }}
 @endsection
+@push('after-scripts')
+    <script>
+        $(document).ready(function(){
+
+            //Generate random password
+            var email = document.getElementById('register_email');
+            var password = document.getElementById('register_password');
+            var confirm_password = document.getElementById('register_confirm_password');
+            var characters = [
+                {
+                    name: "Lowercase",
+                    value: "abcdefghijklmnopqrstuvwxyz",
+                    checked: true,
+                },
+                {
+                    name: "Uppercase",
+                    value: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                    checked: true,
+                },
+                {
+                    name: "Numbers",
+                    value: "0123456789",
+                    checked: true,
+                },
+                {
+                    name: "Special Characters",
+                    value: "_-+=)(*&^%$#@!`~",
+                    checked: true,
+                },
+            ];
+            var gLength = 9;
+
+            email.onchange = function(){
+                let result = "";
+                let charactersVal = "";
+                for (var j = 0; j < characters.length; j++) {
+                    if (characters[j].checked) {
+                    charactersVal += characters[j].value;
+                    }
+                }
+                for ( var i = 0; i < gLength; i++ ) {
+                    result += charactersVal.charAt(Math.floor(Math.random() * charactersVal.length));
+                }
+                // console.log('characters', result);
+                password.value = result;
+                confirm_password.value = result;
+            };
+        });
+    </script>
+@endpush

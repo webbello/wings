@@ -77,7 +77,7 @@ class EventController extends Controller
         $event->status = 0;
         $event->created_by = $request->get('user_id');
         $event->save();
-        return redirect('/admin/events')->with('success', 'Event saved!');
+        return redirect('/admin/events')->->withFlashSuccess('Event saved successfully!');
     }
 
     /**
@@ -148,7 +148,7 @@ class EventController extends Controller
         $event->status = 0;
         $event->created_by = $request->get('user_id');
         $event->save();
-        return redirect('/admin/events')->with('success', 'Event Updated!');
+        return redirect('/admin/events')->withFlashSuccess('Event updated successfully!');
     }
 
     /**
@@ -157,8 +157,10 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, Event $event)
     {
-        //
+        $event->delete();
+        return redirect()->route('admin.events.index')
+                        ->withFlashSuccess('Event deleted successfully!');
     }
 }
