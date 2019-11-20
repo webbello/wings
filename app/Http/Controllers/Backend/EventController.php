@@ -77,7 +77,7 @@ class EventController extends Controller
         $event->status = 0;
         $event->created_by = $request->get('user_id');
         $event->save();
-        return redirect('/admin/events')->->withFlashSuccess('Event saved successfully!');
+        return redirect('/admin/events')->withFlashSuccess('Event saved successfully!');
     }
 
     /**
