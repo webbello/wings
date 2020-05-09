@@ -27,6 +27,8 @@
                 <p>The feathers of wings wrote essays and stories on thought provoking topics. Click
                   below to know more</p>
                 <a href="blog/penmanship" class="btn-get-started scrollto">Our submission</a>
+                <a href="/storage/documents/Penmanship_the_voice_of_wings.pdf" target="_blank" class="btn-get-started scrollto">Download</a>
+
               </div>
             </div>
           </div>
