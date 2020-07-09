@@ -25,6 +25,7 @@
                         <tr>
                             <th>Title</th>
                             <th>Summary</th>
+                            <th>Category</th>
                             {{-- <th>Body</th> --}}
                             <th>@lang('labels.general.actions')</th>
                         </tr>
@@ -34,6 +35,7 @@
                                 <tr>
                                     <td>{{ ucwords($post->title) }}</td>
                                     <td>{{ ucwords($post->summary) }}</td>
+                                    <td>{{ ucwords($post->category->name) }}</td>
                                     {{-- <td>{!! html_entity_decode(Str::limit($post->body, $limit = 180, $end = '...')) !!}</td> --}}
                                     <td>@include('backend.blog.includes.actions', ['post' => $post])</td>
                                 </tr>
@@ -52,7 +54,7 @@
 
             <div class="col-5">
                 <div class="float-right">
-                    {{-- {!! $posts->render() !!} --}}
+                    {!! $posts->links() !!}
                 </div>
             </div><!--col-->
         </div><!--row-->

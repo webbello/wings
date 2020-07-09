@@ -73,7 +73,7 @@ class CategoryController extends Controller
     {
         //$category = Category::find($id);
         $parentCategories = Category::where('parent_id',NULL)->get();
-        //dd($category);
+        // dd($category->subcategory);
         return view('backend.categories.edit', compact('category', 'parentCategories'));
     }
 
@@ -84,9 +84,17 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Category $category)
     {
-        //
+        // dd($category);
+        $request->validate([
+            'name'=>'required'
+        ]);
+        $category->name = $request->name;
+        $category->slug = \Str::slug($request->name);
+        $category->parent_id = $request->parent_id;
+        $category->save();
+        return redirect('admin/categories')->with('success', 'Category updated!');
     }
 
     /**

@@ -7,13 +7,13 @@
 
 <div class="container">
   <div class="row row-height align-items-center">
-      <div class = "col-md-4 left d-none d-sm-none d-md-block">
-          <ul class="list-group">
-            @foreach ($posts as $item)
-              <li class="list-group-item"> <a href="{{ route('frontend.blog.single', $item->id) }}">{{$item->title}}</a> </li>
-            @endforeach
-          </ul>
-      </div>
+    <div class = "col-md-4 left d-none d-sm-none d-md-block">
+        <ul class="list-group">
+          @foreach ($postsList as $key => $item)
+            <li class="list-group-item"> <a href="{{ route('frontend.blog.single', $key) }}">{{$item}}</a> </li>
+          @endforeach
+        </ul>
+    </div>
     <div class="col-md-8 mx-auto mid">
       {{-- <h1 class="my-4 text-center">Welcome to the Blog </h1> --}}
 
