@@ -68,6 +68,7 @@ class EventController extends Controller
         }
         // dd($request->get('event_date'));
         $event->title = $request->get('title');
+        $event->slug = \Str::slug($request->title);
         $event->summary = 'Summary';
         $event->description = $request->get('description');
         $event->event_date = $request->get('event_date');
@@ -139,6 +140,7 @@ class EventController extends Controller
             $event->image = $name;
         }
         $event->title = $request->get('title');
+        $event->slug = \Str::slug($request->title);
         $event->summary = 'summary';
         $event->description = $request->get('description');
         $event->event_date = $request->get('event_date');

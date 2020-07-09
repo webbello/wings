@@ -41,7 +41,9 @@
                         
                             <div class="form-group">
                                 <label for="description">Description:</label>
-                                <input type="text" class="form-control" name="description" value="{{$event->description}}"/>
+                                <!-- <input type="text" class="form-control" name="description" value="{{$event->description}}"/> -->
+                                <textarea name="description" data-lang="{{app()->getLocale()}}" id="editor" placeholder="Body" maxlength="191" rows="10" autofocus="autofocus" class="form-control">{{$event->description}}</textarea>
+
                             </div>
                             <div class="form-group">
                                 

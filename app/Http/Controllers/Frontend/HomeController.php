@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Event;
+use App\Models\Category;
 use App\Http\Controllers\Controller;
 
 /**
@@ -18,6 +19,8 @@ class HomeController extends Controller
         $sort = 'event_date';
         $sortOrder = 'desc';
         $upcoming_events = Event::where('event_date', '>=', now())->orderBy($sort, $sortOrder)->get();
+        $penmanshipCategories = Category::where('slug','penmanship')->get();
+        // dd($penmanshipCategories);
         // $events = Event::latest()->get();
         return view('frontend.index',compact('upcoming_events'));
     }

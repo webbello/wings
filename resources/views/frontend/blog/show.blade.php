@@ -5,8 +5,15 @@
 @section('content')
 <div class="container">
     <div class="row">
-      <div class="col-lg-10 mx-auto">
-        <h1 class="mt-4">{{ $post->title }} </h1>
+      <div class = "col-md-4 left d-none d-sm-none d-md-block">
+          <ul class="list-group">
+            @foreach ($postsList as $key => $item)
+              <li class="list-group-item {{ active_class(Request::is('blog/posts/'.$key)) }}"> <a href="{{ route('frontend.blog.single', $key) }}">{{$item}}</a> </li>
+            @endforeach
+          </ul>
+      </div>
+      <div class="col-md-8 mx-auto">
+        <h1>{{ $post->title }} </h1>
         
         <ul class="list-inline">
             <li class="list-inline-item"><i class="fa fa-calendar"></i> {{ !! !empty($post->created_at) ? $post->created_at->diffForHumans() : $post->created_at }}</li>
@@ -26,7 +33,9 @@
         @if (count($post->tags) > 0)
         <ul class="list-inline">
             @foreach($post->tags as $tag)
+              @if (!empty($tag->name))
               <li class="list-inline-item"><a class="btn btn-sm btn-outline-primary" href="#" role="button">{{$tag->name}}</a></li>
+              @endif
             @endforeach
         </ul>
         @endif
@@ -68,6 +77,9 @@
             </div>
         </div>
       </div>
+      {{-- <div class="col-md-3 right d-none d-sm-none d-md-block">
+      
+      </div> --}}
     </div>
 </div>
 

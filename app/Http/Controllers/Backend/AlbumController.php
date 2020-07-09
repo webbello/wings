@@ -49,6 +49,7 @@ class AlbumController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
+            'image'=>'required'
         ]);
         
         $album = new Album;

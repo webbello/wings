@@ -20,8 +20,10 @@ class PostController extends Controller
      */
     public function allPost(ManagePostRequest $request)
     {
-        $posts = Post::latest()->paginate(5);
-        return view('backend.blog.index', compact('posts'));
+        $sort = 'created_at';
+        $sortOrder = 'desc';
+        $posts = Post::orderBy($sort, $sortOrder)->paginate(25);
+        return view('backend.blog.index', compact('posts'))->with('i', (request()->input('page', 1) - 1) * 25);
     }
 
     public function index()
@@ -44,16 +46,22 @@ class PostController extends Controller
             $category->id = 1;
         }
         $posts = Post::where('category_id', $category->id)->latest()->simplePaginate(6);
-        
+        $postsList = Post::where('category_id', $category->id)->latest()->pluck('title', 'id');
         return view('frontend.blog.index', [
-            'posts' => $posts
+            'posts' => $posts,
+            'postsList' => $postsList
         ]);
     }
 
-    public function single(Request $request, Post $post)
+    public function single(Request $request, Post $post, Category $category)
     {
-        //dd($post);
-        return view('frontend.blog.show', compact('post'));
+        if ($request->category === null) {
+            $category->id = 1;
+        }
+        $postsList = Post::where('category_id', $category->id)->latest()->pluck('title', 'id');
+        
+        // dd($postsList);
+        return view('frontend.blog.show', compact('post', 'postsList'));
     }
 
     /**
