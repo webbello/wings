@@ -4,17 +4,19 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-      <div class = "col-md-4 left d-none d-sm-none d-md-block">
-          <ul class="list-group">
-            @foreach ($postsList as $key => $item)
-              <li class="list-group-item {{ active_class(Request::is('blog/posts/'.$key)) }}"> <a href="{{ route('frontend.blog.single', $key) }}">{{$item}}</a> </li>
-            @endforeach
-          </ul>
-      </div>
-      <div class="col-md-8 mx-auto">
-        <h1>{{ $post->title }} </h1>
-        
+  <div class="row row-height align-items-center">
+    <div class = "col-md-4 left d-none d-sm-none d-md-block">
+        <ul class="list-group">
+          @foreach ($postsList as $key => $item)
+            <li class="list-group-item {{ active_class(Request::is('blog/posts/'.$key)) }}"> <a href="{{ route('frontend.blog.single', $key) }}">{{$item}}</a> </li>
+          @endforeach
+        </ul>
+    </div>
+    <div class="col-md-8 mx-auto mid">
+      <h1>{{ $post->title }} </h1>
+
+      <div class="card-content mb-4">
+
         <ul class="list-inline">
             <li class="list-inline-item"><i class="fa fa-calendar"></i> {{ !! !empty($post->created_at) ? $post->created_at->diffForHumans() : $post->created_at }}</li>
             {{-- <li class="list-inline-item"><span class="lead1"> <i class="fa fa-user"></i> <a href="#"> {{ $post->user->name }}</a></span></li> --}}
@@ -77,10 +79,12 @@
             </div>
         </div>
       </div>
-      {{-- <div class="col-md-3 right d-none d-sm-none d-md-block">
-      
-      </div> --}}
     </div>
+    {{-- <div class="col-md-3 right d-none d-sm-none d-md-block">
+      
+    </div> --}}
+  </div>
 </div>
+
 
 @endsection

@@ -53,14 +53,12 @@ class PostController extends Controller
         ]);
     }
 
-    public function single(Request $request, Post $post, Category $category)
+    public function single(Request $request, Post $post)
     {
-        if ($request->category === null) {
-            $category->id = 1;
-        }
-        $postsList = Post::where('category_id', $category->id)->latest()->pluck('title', 'id');
+
+        $postsList = Post::where('category_id', $post->category_id)->latest()->pluck('title', 'id');
         
-        // dd($postsList);
+        // dd($post->category_id);
         return view('frontend.blog.show', compact('post', 'postsList'));
     }
 
