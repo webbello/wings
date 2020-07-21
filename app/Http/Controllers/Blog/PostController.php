@@ -20,10 +20,28 @@ class PostController extends Controller
      */
     public function allPost(ManagePostRequest $request)
     {
-        $sort = 'created_at';
-        $sortOrder = 'desc';
+        $search = $request->search;
+        $sort = $request->sort ?? 'created_at';
+        $sortOrder = $request->sortOrder ?? 'asc';
+        //toggle the sort order for next time
+        $sortOrder = $sortOrder == 'desc' ? 'asc': 'desc';
         $posts = Post::orderBy($sort, $sortOrder)->paginate(25);
-        return view('backend.blog.index', compact('posts'))->with('i', (request()->input('page', 1) - 1) * 25);
+        $query = Post::orderBy($sort, $sortOrder);
+        if(!empty($request->search)){
+            $searchFields = ['title','summary','body'];
+            $query = $query->where(function($query) use($request, $searchFields){
+                $searchWildcard = '%' . $request->search . '%';
+                foreach($searchFields as $field){
+                    $query = $query->orWhere($field, 'LIKE', $searchWildcard);
+                }
+            });
+            $posts = $query->paginate(25);
+            // $posts = $query->dd();
+            $posts->appends(['search' => $search])->links();
+            $posts->withPath('posts?search='.$search);
+        }
+        $posts->appends(['sort' => $sort, 'sortOrder' => $request->sortOrder ])->links();
+        return view('backend.blog.index', compact('posts', 'search', 'sortOrder'))->with('i', (request()->input('page', 1) - 1) * 25);
     }
 
     public function index()

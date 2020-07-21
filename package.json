@@ -29,7 +29,7 @@
         "laravel-mix": "^4.0.16",
         "lodash": "^4.17.19",
         "pace": "github:HubSpot/pace#v1.0.2",
-        "perfect-scrollbar": "^1.4.0",
+        "perfect-scrollbar": "^1.5.0",
         "popper.js": "^1.16.0",
         "resolve-url-loader": "^2.3.2",
         "sass": "^1.23.3",
