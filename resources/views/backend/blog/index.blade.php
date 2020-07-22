@@ -69,7 +69,7 @@
                                     <td>{{ ucwords($post->title) }}</td>
                                     <td>{{ ucwords($post->summary) }}</td>
                                     <td>{{ isset($post->category->name) ? ucwords($post->category->name) : "" }}</td>
-                                    <td>{!! html_entity_decode(Str::limit($post->body, $limit = 180, $end = '...')) !!}</td>
+                                    <td>{!! html_entity_decode(Str::limit($post->body, $limit = 100, $end = '...')) !!}</td>
                                     <td>@include('backend.blog.includes.actions', ['post' => $post])</td>
                                 </tr>
                             @endforeach
