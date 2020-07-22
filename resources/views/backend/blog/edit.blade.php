@@ -68,7 +68,7 @@
                             @foreach($parentCategories as $category)
                                 <option value="{{$category->id}}" {{($category->id == $post->category_id) ? 'selected' : ''}}>{{$category->name}}</option>
                                 @if(count($category->subcategory))
-                                    @include('backend.Blog.includes.subCategoryEdit',['subcategories' => $category->subcategory])
+                                    @include('backend.blog.includes.subCategoryEdit',['subcategories' => $category->subcategory])
                                 @endif 
                             @endforeach
                         </select>
