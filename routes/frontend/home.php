@@ -14,8 +14,8 @@ use App\Http\Controllers\Backend\AlbumController;
  * All route names are prefixed with 'frontend.'.
  */
 Route::get('/', [HomeController::class, 'index'])->name('index');
-Route::get('blog/{category?}', [PostController::class, 'all'])->name('blog.index');
-Route::get('blog/posts/{post}', [PostController::class, 'single'])->name('blog.single');
+Route::get('content/{category}/{slug}', [PostController::class, 'single'])->name('blog.single');
+Route::get('content/{category?}', [PostController::class, 'all'])->name('blog.index');
 Route::get('events', [EventController::class, 'frontend_index'])->name('events.index');
 Route::get('events/{id}', [EventController::class, 'frontend_show'])->name('events.show');
 Route::post('events/store', [EventController::class, 'store'])->name('events.store');

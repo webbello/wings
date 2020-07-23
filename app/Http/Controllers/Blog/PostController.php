@@ -59,25 +59,31 @@ class PostController extends Controller
     {
         
         // $category = Category::where('slug', $request->category)->get();
-        // dd($category);
+        
         if ($request->category === null) {
             $category->id = 1;
+            $category->slug = 'blog';
         }
+        // dd($category);
         $posts = Post::where('category_id', $category->id)->latest()->simplePaginate(6);
-        $postsList = Post::where('category_id', $category->id)->latest()->pluck('title', 'id');
+        $postsList = Post::where('category_id', $category->id)->latest()->pluck('title', 'slug');
         return view('frontend.blog.index', [
             'posts' => $posts,
-            'postsList' => $postsList
+            'postsList' => $postsList,
+            'category' => $category
         ]);
     }
 
-    public function single(Request $request, Post $post)
+    public function single(Request $request, Category $category, $slug)
     {
+        $categorySlug = $category->slug;
+        $post = Post::where('slug', $slug)->latest()->first();
+        // dd($category->slug);
 
-        $postsList = Post::where('category_id', $post->category_id)->latest()->pluck('title', 'id');
+        $postsList = Post::where('category_id', $post->category_id)->latest()->pluck('title', 'slug');
         
         // dd($post->category_id);
-        return view('frontend.blog.show', compact('post', 'postsList'));
+        return view('frontend.blog.show', compact('categorySlug','post', 'postsList'));
     }
 
     /**
@@ -100,7 +106,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
+            'title' => ['required', 'unique:posts'],
             'summary' => 'required',
             'body' => 'required',           
             //'image' => 'required|mimes:jpeg,png,jpg,gif,svg',
@@ -191,8 +197,9 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+        // dd($post->title);
         $this->validate($request, [
-            'title' => 'required',
+            'title' => 'exclude_if:title,'.$post->title.'|required|string|unique:posts',
             'summary' => 'required',
             'body' => 'required',           
             //'image' => 'required|mimes:jpeg,png,jpg,gif,svg',

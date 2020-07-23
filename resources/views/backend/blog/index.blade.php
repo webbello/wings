@@ -62,6 +62,9 @@
                             <th>
                                 @include('backend.blog.includes.sortable-link', ['name' => 'Body', 'sort' => 'body', 'sortOrder' => $sortOrder])
                             </th>
+                            <th>
+                                @include('backend.blog.includes.sortable-link', ['name' => 'Created At', 'sort' => 'created_at', 'sortOrder' => $sortOrder])
+                            </th>
                             <th>@lang('labels.general.actions')</th>
                         </tr>
                         </thead>
@@ -71,7 +74,8 @@
                                     <td>{{ ucwords($post->title) }}</td>
                                     <td>{{ ucwords($post->summary) }}</td>
                                     <td>{{ isset($post->category->name) ? ucwords($post->category->name) : "" }}</td>
-                                    <td>{!! html_entity_decode(Str::limit($post->body, $limit = 100, $end = '...')) !!}</td>
+                                    <td>{!! html_entity_decode(Str::limit($post->body, $limit = 70, $end = '...')) !!}</td>
+                                    <td>{{ $post->created_at->diffForHumans() }}</td>
                                     <td>@include('backend.blog.includes.actions', ['post' => $post])</td>
                                 </tr>
                             @endforeach

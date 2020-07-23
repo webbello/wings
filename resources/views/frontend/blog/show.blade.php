@@ -8,7 +8,7 @@
     <div class = "col-md-4 left d-none d-sm-none d-md-block">
         <ul class="list-group">
           @foreach ($postsList as $key => $item)
-            <li class="list-group-item {{ active_class(Request::is('blog/posts/'.$key)) }}"> <a href="{{ route('frontend.blog.single', $key) }}">{{$item}}</a> </li>
+            <li class="list-group-item {{ active_class(Request::is('blog/'.$categorySlug.'/'.$key)) }}"> <a href="{{ route('frontend.blog.single', [$categorySlug, $key]) }}">{{$item}}</a> </li>
           @endforeach
         </ul>
     </div>
