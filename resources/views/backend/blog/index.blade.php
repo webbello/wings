@@ -56,7 +56,9 @@
                             <th>
                                 @include('backend.blog.includes.sortable-link', ['name' => 'Summary', 'sort' => 'summary', 'sortOrder' => $sortOrder])
                             </th>
-                            <th>Category</th>
+                            <th>
+                                @include('backend.blog.includes.sortable-link', ['name' => 'Category', 'sort' => 'category_id', 'sortOrder' => $sortOrder])
+                            </th>
                             <th>
                                 @include('backend.blog.includes.sortable-link', ['name' => 'Body', 'sort' => 'body', 'sortOrder' => $sortOrder])
                             </th>
