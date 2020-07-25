@@ -25,6 +25,7 @@ class CreateEventsTable extends Migration
             $table->string('country');
             $table->string('event_by')->nullable();
             $table->dateTime('event_date');
+            $table->dateTime('event_end_date');
             $table->string('event_type');
             $table->tinyInteger('status'); 
             $table->integer('created_by');

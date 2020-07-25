@@ -4,100 +4,100 @@
 
 @section('content')
 {{-- {{dd($events['upcoming']->last())}} --}}
-    @if (isset($events['upcoming']))
-        @include('frontend.includes.upcoming-events', ['recent_event' => $events['upcoming']->last()])
+    @if (isset($upcomingEvents))
+        @include('frontend.includes.upcoming-events', ['recent_event' => $upcomingEvents->last()])
     @endif
     
     <div class="container">
-        <div class="section-content">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-5">
-                    <h3 class="line-bottom border-bottom mt-3">Upcoming Events</h3>
-                    @if (isset($events['upcoming']))
-                        @foreach ($events['upcoming'] as $key => $event)
+        <div class="row mt-4 mb-3">
+            <div class="col-sm-6">
+                <form action="{{ route('frontend.events.index') }}" method="get">
+                    <div class="form-group1">
+                        <label for="appendedInputButtons" class="sr-only">Two-button append</label>
+                        <div class="controls">
+                        <div class="input-group">
+                            <input class="form-control" name="search" placeholder="Search" size="26" type="text" value="{{$search}}">
+                            <span class="input-group-append">
+                                <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
+                                @if ($search)
+                                <a class="btn btn-primary" href="{{ route('frontend.events.index') }}">Reset</a>
+                                <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Advanced</button> -->
+                                @endif
+                            </span>
+                        </div>
+                        </div>
+                    </div>
+                </form>
+            </div><!--col-->
 
-                            <div class="media {{($key > 0) ? 'my-4' : ''}}">
-                                <div class="event-date text-center bg-theme-colored border-1px pt-1 pl-3 pr-3 mr-3 sm-custom-style">
-                                    <ul class="list-inline">
-                                        <li class="font-28 text-white font-weight-700">{{ \Carbon\Carbon::parse($event->event_date)->format('d') }}</li>
-                                        <li class="font-18 text-white text-center text-uppercase">{{\Carbon\Carbon::parse($event->event_date)->format('M')}}</li>
-                                    </ul>
-                                </div>
-                                <div class="media-body align-self-center">
-                                    <h5 class="media-heading font-16 font-weight-600"><a href="{{ route('frontend.events.show', $event->id ) }}">{{$event->title}}</a></h5>
-                                    <ul class="list-inline font-weight-600 text-gray-dimgray">
-                                        <li class="list-inline-item"><i class="far fa-clock text-theme-colored"></i> {{\Carbon\Carbon::parse($event->event_date)->format('g.i')}}</li>
-                                        <li class="list-inline-item"> <i class="fa fa-map-marker text-theme-colored"></i> {{$event->venue}}</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        @endforeach
+            <div class="col-sm-6 text-right">
+            <form action="{{ route('frontend.events.index') }}" method="get" name="event_filter">
+                <div class="form-row">
+                    <div class="form-group col-md-9">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons" onchange="event_filter.submit();">
+                            <label class="btn btn-outline-primary {{ ($filter === "all" || $filter == '') ? 'active':''}}" >
+                                <input type="radio" name="filter" id="option1" {{$filter === "all" ? 'checked':''}} value="all" > All
+                            </label>
+                            <label class="btn btn-outline-primary {{$filter === "upcoming" ? 'active':''}}">
+                                <input type="radio" name="filter" id="option2" {{$filter === "upcoming" ? 'checked':''}} value="upcoming" > Upcoming
+                            </label>
+                            <label class="btn btn-outline-primary {{$filter === "past" ? 'active':''}}" >
+                                <input type="radio" name="filter" id="option3" {{$filter === "past" ? 'checked':''}} value="past" > Past
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <select class="form-control" name="sort" id="sort_by_event" onchange="event_filter.submit();">
+                            <option value="">Sort By</option>
+                            <!-- {{$sort == "title" ? 'selected':''}} -->
+                            <option value="title">Title</option>
+                            <option value="event_date">Event Date</option>
+                            <option value="venue">Venue</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="sortOrder" value="{{$sortOrder}}">
+                </div>
+            </form>
+            </div><!--col-->
+        </div><!--row-->
+        <div class="row clearfix">
+            @if (isset($events))
+                @foreach ($events as $key => $event)
+                <!--Event Block-->
+                <div class="event-block col-md-6 col-sm-12 col-xs-12">
+                    @if ($event->event_date >= now())
+                    <div class="d-flex flex-row-reverse bd-highlight">
+                        <span class="text-right">Upcoming</span>
+                    </div>
                     @endif
-                    
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <h3 class="line-bottom border-bottom mt-3">About Us</h3>
-                    <img src="img/frontend/site/about-plan.jpg" class="rounded img-fluid" alt="">
-                    <p class="mt-15">A humble desire to give back to E.S.C. (Educational Support Council) and the society at large while having the inner pleasure to reach out to the distressed and being tied together by a value system that transforms the past students of E.S.C.</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm btn-theme-colored">read more</a>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <h3 class="text-uppercase line-bottom mt-sm-30 mt-3">Get <span class="text-theme-colored"> Involved</span></h3>
-                    <div class="icon-box icon-box-effect mb-20 p-3 bg-light border-bottom-theme-color-3px">
-                        <a href="#" class="icon mb-0 mr-0 pull-left flip">
-                        <i class="flaticon-charity-responsible-energy-use text-theme-colored font-48"></i>
-                        </a>
-                        <div class="ml-80">
-                        <h5 class="icon-box-title mt-15 mb-1"><strong>Become a Donar</strong></h5>
-                        <p class="text-gray">Lorem ipsum dolor sit ametcon elit sectetu radipisicing. Mollitia quasi.<a class="font-14 pl-10 text-theme-colored" href="page-about1.html"> read more...</a></p>
-                        </div>
-                    </div>
-                    <div class="icon-box icon-box-effect mb-20 p-3 bg-light border-bottom-theme-color-3px">
-                        <a href="#" class="icon mb-0 mr-0 pull-left flip">
-                        <i class="flaticon-charity-shelter text-theme-colored font-48"></i>
-                        </a>
-                        <div class="ml-80">
-                        <h5 class="icon-box-title mt-15 mb-1"><strong>Become a Volunteer</strong></h5>
-                        <p class="text-gray">Lorem ipsum dolor sit ametcon elit sectetu radipisicing. Mollitia quasi.<a class="font-14 pl-10 text-theme-colored" href="page-about1.html"> read more...</a></p>
+                    <div class="inner-box">
+                        <div class="content">
+                            <div class="date-box">
+                            {{ \Carbon\Carbon::parse($event->event_date)->format('d') }} <span>{{\Carbon\Carbon::parse($event->event_date)->format('F')}}</span>
+                            </div>
+                            <h3><a href="{{ route('frontend.events.show', $event->id ) }}">{{$event->title}}</a></h3>
+                            <ul class="event-info">
+                                <li><span class="icon fa fa-clock-o"></span>{{\Carbon\Carbon::parse($event->event_date)->format('g.i')}}</li>
+                                <li><span class="icon fa fa-map-marker"></span>{{$event->venue}}</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
+                <!--Event Block-->
+                @endforeach
+            @endif
         </div>
-        <div class="row mb-4 mt-3">
-            <div class="col">
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fab fa-font-awesome-flag"></i> Past Events
-                    </div>
-                    <div class="card-body">
-                        @if (isset($events['past']))
-                            @foreach ($events['past'] as $key => $event)
-                                <div class="media {{($key > 0) ? 'my-4' : ''}}">
-                                    <div class="event-date text-center bg-theme-colored border-1px pt-1 pl-3 pr-3 mr-3 sm-custom-style">
-                                        <ul class="list-inline">
-                                            <li class="font-28 text-white font-weight-700">{{ \Carbon\Carbon::parse($event->event_date)->format('d') }}</li>
-                                            <li class="font-18 text-white text-center text-uppercase">{{\Carbon\Carbon::parse($event->event_date)->format('M')}}</li>
-                                        </ul>
-                                    </div>
-                                    <div class="media-body align-self-center">
-                                        <h5 class="media-heading font-16 font-weight-600"><a href="{{ route('frontend.events.show', $event->id ) }}">{{$event->title}}</a></h5>
-                                        <ul class="list-inline font-weight-600 text-gray-dimgray">
-                                            <li class="list-inline-item"><i class="far fa-clock text-theme-colored"></i> {{\Carbon\Carbon::parse($event->event_date)->format('g.i')}}</li>
-                                            <li class="list-inline-item"> <i class="fa fa-map-marker text-theme-colored"></i> {{$event->venue}}</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            @endforeach
-                        @endif
-                        {{-- <event-calender></event-calender> --}}
-                        <i class="fas fa-home"></i>
-                        <i class="fab fa-facebook"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-pinterest"></i>
-                    </div><!--card-body-->
-                </div><!--card-->  
+        <div class="row">
+            <div class="col-7">
+                <div class="float-left">
+                    {{-- {!! $events->total() !!} {{ trans_choice('labels.backend.access.roles.table.total', $events->total()) }} --}}
+                </div>
+            </div><!--col-->
+
+            <div class="col-5">
+                <div class="float-right">
+                    {!! $events->links() !!}
+                </div>
             </div><!--col-->
         </div><!--row-->
     </div><!--container-->

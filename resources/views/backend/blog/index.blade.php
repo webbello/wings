@@ -18,31 +18,31 @@
         </div><!--row-->
         <div class="row">
         
-        <div class="col-sm-6">
-        <form action="{{ route('admin.blog.posts.index') }}" method="get">
-            <div class="form-group1">
-                <label for="appendedInputButtons" class="sr-only">Two-button append</label>
-                <div class="controls">
-                <div class="input-group">
-                    <input class="form-control" name="search" placeholder="Search" size="26" type="text" value="{{$search}}">
-                    <span class="input-group-append">
-                        <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
-                        @if ($search)
-                        <a class="btn btn-primary" href="{{ route('admin.blog.posts.index') }}">Reset</a>
-                        <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Advanced</button> -->
-                        @endif
-                    </span>
-                </div>
-                </div>
-            </div>
-        </form>
-        </div><!--col-->
+            <div class="col-sm-6">
+                <form action="{{ route('admin.blog.posts.index') }}" method="get">
+                    <div class="form-group1">
+                        <label for="appendedInputButtons" class="sr-only">Two-button append</label>
+                        <div class="controls">
+                        <div class="input-group">
+                            <input class="form-control" name="search" placeholder="Search" size="26" type="text" value="{{$search}}">
+                            <span class="input-group-append">
+                                <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
+                                @if ($search)
+                                <a class="btn btn-primary" href="{{ route('admin.blog.posts.index') }}">Reset</a>
+                                <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Advanced</button> -->
+                                @endif
+                            </span>
+                        </div>
+                        </div>
+                    </div>
+                </form>
+            </div><!--col-->
 
-        <div class="col-sm-6">
+            <div class="col-sm-6">
+                
+            </div><!--col-->
             
-        </div><!--col-->
-        
-    </div><!--row-->
+        </div><!--row-->
 
         <div class="row mt-4">
             <div class="col">

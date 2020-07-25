@@ -23,14 +23,45 @@ class EventController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
-    public function frontend_index($sort = 'event_date', $sortOrder = 'desc')
+    public function frontend_index(Request $request, $sort = 'event_date', $sortOrder = 'desc')
     {
-        $events = Event::orderBy($sort, $sortOrder)->get()
-        ->groupBy(function($event) {
-            return $event->event_date >= now() ? 'upcoming' : 'past';
-        });
+        $search = $request->search;
+        $filter = $request->filter;
+        $sort = $request->sort ?? 'created_at';
+        $sortOrder = $request->sortOrder ?? 'desc';
+        //toggle the sort order for next time
+        if ( (isset($filter) && isset($request->sort)) || isset($request->sort)) {
+            $sortOrder = $sortOrder == 'desc' ? 'asc': 'desc';
+        }
+        $upcomingEvents = Event::whereDate('event_date', '>=', now())->orderBy($sort, $sortOrder)->get();
+        
+        $events = Event::orderBy($sort, $sortOrder)->paginate(20);
+        $query = Event::orderBy($sort, $sortOrder);
+        if ($filter === 'upcoming') {
+            $query->whereDate('event_date', '>=', now());
+            // $events = $query->paginate(25);
+        } else if ($filter === 'past') {
+            $query->whereDate('event_date', '<=', now());
+        }
+        if(!empty($request->search)){
+            $searchFields = ['title','summary','description', 'venue', 'city', 'country'];
+            $query = $query->where(function($query) use($request, $searchFields){
+                $searchWildcard = '%' . $request->search . '%';
+                foreach($searchFields as $field){
+                    $query = $query->orWhere($field, 'LIKE', $searchWildcard);
+                }
+            });
+            // $events = $query->paginate(25);
+            // $events = $query->dd();
+            // dd($events);
+            $events->appends(['search' => $search])->links();
+            $events->withPath('events?search='.$search);
+        }
+        $events = $query->paginate(25);
+        $events->appends(['sort' => $sort, 'sortOrder' => $request->sortOrder ])->links();
         // dd($events);
-        return view('frontend.events.index', compact('events'));
+        return view('frontend.events.index', compact('events', 'upcomingEvents', 'search', 'filter', 'sort', 'sortOrder'))->with('i', (request()->input('page', 1) - 1) * 20);
+
     }
 
     /**
@@ -52,7 +83,7 @@ class EventController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'=>'required',
+            'title'=>'required|string|unique:events',
             // 'summary'=>'required',
             'description'=>'required'
         ]);
@@ -69,7 +100,7 @@ class EventController extends Controller
         // dd($request->get('event_date'));
         $event->title = $request->get('title');
         $event->slug = \Str::slug($request->title);
-        $event->summary = 'Summary';
+        $event->summary = $request->get('summary');
         $event->description = $request->get('description');
         $event->event_date = $request->get('event_date');
         $event->venue = $request->get('venue');
@@ -125,7 +156,7 @@ class EventController extends Controller
     public function update(Request $request, Event $event)
     {
         $request->validate([
-            'title'=>'required',
+            'title'=>'exclude_if:title,'.$event->title.'|required|string|unique:events',
             // 'summary'=>'required',
             'description'=>'required'
         ]);
@@ -141,7 +172,7 @@ class EventController extends Controller
         }
         $event->title = $request->get('title');
         $event->slug = \Str::slug($request->title);
-        $event->summary = 'summary';
+        $event->summary = $request->get('summary');
         $event->description = $request->get('description');
         $event->event_date = $request->get('event_date');
         $event->venue = $request->get('venue');
