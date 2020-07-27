@@ -77,7 +77,7 @@
                             </div>
                             <h3><a href="{{ route('frontend.events.show', $event->id ) }}">{{$event->title}}</a></h3>
                             <ul class="event-info">
-                                <li><span class="icon fa fa-clock-o"></span>{{\Carbon\Carbon::parse($event->event_date)->format('g.i')}}</li>
+                                <li><span class="icon fa fa-clock-o"></span>{{\Carbon\Carbon::parse($event->event_date)->format('g:i A')}}</li>
                                 <li><span class="icon fa fa-map-marker"></span>{{$event->venue}}</li>
                             </ul>
                         </div>

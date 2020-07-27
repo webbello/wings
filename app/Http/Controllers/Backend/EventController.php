@@ -13,13 +13,43 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $sort = 'event_date';
-        $sortOrder = 'desc';
-        $events = Event::orderBy($sort, $sortOrder)->paginate(10);
+        $search = $request->search;
+        $filter = $request->filter;
+        $sort = $request->sort ?? 'created_at';
+        $sortOrder = $request->sortOrder ?? 'desc';
+        //toggle the sort order for next time
+        if ( (isset($filter) && isset($request->sort)) || isset($request->sort)) {
+            $sortOrder = $sortOrder == 'desc' ? 'asc': 'desc';
+        }
+        
+        $events = Event::orderBy($sort, $sortOrder)->paginate(20);
+        $query = Event::orderBy($sort, $sortOrder);
+        if ($filter === 'upcoming') {
+            $query->whereDate('event_date', '>=', now());
+            // $events = $query->paginate(25);
+        } else if ($filter === 'past') {
+            $query->whereDate('event_date', '<=', now());
+        }
+        if(!empty($request->search)){
+            $searchFields = ['title','summary','description', 'venue', 'city', 'country'];
+            $query = $query->where(function($query) use($request, $searchFields){
+                $searchWildcard = '%' . $request->search . '%';
+                foreach($searchFields as $field){
+                    $query = $query->orWhere($field, 'LIKE', $searchWildcard);
+                }
+            });
+            // $events = $query->paginate(25);
+            // $events = $query->dd();
+            // dd($events);
+            $events->appends(['search' => $search])->links();
+            $events->withPath('events?search='.$search);
+        }
+        $events = $query->paginate(25);
+        $events->appends(['sort' => $sort, 'sortOrder' => $request->sortOrder ])->links();
         // dd($events);
-        return view('backend.events.index',compact('events'))
+        return view('backend.events.index',compact('events', 'search', 'filter', 'sort', 'sortOrder'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -84,7 +114,7 @@ class EventController extends Controller
     {
         $request->validate([
             'title'=>'required|string|unique:events',
-            // 'summary'=>'required',
+            'summary'=>'string',
             'description'=>'required'
         ]);
         $event = new Event;
@@ -157,7 +187,7 @@ class EventController extends Controller
     {
         $request->validate([
             'title'=>'exclude_if:title,'.$event->title.'|required|string|unique:events',
-            // 'summary'=>'required',
+            'summary'=>'string|nullable',
             'description'=>'required'
         ]);
         // $event = new Event;
@@ -170,6 +200,7 @@ class EventController extends Controller
             $image->move($destinationPath, $name);
             $event->image = $name;
         }
+
         $event->title = $request->get('title');
         $event->slug = \Str::slug($request->title);
         $event->summary = $request->get('summary');
