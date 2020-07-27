@@ -1263,7 +1263,16 @@ h6 {
 	color:#eb5310;
 	margin-right:10px;
 }
-
+.ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 10px;
+  color: #ffffff;
+  background-color: #28a745;
+  border-style: solid;
+  border-radius: 50px 10px 50px 20px;
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/

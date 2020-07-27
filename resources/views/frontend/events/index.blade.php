@@ -9,6 +9,7 @@
     @endif
     
     <div class="container">
+    <!-- <event-calender></event-calender> -->
         <div class="row mt-4 mb-3">
             <div class="col-sm-6">
                 <form action="{{ route('frontend.events.index') }}" method="get">
@@ -65,12 +66,10 @@
                 @foreach ($events as $key => $event)
                 <!--Event Block-->
                 <div class="event-block col-md-6 col-sm-12 col-xs-12">
-                    @if ($event->event_date >= now())
-                    <div class="d-flex flex-row-reverse bd-highlight">
-                        <span class="text-right">Upcoming</span>
-                    </div>
-                    @endif
                     <div class="inner-box">
+                        @if ($event->event_date >= now())
+                            <span class="ribbon">Upcoming</span>
+                        @endif
                         <div class="content">
                             <div class="date-box">
                             {{ \Carbon\Carbon::parse($event->event_date)->format('d') }} <span>{{\Carbon\Carbon::parse($event->event_date)->format('F')}}</span>

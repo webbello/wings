@@ -46,6 +46,13 @@ export default {
     }
   },
   methods: {
+    getEvents(address) {
+      axios.get(address ? address : "/api/events").then(response => {
+        calendarEvents.push(
+          { title: 'Event Now 1', start: new Date() }
+        )
+      });
+    },
     toggleWeekends() {
       this.calendarWeekends = !this.calendarWeekends // update a property
     },
