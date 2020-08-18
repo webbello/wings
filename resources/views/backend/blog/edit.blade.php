@@ -74,6 +74,10 @@
                         </select>
                         {{-- <input type="category" name="category" id="category" placeholder="Category" maxlength="191"  autofocus="autofocus" class="form-control"> --}}
                     </div>
+                    <div class="form-group">    
+                        <label for="tags">Tag</label>
+                        <input type="text" name="tags" id="tags"  value="{{ old('tags') }}" class="form-control">
+                    </div>
                 </div>
             </div>
             </div>

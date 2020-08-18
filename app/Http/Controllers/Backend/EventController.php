@@ -161,8 +161,13 @@ class EventController extends Controller
      */
     public function frontend_show($id)
     {
+        $sort = 'created_at';
+        $sortOrder = 'desc';
         $event = Event::find($id);
-        return view('frontend.events.show', compact('event'));
+        $upcomingEvents = Event::whereDate('event_date', '>=', now())->orderBy($sort, $sortOrder)->get();
+        $pastEvents = Event::whereDate('event_date', '<=', now())->orderBy($sort, $sortOrder)->limit(5)->get();
+        // dd($upcomingEvents);
+        return view('frontend.events.show', compact('event', 'upcomingEvents', 'pastEvents'));
     }
 
     /**

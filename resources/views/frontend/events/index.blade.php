@@ -7,7 +7,7 @@
     @if (isset($upcomingEvents))
         @include('frontend.includes.upcoming-events', ['recent_event' => $upcomingEvents->last()])
     @endif
-    
+    <!-- http://t.commonsupport.xyz/salonika/ -->
     <div class="container">
     <!-- <event-calender></event-calender> -->
         <div class="row mt-4 mb-3">
