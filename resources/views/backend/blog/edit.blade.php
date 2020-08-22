@@ -76,7 +76,7 @@
                     </div>
                     <div class="form-group">    
                         <label for="tags">Tag</label>
-                        <input type="text" name="tags" id="tags"  value="{{ old('tags') }}" class="form-control">
+                        <input type="text" name="tags" id="tags"  value="{{ $post->tags->pluck('name')->implode(', ') }}" class="form-control">
                     </div>
                 </div>
             </div>

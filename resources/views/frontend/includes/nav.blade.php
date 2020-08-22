@@ -44,15 +44,15 @@
 
             <li class="nav-item"><a href="{{route('frontend.photo.gallery.index')}}" class="nav-link {{ active_class(Route::is('frontend.photo.gallery*')) }}">@lang('page.frontend.photo.gallery.show')</a></li>
             <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuUser" data-toggle="dropdown"
+                <a href="#" class="nav-link dropdown-toggle {{ active_class(Request::is('content/*')) }}" id="navbarDropdownMenuUser" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">E-Magazine</a>
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuUser">
-                    <a href="{{ route('frontend.blog.index', 'penmanship-2019') }}" class="dropdown-item {{ active_class(Request::is('blog/penmanship-2019')) }}">Penmanship 2019</a>
-                    <a href="{{ route('frontend.blog.index', 'penmanship-2020') }}" class="dropdown-item {{ active_class(Request::is('blog/penmanship-2020')) }}">Penmanship 2020</a>
+                    <a href="{{ route('frontend.blog.index', 'penmanship-2019') }}" class="dropdown-item {{ active_class(Request::is('content/penmanship-2019')) }}">Penmanship 2019</a>
+                    <a href="{{ route('frontend.blog.index', 'penmanship-2020') }}" class="dropdown-item {{ active_class(Request::is('content/penmanship-2020')) }}">Penmanship 2020</a>
                 </div>
             </li>
-            <li class="nav-item"><a href="{{route('frontend.blog.index')}}" class="nav-link {{ active_class(Route::is('frontend.blog*')) }}">@lang('navs.frontend.blog.index')</a></li>
+            <li class="nav-item"><a href="{{route('frontend.blog.index')}}" class="nav-link {{ active_class(Request::is('content') || Request::is('content/blog/*')) }}">@lang('navs.frontend.blog.index')</a></li>
             <li class="nav-item"><a href="{{route('frontend.contact')}}" class="nav-link {{ active_class(Route::is('frontend.contact')) }}">@lang('navs.frontend.contact')</a></li>
             <li class="nav-item"><a href="{{route('frontend.events.index')}}" class="nav-link {{ active_class(Route::is('frontend.events.index')) }}">@lang('navs.frontend.event')</a></li>
         </ul>

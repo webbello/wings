@@ -80,7 +80,7 @@ class PostController extends Controller
         $post = Post::where('slug', $slug)->latest()->first();
         // dd($category->slug);
 
-        $postsList = Post::where('category_id', $post->category_id)->latest()->pluck('title', 'slug');
+        $postsList = Post::where('category_id', $category->id)->latest()->pluck('title', 'slug');
         
         // dd($post->category_id);
         return view('frontend.blog.show', compact('categorySlug','post', 'postsList'));
@@ -179,8 +179,7 @@ class PostController extends Controller
     public function edit(ManagePostRequest $request, Post $post)
     {
         //$post = Post::find($post);
-        //dd($post);
-        
+
         $parentCategories = Category::where('parent_id',NULL)->get();
         //return view('backend.blog.edit', compact('post', 'parentCategories'));
         return view('backend.blog.edit')
