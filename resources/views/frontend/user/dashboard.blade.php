@@ -27,7 +27,9 @@
             .user-image img{
             width: 140px;
             }
-            
+            #dashboard-right {
+                height: 100%;
+            }
 
             // Small devices (landscape phones, 576px and up)
         @media (max-width: 767px) { 
@@ -72,7 +74,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-9" id="dashboard-right">
             <div role="tabpanel">
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">

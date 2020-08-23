@@ -1,8 +1,10 @@
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
-// import PerfectScrollbar from 'perfect-scrollbar'
-// const ps = new PerfectScrollbar('.mid');
-
+import 'perfect-scrollbar/css/perfect-scrollbar.css'
+import PerfectScrollbar from 'perfect-scrollbar'
+const left = new PerfectScrollbar('.left');
+const mid = new PerfectScrollbar('.mid');
+const dashboard = new PerfectScrollbar('#dashboard-right');
 $(document).ready(function(){
     var owl = $('.owl-carousel');
     owl.owlCarousel({
