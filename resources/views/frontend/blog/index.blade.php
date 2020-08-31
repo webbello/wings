@@ -6,7 +6,7 @@
 {{-- <blog-posts></blog-posts> --}}
 
 <div class="container">
-  <div class="row row-height align-items-center">
+  <div class="row row-height align-items-center blog">
     <div class = "col-md-4 left d-none d-sm-none d-md-block">
         <ul class="list-group">
           @foreach ($postsList as $key => $item)
