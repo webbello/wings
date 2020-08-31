@@ -8,7 +8,7 @@
     <div class = "col-md-4 left d-none d-sm-none d-md-block">
         <ul class="list-group">
           @foreach ($postsList as $key => $item)
-            <li class="list-group-item {{ active_class(Request::is('content/'.$categorySlug.'/'.$key)) }}"> <a href="{{ route('frontend.blog.single', [$categorySlug, $key]) }}">{{$item}}</a> </li>
+          <a href="{{ route('frontend.blog.single', [$categorySlug, $key]) }}"><li class="list-group-item {{ active_class(Request::is('content/'.$categorySlug.'/'.$key)) }}"> {{$item}} </li></a>
           @endforeach
         </ul>
     </div>
@@ -25,7 +25,7 @@
 
         {{-- <p>Posted {{ !! !empty($post->created_at) ? $post->created_at->diffForHumans() : $post->created_at }} </p> --}}
         
-        <div class="blog-post clearfix">
+        <div class="blog-post clearfix text-center">
           <img class="img-fluid rounded" src=" {!! !empty($post->image) ? '/storage/uploads/posts/' . $post->image :  'http://placehold.it/750x300' !!} " style="height: 300px">
           <hr>
           {!! html_entity_decode($post->body) !!}

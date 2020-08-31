@@ -1,6 +1,6 @@
 
 <div class="btn-group btn-group-sm" post="group" aria-label="@lang('labels.backend.access.users.user_actions')">
-    <a href="{{ route('admin.events.show', $event) }}" data-toggle="tooltip" data-placement="top" title="@lang('buttons.general.crud.view')" class="btn btn-info">
+    <a href="{{ route('frontend.events.show', $event) }}" target="_blank" data-toggle="tooltip" data-placement="top" title="@lang('buttons.general.crud.view')" class="btn btn-info">
         <i class="fas fa-eye"></i>
     </a>
     <a href="{{ route('admin.events.edit', $event) }}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="@lang('buttons.general.crud.edit')">

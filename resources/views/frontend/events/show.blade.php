@@ -15,9 +15,7 @@
                 <!--Basic Info-->
                 <div class="basic-info">
                     <div class="inner-box">
-                        <div class="image">
-                            <img src="/storage/uploads/events/{{ $event->image }}" alt="">
-                        </div>
+                        
                         <div class="lower-content">
                         
                             <div class="upper-box">
@@ -55,6 +53,9 @@
                             <!--Countdown Timer-->
                             <!-- <div class="time-counter"><div class="time-countdown clearfix" data-countdown="2017/11/29"><div class="counter-column"><div class="inner"><span class="count">00</span>Days</div></div> <div class="counter-column"><div class="inner"><span class="count">00</span>Hours</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Mins</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Secs</div></div></div></div> -->
                             
+                        </div>
+                        <div class="image">
+                            <img src="/storage/uploads/events/{{ $event->image }}" alt="">
                         </div>
                     </div>
                 </div>
