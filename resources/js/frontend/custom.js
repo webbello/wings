@@ -2,19 +2,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 import 'perfect-scrollbar/css/perfect-scrollbar.css'
 import PerfectScrollbar from 'perfect-scrollbar'
-const left = document.querySelector('.blog .left');
-const mid = document.querySelector('.blog .mid');
 
-if (left !== null) {
-    const leftPS = new PerfectScrollbar(left);
-}
-if (mid !== null) {
-    const midPS = new PerfectScrollbar(mid, {
-        wheelSpeed: 4,
-        wheelPropagation: true,
-        minScrollbarLength: 20
-    });
-}
 // const dashboard = new PerfectScrollbar('#dashboard-right');
 $(document).ready(function(){
     var owl = $('.owl-carousel');
@@ -57,5 +45,20 @@ $(document).ready(function(){
     $(".customNavigation").mouseout(function(){
         owl.trigger('play.owl.autoplay',[2000]);
     });
+
+    // PerfectScrollbar
+    const left = document.querySelector('.blog .left');
+    const mid = document.querySelector('.blog .mid');
+
+    if (left !== null) {
+        const leftPS = new PerfectScrollbar(left);
+    }
+    if (mid !== null) {
+        const midPS = new PerfectScrollbar(mid, {
+            wheelSpeed: 4,
+            wheelPropagation: true,
+            minScrollbarLength: 20
+        });
+    }
 
 });
