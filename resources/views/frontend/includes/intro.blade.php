@@ -26,7 +26,11 @@
                 <h2>Penmanship Update </h2>
                 <p>The feathers of wings wrote essays and stories on thought provoking topics. Click
                   below to know more</p>
-                <a href="blog/penmanship" class="btn-get-started scrollto">Our submission</a>
+                  <ul class="list-inline">
+                    <li class="list-inline-item"><a href="content/penmanship-2019" class="text-info">Penmanship-2019</a></li>
+                    <li class="list-inline-item"><a href="content/penmanship-2020" class="text-info">Penmanship-2020</a></li>
+                  </ul>
+                <!-- <a href="blog/penmanship" class="btn-get-started scrollto">Our submission</a> -->
                 <a href="/documents/penmanship_the_voice_of_wings.pdf" target="_blank" class="btn-get-started scrollto"><i class="far fa-file-pdf"></i> Download</a>
 
               </div>
@@ -39,7 +43,7 @@
                 <h2>Book exhibition</h2>
                 <p>We came together to distribute our used books to others and it was a massive
                   success. It created a big library</p>
-                <a href="blog/book_exhibition" class="btn-get-started scrollto">Know more</a>
+                <a href="content/book_exhibition" class="btn-get-started scrollto">Know more</a>
               </div>
             </div>
           </div>
