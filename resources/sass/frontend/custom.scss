@@ -1516,8 +1516,9 @@ blockquote p {
 
 .events-single .basic-info .image img{
 	position:relative;
-	width:100%;
-	display:block;
+	max-width:100%;
+  display:block;
+  margin: 0 auto;
 }
 
 .events-single .basic-info .image img{
