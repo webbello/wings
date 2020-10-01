@@ -25,8 +25,10 @@
 
         {{-- <p>Posted {{ !! !empty($post->created_at) ? $post->created_at->diffForHumans() : $post->created_at }} </p> --}}
         
-        <div class="blog-post clearfix text-center">
+        <div class="blog-post clearfix">
+        <div class="text-center">
           <img class="img-fluid rounded" src=" {!! !empty($post->image) ? '/storage/uploads/posts/' . $post->image :  'http://placehold.it/750x300' !!} " style="height: 300px">
+        </div>
           <hr>
           {!! html_entity_decode($post->body) !!}
         </div>
