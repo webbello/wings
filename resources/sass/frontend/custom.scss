@@ -1314,6 +1314,10 @@ blockquote p {
     margin-bottom:40px;
 }
 
+.sidebar-widget .upcoming-events{
+	margin-top:30px;
+}
+
 .sidebar-widget .sidebar-title{
 	position:relative;
 	margin-bottom:30px;
@@ -1427,7 +1431,7 @@ blockquote p {
 	 font-weight:700;
 	 text-align:center;
 	 border-radius:5px;
-	 padding:8px 0px;
+	//  padding:8px 0px;
 	 background-color:#eb5310;
 	 text-transform:capitalize;
 	 font-family: 'Roboto Slab', serif;
@@ -1437,7 +1441,7 @@ blockquote p {
 	color:#ffffff;
 	display:block;
 	font-size:16px;
-	padding:2px;
+	// padding:2px;
 	font-weight:700;
 	font-family: 'Nunito Sans', sans-serif;
 }
