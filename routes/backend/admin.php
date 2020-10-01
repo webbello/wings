@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Blog\PostController;
+use App\Http\Controllers\CkeditorController;
 
 // All route names are prefixed with 'admin.'.
 Route::redirect('/', '/admin/dashboard', 301);
@@ -26,3 +27,5 @@ Route::group(['prefix' => 'blog/posts/{post}'], function () {
 Route::resource('events','EventController');
 Route::resource('album','AlbumController');
 Route::resource('gallery','PhotoGalleryController');
+
+Route::post('ckeditor/upload', [CkeditorController::class, 'upload'])->name('ckeditor.upload');
