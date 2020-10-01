@@ -77,7 +77,7 @@
             <aside class="sidebar">
                 
                 <!--Popular Events Widget-->
-                <div class="sidebar-widget upcoming-events">
+                <div class="sidebar-widget popular-events mt-4">
                     <div class="sidebar-title">
                         <h3>Upcoming Events</h3>
                     </div>
@@ -85,7 +85,7 @@
                         <article class="event-post">
                             <div class="date-box">{{ \Carbon\Carbon::parse($event->event_date)->format('d') }} <span>{{\Carbon\Carbon::parse($event->event_date)->format('M')}}</span></div>
                             <div class="text"><a href="{{ route('frontend.events.show', $event->id ) }}">{{$event->title}}</a></div>
-                            <div class="event-location">{{$event->venue}}</div>
+                            <div class="icon"><i class="fa fa-map-marker" style="color:#eb5310;"></i> {{$event->venue}}</div>
                         </article>
                     @endforeach   
                 </div>
