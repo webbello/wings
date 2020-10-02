@@ -36,10 +36,11 @@
                             {{-- <input type="text" class="form-control" name="parent_id"/> --}}
                             <select class="form-control" id="parent_id" name="parent_id">
                                 <option value="">Root</option>
-                                @foreach($parentCategories as $category)
-                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                @foreach($categories as $category)
+                                    
+                                    <option value="{{$category->id}}" {{($parentCategory !== NULL && ($parentCategory->id === $category->id)) ? 'selected' : ''}}>{{$category->name}}</option>
                                     @if(count($category->subcategory))
-                                        @include('backend.categories.includes.subCategory',['subcategories' => $category->subcategory])
+                                        @include('backend.categories.includes.subCategory',['parentCategory'=> $parentCategory, 'subcategories' => $category->subcategory])
                                     @endif 
                                 @endforeach
                             </select>

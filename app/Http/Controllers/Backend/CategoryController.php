@@ -72,9 +72,12 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
         //$category = Category::find($id);
-        $parentCategories = Category::where('parent_id',NULL)->get();
-        // dd($category->subcategory);
-        return view('backend.categories.edit', compact('category', 'parentCategories'));
+        // dd($category->parent);
+        // $parentCategories = Category::where('parent_id',$category->parent_id)->get();
+        $categories = Category::where('parent_id',NULL)->get();
+        $parentCategory = $category->parent;
+        // dd($parentCategory);
+        return view('backend.categories.edit', compact('category', 'categories', 'parentCategory'));
     }
 
     /**
