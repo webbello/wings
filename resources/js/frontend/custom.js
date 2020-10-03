@@ -49,16 +49,17 @@ $(document).ready(function(){
     // PerfectScrollbar
     const left = document.querySelector('.blog .left');
     const mid = document.querySelector('.blog .mid');
-
-    if (left !== null) {
-        const leftPS = new PerfectScrollbar(left);
-    }
-    if (mid !== null) {
-        const midPS = new PerfectScrollbar(mid, {
-            wheelSpeed: 4,
-            wheelPropagation: true,
-            minScrollbarLength: 20
-        });
+    if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))){
+        if (left !== null) {
+            const leftPS = new PerfectScrollbar(left);
+        }
+        if (mid !== null) {
+            const midPS = new PerfectScrollbar(mid, {
+                wheelSpeed: 4,
+                wheelPropagation: true,
+                minScrollbarLength: 20
+            });
+        }
     }
 
 });
