@@ -1,6 +1,13 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('navs.general.home'))
+@section('title', app_name() . ' |  Events')
+@section('og_title', $event->title))
+@section('og_description', $event->summary))
+@section('og_image', '/storage/uploads/events/' . $event->image))
+
+@section('twitter_text_title', $event->title))
+@section('twitter_card', $event->summary))
+@section('twitter_image', '/storage/uploads/events/' . $event->image))
 
 @section('content')
 
