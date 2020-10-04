@@ -14,18 +14,18 @@
         @yield('meta')
         <!-- Jetpack Open Graph Tags -->
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Wings of ESC" />
-        <meta property="og:description" content="Serve the society - An Ex-Students' Association" />
-        <meta property="og:url" content="https://wingsofesc.in" />
+        <meta property="og:title" content="@yield('og_title', 'Wings of ESC')" />
+        <meta property="og:description" content="@yield('og_description', 'Serve the society - An Ex-Students')" />
+        <meta property="og:url" content="@yield('og_url', 'https://wingsofesc.in')" />
         <meta property="og:site_name" content="Wings of ESC" />
-        <meta property="og:image" content="https://wingsofesc.files.wordpress.com/2016/10/wings.png" />
+        <meta property="og:image" content="@yield('og_image', 'https://wingsofesc.files.wordpress.com/2016/10/wings.png')" />
         <meta property="og:image:width" content="600" />
         <meta property="og:image:height" content="304" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:site" content="@wings_of_esc" />
-        <meta name="twitter:text:title" content="WingsOfEsc" />
-        <meta name="twitter:image" content="https://wingsofesc.files.wordpress.com/2016/10/wings.png" />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:text:title" content="@yield('twitter_text_title','WingsOfEsc')" />
+        <meta name="twitter:image" content="@yield('twitter_image','https://wingsofesc.files.wordpress.com/2016/10/wings.png')" />
+        <meta name="twitter:card" content="@yield('twitter_card', 'Serve the society - An Ex-Students')" />
         <meta property="fb:app_id" content="370313053437434" />
         <meta property="article:publisher" content="https://www.facebook.com/wingsofescofficial" />
         <!-- End Jetpack Open Graph Tags -->

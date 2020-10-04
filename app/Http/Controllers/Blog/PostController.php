@@ -77,13 +77,15 @@ class PostController extends Controller
     public function single(Request $request, Category $category, $slug)
     {
         $categorySlug = $category->slug;
+        $categoryName = $category->name;
+
         $post = Post::where('slug', $slug)->latest()->first();
         // dd($category->slug);
 
         $postsList = Post::where('category_id', $category->id)->latest()->pluck('title', 'slug');
         
         // dd($post->category_id);
-        return view('frontend.blog.show', compact('categorySlug','post', 'postsList'));
+        return view('frontend.blog.show', compact('categorySlug', 'categoryName','post', 'postsList'));
     }
 
     /**
