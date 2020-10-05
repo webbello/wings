@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('title', app_name() . ' |  Events')
-@section('og_title', $event->title))
+@section('og_title', $event->title)
 @section('og_description', $event->summary)
 @section('og_image', '/storage/uploads/events/' . $event->image)
 
