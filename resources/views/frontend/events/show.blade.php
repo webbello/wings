@@ -7,7 +7,7 @@
 @section('og_image', '/storage/uploads/events/' . $event->image)
 
 @section('twitter_text_title', $event->title)
-@section('twitter_card', $event->summary)
+{{-- @section('twitter_card', $event->summary) --}}
 @section('twitter_image', '/storage/uploads/events/' . $event->image)
 
 @section('content')

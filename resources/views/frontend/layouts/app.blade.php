@@ -30,7 +30,7 @@
         <meta name="twitter:site" content="@wings_of_esc" />
         <meta name="twitter:text:title" content="@yield('twitter_text_title','WingsOfEsc')" />
         <meta name="twitter:image" content="@yield('twitter_image','https://wingsofesc.files.wordpress.com/2016/10/wings.png')" />
-        <meta name="twitter:card" content="@yield('twitter_card', 'Serve the society - An Ex-Students')" />
+        <meta name="twitter:card" content="@yield('twitter_card', 'summary')" />
         <meta property="fb:app_id" content="370313053437434" />
         <meta property="article:publisher" content="https://www.facebook.com/wingsofescofficial" />
         <!-- End Jetpack Open Graph Tags -->
