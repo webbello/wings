@@ -3,6 +3,7 @@
 @section('title', app_name() . ' | ' . $categoryName)
 @section('og_title', $post->title)
 @section('og_description', $post->summary)
+@section('og_url', Request::url())
 @section('og_image', '/storage/uploads/posts/' . $post->image)
 
 @section('twitter_text_title', $post->title)

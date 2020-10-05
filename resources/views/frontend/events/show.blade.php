@@ -3,6 +3,7 @@
 @section('title', app_name() . ' |  Events')
 @section('og_title', $event->title)
 @section('og_description', $event->summary)
+@section('og_url', Request::url())
 @section('og_image', '/storage/uploads/events/' . $event->image)
 
 @section('twitter_text_title', $event->title)

@@ -13,15 +13,20 @@
         <meta name="author" content="@yield('meta_author', 'Md Irfan')">
         @yield('meta')
         <!-- Jetpack Open Graph Tags -->
+        <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Wings of ESC" />
+        <meta property="article:section" content="Uncategorized" />
+        <meta property="article:published_time" content="@yield('article_published_time')" />
+        <meta property="article:modified_time" content="@yield('article_modified_time')" />
+        <meta property="og:updated_time" content="@yield('og_updated_time')" />
+
         <meta property="og:title" content="@yield('og_title', 'Wings of ESC')" />
         <meta property="og:description" content="@yield('og_description', 'Serve the society - An Ex-Students')" />
         <meta property="og:url" content="@yield('og_url', 'https://wingsofesc.in')" />
-        <meta property="og:site_name" content="Wings of ESC" />
         <meta property="og:image" content="@yield('og_image', 'https://wingsofesc.files.wordpress.com/2016/10/wings.png')" />
-        <meta property="og:image:width" content="600" />
-        <meta property="og:image:height" content="304" />
-        <meta property="og:locale" content="en_US" />
+        <meta property="og:image:width" content="730" />
+        <meta property="og:image:height" content="412" />
         <meta name="twitter:site" content="@wings_of_esc" />
         <meta name="twitter:text:title" content="@yield('twitter_text_title','WingsOfEsc')" />
         <meta name="twitter:image" content="@yield('twitter_image','https://wingsofesc.files.wordpress.com/2016/10/wings.png')" />
