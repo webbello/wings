@@ -17,7 +17,7 @@
     
             <div class=" wow fadeInUp" data-wow-delay="0.1s">
                 <div class="member">
-                <img src="img/frontend/site/team/md-shadaab-alam_1.jpg" class="img-fluid" alt="">
+                <img src="img/frontend/site/team/md-shadaab-alam_2.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                     <div class="member-info-content">
                     <h4>Md Shadaab Alam</h4>
@@ -35,7 +35,7 @@
 
             <div class=" wow fadeInUp" data-wow-delay="0.4s">
                 <div class="member">
-                <img src="img/frontend/site/team/arshi_salim.jpg" class="img-fluid" alt="">
+                <img src="img/frontend/site/team/arshi_salim1.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                     <div class="member-info-content">
                     <h4>Arshi Salim</h4>
@@ -45,6 +45,23 @@
                         <a href="https://www.facebook.com/aap.ki.73"><i class="fab fa-facebook"></i></a>
                         <a href="https://www.instagram.com/arshisalim_/"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/in/arshi-salim/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class=" wow fadeInUp" data-wow-delay="0.4s">
+                <div class="member">
+                <img src="img/frontend/site/team/aquib.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                    <div class="member-info-content">
+                    <h4>Aquib</h4>
+                    <span>Member</span>
+                    <div class="social">
+                        {{-- <a href=""><i class="fab fa-twitter"></i></a> --}}
+                        <a href="https://www.facebook.com/md.javedaquib"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/arshisalim_/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.twitter.com/md_aj786"><i class="fab fa-twitter"></i></a>
                     </div>
                     </div>
                 </div>
