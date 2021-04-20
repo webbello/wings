@@ -4,7 +4,7 @@
 
 @section('content')
 {{-- <blog-posts></blog-posts> --}}
-<div class="our_activities p-3">
+<div class="our_activities container">
     
     <p>
         Wings of ESC envisions itself to be a collaborative organization of individuals from all walks of life. 

@@ -4,6 +4,7 @@
 
 @section('content')
 {{-- <blog-posts></blog-posts> --}}
+<div class="container">
 <div class="president_message p-3 clearfix">
     <img class="img-fluid img-thumbnail float-md-right" src="img/frontend/site/team/president-md-shadaab-alam_1.jpg" alt="Md Shadaab Alam Khan" >
     <p>
@@ -37,6 +38,6 @@ Best Wishes
     
 
 </div>
-
+</div>
 
 @endsection

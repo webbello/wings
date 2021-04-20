@@ -15,12 +15,12 @@
                 <h2>Together we can and we will make a difference</h2>
                 <p>Alone, we are powerless. But, together, we can make things happen. The combined
                   effect is greater than the sum of the individual effects</p>
-                <a href="#" class="btn-get-started scrollto">Know How</a>
+                <a href="https://wingsofesc.in/our_mission" class="btn-get-started scrollto">Know How</a>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/2.wingsofess-survey-2020.jpg');">
+          {{-- <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/2.wingsofess-survey-2020.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Wings of ESC survey 2020</h2>
@@ -28,7 +28,7 @@
                 <a href="https://wingsofesc.in/events/23" class="btn-get-started scrollto">Know more</a>
               </div>
             </div>
-          </div>
+          </div> --}}
 
           <div class="carousel-item" style="background-image: url('img/frontend/site/intro-carousel/3.penmanship1.jpg');">
             <div class="carousel-container">

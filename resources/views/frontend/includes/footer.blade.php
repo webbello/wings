@@ -15,10 +15,10 @@
                 <h4>Useful Links</h4>
                 <ul>
                   <li><i class="ion-ios-arrow-right"></i> <a href="/">Home</a></li>
-                  <li><i class="ion-ios-arrow-right"></i> <a href="/blog">E-Magazine</a></li>
+                  <li><i class="ion-ios-arrow-right"></i> <a href="/penmanship-2019">E-Magazine</a></li>
                   <li><i class="ion-ios-arrow-right"></i> <a href="http://edusample.weebly.com/scholarship.html" target="_blank">Scholarships</a></li>
-                  <li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
-                  <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li>
+                  <li><i class="ion-ios-arrow-right"></i> <a href="/photo_gallery">Album</a></li>
+                  <li><i class="ion-ios-arrow-right"></i> <a href="/president_message">President's Message</a></li>
                 </ul>
               </div>
     

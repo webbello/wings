@@ -4,7 +4,7 @@
 
 @section('content')
 {{-- <blog-posts></blog-posts> --}}
-<div class="our_mission p-3">
+<div class="our_mission container">
     
     <ul>
         <li>To carry forward the lamp of knowledge in the society</li>

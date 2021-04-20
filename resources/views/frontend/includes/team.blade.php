@@ -60,7 +60,7 @@
                     <div class="social">
                         {{-- <a href=""><i class="fab fa-twitter"></i></a> --}}
                         <a href="https://www.facebook.com/md.javedaquib"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/arshisalim_/"><i class="fab fa-instagram"></i></a>
+                        <a href="www.instagram.com/md.aj786"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.twitter.com/md_aj786"><i class="fab fa-twitter"></i></a>
                     </div>
                     </div>
